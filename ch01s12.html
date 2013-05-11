@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="autor" content="Roy Gu (roy@solarphp.cn)" /><meta name="copyright" content="Solar Framework for PHP 5 In China" /><meta name="description" content="Solar Php框架 最佳实践框架 完全面向对象 企设级应用设计模式 超强命令行工具 | Solar 中国"  /><meta name="keywords" content="php, framework, 框架, php框架, solar, solarphp" />
+   <title>1.12 &#28155;&#21152;&#26032;&#25991;&#31456;</title><link rel="stylesheet" href="style.css" type="text/css"><link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen" /><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Solar PHP &#20013;&#25991;&#25945;&#31243;"><link rel="up" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="prev" href="ch01s11.html" title="1.11. &#32534;&#36753;&#25991;&#31456;"><link rel="next" href="ch01s13.html" title="1.13 &#21024;&#38500;&#25991;&#31456;"><link rel="part" href="pt01.html" title="Part&nbsp;I.&nbsp;&#25196;&#24070;&#36215;&#33322;"><link rel="chapter" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="chapter" href="ch02.html" title="Chapter&nbsp;2.&nbsp;&#21160;&#24577;&#35843;&#24230;&#21608;&#26399;"><link rel="chapter" href="ch03.html" title="Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;"><link rel="chapter" href="ch04.html" title="Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;"><link rel="chapter" href="ch05.html" title="Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;"><link rel="chapter" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="chapter" href="ch07.html" title="Chapter&nbsp;7.&nbsp;&#29992;&#25143;&#35748;&#35777;&#12289;&#35282;&#33394;&#21450;&#35775;&#38382;&#25511;&#21046;"><link rel="chapter" href="ch08.html" title="Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;"><link rel="chapter" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="part" href="pt02.html" title="Part&nbsp;II.&nbsp;&#38468;&#24405;"><link rel="appendix" href="apa.html" title="Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;"><link rel="appendix" href="apb.html" title="Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;"><link rel="subsection" href="ch01s12.html#d4e332" title="1.12.1 &#8220;Add&#8221; Action&#26041;&#27861;"><link rel="subsection" href="ch01s12.html#d4e342" title="1.12.2 &#8220;Add&#8221;&#35270;&#22270;&#25991;&#20214;"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="view"><!-- #header (main heading + logo with slogan) --><div id="head"><!-- main headings with search component --><div id="main"><h1><a href="/">SOLAR</a><sup><a href="http://solarphp.org.cn/viewtopic.php?f=13&t=165" target="_blank">1.1.2</a></sup></h1>      <h2><a href="#">Framework for PHP	5</a></h2></div><!-- /main headings with search component -->    <hr class="hidden" /><!-- main horizontal menu --><div id="mainMenu"><ul><li><a href="../">首　页<span></span></a></li><li><a href="../project.php">Solar 项目<span></span></a></li><li class="active"><a href="../manual-new/">用户手册<span></span></a></li> <li><a href="http://forum.solarphp.cn" target="_blank">开发者社区<span></span></a></li><li><a href="http://bug.solarphp.cn" target="_blank">Bug 跟踪<span></span></a></li><li><a href="../contributor.php">Contributor<span></span></a></li><li class="fr"><a href="http://solarphp.cn/apidoc/">API 文档<span></span></a></li><li class="fr"><a href="http://demo.solarphp.cn" target="_blank">Solar Demo<span></span></a></li></ul></div>    <!-- /main horizontal menu --><hr class="hidden" /><!-- logo with slogan --><div id="logo"></div>    <!-- /logo with slogan --><hr class="hidden" /></div><!-- /#header (main heading + logo with slogan) -->  <!-- #main content construct --><div id="content"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">1.12 &#28155;&#21152;&#26032;&#25991;&#31456;</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch01s11.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch01s13.html">Next</a></td></tr></table><hr></div><div class="sect1" title="1.12 &#28155;&#21152;&#26032;&#25991;&#31456;"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e329"></a>1.12 &#28155;&#21152;&#26032;&#25991;&#31456;</h2></div></div></div>
+                
+                <p>&#23613;&#31649;&#29616;&#22312;&#25105;&#20204;&#24050;&#32463;&#21487;&#20197;&#32534;&#36753;&#21338;&#23458;&#25991;&#31456;&#20102;&#65292;&#20294;&#26159;&#25105;&#20204;&#36824;&#19981;&#33021;&#28155;&#21152;&#26032;&#25991;&#31456;&#65292;&#36825;&#26159;&#19981;&#33021;&#23481;&#24525;&#30340;&#12290;</p>
+                <div class="sect2" title="1.12.1 &#8220;Add&#8221; Action&#26041;&#27861;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e332"></a>1.12.1 &#8220;Add&#8221; Action&#26041;&#27861;</h3></div></div></div>
+                    
+                    <p>&#25214;&#21040;&#24182;&#25171;&#24320;Blog.php&#25991;&#20214;&#12290;&#65288;&#22312;&#27492;&#31034;&#20363;&#20013;&#65292;&#25105;&#20204;&#20351;&#29992;vim&#32534;&#36753;&#22120;&#65292;&#20320;&#21487;&#20197;&#36873;&#25321;&#33258;&#24049;&#26368;&#21916;&#27426;&#30340;&#65289;</p>
+                    <pre class="screen">$ vim Blog.php</pre>
+                    <p>&#22312;&#31867;&#20013;&#28155;&#21152;&#20197;&#19979;&#20195;&#30721;&#65306;</p>
+                    <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+    <b class="hl-keyword">public</b> <b class="hl-keyword">function</b> actionAdd()
+    {
+        <i class="hl-comment" style="color: silver">// get a new default record</i>
+        $this-&gt;item = $this-&gt;_model-&gt;blogs-&gt;fetchNew();
+    
+        <i class="hl-comment" style="color: silver">// did the user click the save button?</i>
+        <b class="hl-keyword">if</b> ($this-&gt;_isProcess(<b class="hl-string"><i style="color:red">'save'</i></b>)) {
+        
+            <i class="hl-comment" style="color: silver">// look for $_POST['blog'] in the request,</i>
+            <i class="hl-comment" style="color: silver">// and load into the record.</i>
+            $data = $this-&gt;_request-&gt;post(<b class="hl-string"><i style="color:red">'blog'</i></b>);
+            $this-&gt;item-&gt;load($data);
+        
+            <i class="hl-comment" style="color: silver">// attempt to save it, and redirect to editing on success</i>
+            <b class="hl-keyword">if</b> ($this-&gt;item-&gt;save()) {
+                $uri = <b class="hl-string"><i style="color:red">"/{$this-&gt;_controller}/edit/{$this-&gt;item-&gt;id}"</i></b>;
+                <b class="hl-keyword">return</b> $this-&gt;_redirectNoCache($uri);
+            }
+        }
+    
+        <i class="hl-comment" style="color: silver">// get form hints from the record</i>
+        $this-&gt;form = $this-&gt;item-&gt;newForm();
+        
+        <i class="hl-comment" style="color: silver">// turn off http caching</i>
+        $this-&gt;_response-&gt;setNoCache();
+    }</pre>
+                    <p>&#36825;&#20010;Action&#21644;actionEdit()&#26041;&#27861;&#38750;&#24120;&#31867;&#20284;&#65292;&#20294;&#26159;&#36825;&#37324;&#25105;&#20204;&#19981;&#38656;&#35201;&#33719;&#21462;&#19968;&#26465;&#24050;&#23384;&#22312;&#30340;&#35760;&#24405;&#65292;&#25105;&#20204;&#38656;&#35201;&#33719;&#21462;&#30340;&#26159;&#19968;&#26465;&#26032;&#35760;&#24405;&#12290;&#26816;&#26597;&#21644;&#20445;&#23384;&#36807;&#31243;&#20063;&#38750;&#24120;&#31867;&#20284;&#12290;&#20294;&#26159;&#22914;&#26524;&#20445;&#23384;&#25104;&#21151;&#65292;&#39029;&#38754;&#20250;&#34987;&#37325;&#23450;&#21521;&#21040;&#23545;&#21018;&#20445;&#23384;&#25991;&#31456;&#30340;&#32534;&#36753;&#39029;&#38754;&#12290;</p>
+                    <div class="note" title="&#37325;&#23450;&#21521;" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note: &#37325;&#23450;&#21521;"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">&#37325;&#23450;&#21521;</th></tr><tr><td align="left" valign="top">
+                        
+                        <p>Solar&#39029;&#38754;&#25511;&#21046;&#22120;&#26377;&#20004;&#20010;&#26041;&#27861;&#26469;&#22788;&#29702;&#39029;&#38754;&#37325;&#23450;&#21521;&#35831;&#27714;&#65306;_redirect() &#21644;
+                            _redirectNoCache()&#12290;&#20351;&#29992;&#26080;&#32531;&#23384;&#29256;&#30340;&#26041;&#27861;&#21487;&#20197;&#36991;&#20813;&#22240;&#28857;&#20987;&#21518;&#36864;&#38190;&#32780;&#23548;&#33268;&#30340;&#34920;&#21333;&#24847;&#22806;&#37325;&#22797;&#25552;&#20132;&#12290;</p>
+                    </td></tr></table></div>
+                </div>
+                <div class="sect2" title="1.12.2 &#8220;Add&#8221;&#35270;&#22270;&#25991;&#20214;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e342"></a>1.12.2 &#8220;Add&#8221;&#35270;&#22270;&#25991;&#20214;</h3></div></div></div>
+                    
+                    <p>&#20026;actionAdd()&#26041;&#27861;&#26032;&#24314;add.php&#35270;&#22270;&#25991;&#20214;&#12290;</p>
+                    <pre class="screen">$ vim Blog/View/add.php</pre>
+                    <p>&#22312;add.php&#35270;&#22270;&#25991;&#20214;&#20013;&#28155;&#21152;&#20197;&#19979;&#20195;&#30721;&#65306;</p>
+                    <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+    $title = $this-&gt;getTextRaw(<b class="hl-string"><i style="color:red">'TITLE_ADD'</i></b>);
+    $this-&gt;head()-&gt;setTitle($title);
+<span class="hl-directive" style="color: maroon">?&gt;</span>
+
+&lt;h2&gt;<span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">echo</b> $this-&gt;getText(<b class="hl-string"><i style="color:red">'HEADING_ADD'</i></b>); ?&gt;&lt;/h2&gt;
+
+<span class="hl-directive" style="color: maroon">&lt;?php</span>
+    <b class="hl-keyword">echo</b> $this-&gt;form()
+              -&gt;auto($this-&gt;form)
+              -&gt;addProcess(<b class="hl-string"><i style="color:red">'save'</i></b>)
+              -&gt;fetch();
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                    <p>&#31616;&#21333;&#22320;&#35828;&#65292;&#36825;&#24352;&#35270;&#22270;&#33719;&#24471;&#34920;&#21333;&#25552;&#31034;&#65288;$this-&gt;form&#65289;&#24182;&#19988;&#33258;&#21160;&#20135;&#29983;&#34920;&#21333;&#20379;&#29992;&#25143;&#20351;&#29992;&#12290;&#23427;&#21644;edit.php&#35270;&#22270;&#25991;&#20214;&#20960;&#20046;&#26159;&#19968;&#26679;&#30340;&#65292;&#38500;&#20102;&#39029;&#38754;&#30340;&#26631;&#39064;&#21644;&#39029;&#22836;&#20449;&#24687;&#19981;&#21516;&#20043;&#22806;&#12290;</p>
+                    <p>&#20320;&#29616;&#22312;&#21487;&#20197;&#27983;&#35272;http://localhost/index.php/blog/add&#26469;&#28155;&#21152;&#26032;&#25991;&#31456;&#20102;&#12290;</p>
+                </div>
+            </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch01s11.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch01.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch01s13.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">1.11. &#32534;&#36753;&#25991;&#31456;&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;1.13 &#21024;&#38500;&#25991;&#31456;</td></tr></table></div></div>  <!-- /#main content construct --> <!-- #footer -->  <div id="foot">  <p class="fl">Copyright &copy; 2010 Solar For PHP 5 In China, All Rights Reserved.</p>    <!-- /#   LINKS AND AUTHOR-SIGNATURE CANNOT BE REMOVED !!! -->    <p class="fr">Powered By&nbsp;&nbsp;<a href="mailto:roy@solarphp.cn">Roy Gu</a><span id="cnzz"><script src="http://s16.cnzz.com/stat.php?id=2386648&web_id=2386648&show=pic" language="JavaScript"></script></span>    </p>  </div>  <hr class="hidden" />  <div class="clear"></div>  <div id="solarcopy">  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-1.gif" style="border: 0 !important;" /></a>  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-2.gif" style="border: 0 !important;" /></a>  <br />  <script type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('mzsrzilnbxkw')</script></div> <!-- /#footer --></div></body></html>

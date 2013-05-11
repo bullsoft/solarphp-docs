@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="autor" content="Roy Gu (roy@solarphp.cn)" /><meta name="copyright" content="Solar Framework for PHP 5 In China" /><meta name="description" content="Solar Php框架 最佳实践框架 完全面向对象 企设级应用设计模式 超强命令行工具 | Solar 中国"  /><meta name="keywords" content="php, framework, 框架, php框架, solar, solarphp" />
+   <title>8.2. &#21019;&#24314;&#24037;&#20316;&#21306;&#28304;&#30721;</title><link rel="stylesheet" href="style.css" type="text/css"><link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen" /><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Solar PHP &#20013;&#25991;&#25945;&#31243;"><link rel="up" href="ch08.html" title="Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;"><link rel="prev" href="ch08s01.html" title="8.1. &#31616;&#20171;"><link rel="next" href="ch08s03.html" title="8.3. &#38142;&#25509;&#24037;&#20316;&#21306;&#28304;&#30721;"><link rel="part" href="pt01.html" title="Part&nbsp;I.&nbsp;&#25196;&#24070;&#36215;&#33322;"><link rel="chapter" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="chapter" href="ch02.html" title="Chapter&nbsp;2.&nbsp;&#21160;&#24577;&#35843;&#24230;&#21608;&#26399;"><link rel="chapter" href="ch03.html" title="Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;"><link rel="chapter" href="ch04.html" title="Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;"><link rel="chapter" href="ch05.html" title="Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;"><link rel="chapter" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="chapter" href="ch07.html" title="Chapter&nbsp;7.&nbsp;&#29992;&#25143;&#35748;&#35777;&#12289;&#35282;&#33394;&#21450;&#35775;&#38382;&#25511;&#21046;"><link rel="chapter" href="ch08.html" title="Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;"><link rel="chapter" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="part" href="pt02.html" title="Part&nbsp;II.&nbsp;&#38468;&#24405;"><link rel="appendix" href="apa.html" title="Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;"><link rel="appendix" href="apb.html" title="Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;"><link rel="subsection" href="ch08s02.html#d4e3096" title="8.2.1. &#31034;&#20363;"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="view"><!-- #header (main heading + logo with slogan) --><div id="head"><!-- main headings with search component --><div id="main"><h1><a href="/">SOLAR</a><sup><a href="http://solarphp.org.cn/viewtopic.php?f=13&t=165" target="_blank">1.1.2</a></sup></h1>      <h2><a href="#">Framework for PHP	5</a></h2></div><!-- /main headings with search component -->    <hr class="hidden" /><!-- main horizontal menu --><div id="mainMenu"><ul><li><a href="../">首　页<span></span></a></li><li><a href="../project.php">Solar 项目<span></span></a></li><li class="active"><a href="../manual-new/">用户手册<span></span></a></li> <li><a href="http://forum.solarphp.cn" target="_blank">开发者社区<span></span></a></li><li><a href="http://bug.solarphp.cn" target="_blank">Bug 跟踪<span></span></a></li><li><a href="../contributor.php">Contributor<span></span></a></li><li class="fr"><a href="http://solarphp.cn/apidoc/">API 文档<span></span></a></li><li class="fr"><a href="http://demo.solarphp.cn" target="_blank">Solar Demo<span></span></a></li></ul></div>    <!-- /main horizontal menu --><hr class="hidden" /><!-- logo with slogan --><div id="logo"></div>    <!-- /logo with slogan --><hr class="hidden" /></div><!-- /#header (main heading + logo with slogan) -->  <!-- #main content construct --><div id="content"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.2. &#21019;&#24314;&#24037;&#20316;&#21306;&#28304;&#30721;</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch08s01.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch08s03.html">Next</a></td></tr></table><hr></div><div class="sect1" title="8.2. &#21019;&#24314;&#24037;&#20316;&#21306;&#28304;&#30721;"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e3089"></a>8.2. &#21019;&#24314;&#24037;&#20316;&#21306;&#28304;&#30721;</h2></div></div></div>
+                
+                <p><code class="code">./script/solar make-vendor</code>
+                    <code class="code">VendorName</code></p>
+                <p><span class="bold"><strong>make-vendor</strong></span>&#21629;&#20196;&#20026;&#19968;&#20010;&#26032;&#30340;&#24037;&#20316;&#21306;&#21019;&#24314;&#25152;&#26377;&#30340;&#22522;&#26412;&#28304;&#20195;&#30721;&#25991;&#20214;&#12290;&#22522;&#26412;&#24605;&#24819;&#26159;&#65306;&#24403;&#20320;&#24320;&#22987;&#19968;&#20010;&#26032;&#39033;&#30446;&#30340;&#26102;&#20505;&#65292;&#20320;&#23558;&#20250;&#20351;&#29992;&#26032;&#30340;&#24037;&#20316;&#21306;&#26469;&#32452;&#32455;&#25511;&#21046;&#22120;&#12289;&#27169;&#22411;&#12289;&#35270;&#22270;&#21644;&#20854;&#20182;&#24212;&#29992;&#32452;&#20214;&#12290;&#20320;&#35201;&#20197;&#21019;&#24314;&#22810;&#20010;&#24037;&#20316;&#21306;&#65292;&#21482;&#35201;&#20182;&#20204;&#30340;&#21517;&#23383;&#19981;&#21516;&#21363;&#21487;&#12290;</p>
+                <div class="sect2" title="8.2.1. &#31034;&#20363;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e3096"></a>8.2.1. &#31034;&#20363;</h3></div></div></div>
+                    
+                    <p>&#35201;&#21019;&#24314;&#19968;&#20010;&#26032;&#30340;&#24037;&#20316;&#21306;&#65292;&#36755;&#20837;&#20197;&#19979;&#20195;&#30721;&#65306;</p><pre class="screen">$ ./script/solar make-vendor VendorName
+Making vendor source directories.
+Creating SYSTEM/source/vendor-name/config.
+Creating SYSTEM/source/vendor-name/docs.
+Creating SYSTEM/source/vendor-name/script.
+Creating SYSTEM/source/vendor-name/tests.
+Creating SYSTEM/source/vendor-name/tests/Mock.
+Creating SYSTEM/source/vendor-name/tests/Mock/VendorName.
+Creating SYSTEM/source/vendor-name/tests/Test.
+Creating SYSTEM/source/vendor-name/tests/Test/VendorName.
+Creating SYSTEM/source/vendor-name/VendorName/Cli/Help.
+Creating SYSTEM/source/vendor-name/VendorName/Cli/Help/Info.
+Creating SYSTEM/source/vendor-name/VendorName/Cli/Help/Locale.
+Creating SYSTEM/source/vendor-name/VendorName/Controller/Bread/Locale.
+Creating SYSTEM/source/vendor-name/VendorName/Controller/Bread/Public.
+Creating SYSTEM/source/vendor-name/VendorName/Controller/Bread/View.
+Creating SYSTEM/source/vendor-name/VendorName/Controller/Command/Info.
+Creating SYSTEM/source/vendor-name/VendorName/Controller/Command/Locale.
+Creating SYSTEM/source/vendor-name/VendorName/Controller/Page/Layout.
+Creating SYSTEM/source/vendor-name/VendorName/Controller/Page/Locale.
+Creating SYSTEM/source/vendor-name/VendorName/Controller/Page/Public.
+Creating SYSTEM/source/vendor-name/VendorName/Controller/Page/View.
+Creating SYSTEM/source/vendor-name/VendorName/Model.
+Writing SYSTEM/source/vendor-name/VendorName/Cli/Help.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Cli/Help/Info/options.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Controller/Bread.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Controller/Bread/Locale/en_US.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Controller/Bread/View/_item.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Controller/Bread/View/_list.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Controller/Bread/View/add.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Controller/Bread/View/browse.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Controller/Bread/View/delete.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Controller/Bread/View/edit.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Controller/Bread/View/read.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Controller/Bread/View/search.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Controller/Command.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Controller/Page.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Filter.php ... done.
+Making directory SYSTEM/source/vendor-name/VendorName/Sql ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Sql/Model.php ... done.
+Making directory SYSTEM/source/vendor-name/VendorName/Sql/Model ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Sql/Model/Collection.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Sql/Model/Metadata.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Sql/Model/Record.php ... done.
+Writing SYSTEM/source/vendor-name/config/default.php ... done.
+Writing SYSTEM/source/vendor-name/config/run-tests.php ... done.
+Writing SYSTEM/source/vendor-name/VendorName/Cli/Help/Info/help.txt ... done.
+Making links for vendor 'VendorName' ...
+    Making link 'include/VendorName' ... done.
+    Making link 'include/Test/VendorName' ... done.
+    Making link 'include/Mock/VendorName' ... done.
+    Making link 'script/vendor-name' ... done.
+... done.
+Making public symlinks for 'VendorName' ...
+    Making public directory docroot/public/VendorName/Controller ... done.
+    Making public symlink for VendorName_Controller_Bread ... done.
+    Making public symlink for VendorName_Controller_Page ... done.
+... done.
+Remember to add 'VendorName_App' to the ['Solar_Controller_Front']['classes'] element in your config file so that it finds your apps.
+Remember to add 'VendorName_Model' to the ['Solar_Sql_Model_Catalog']['classes'] element in your config file so that it finds your models.
+$</pre>
+                    <p>&#19978;&#38754;&#30340;&#21629;&#20196;&#20570;&#20102;&#20123;&#20160;&#20040;&#65311;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+                                <p>&#35813;&#21629;&#20196;&#20026;<code class="code">vendor-name</code>&#21019;&#24314;&#20102;&#26032;&#30340;&#28304;&#20195;&#30721;&#30446;&#24405;&#65292;&#24182;&#19988;&#22312;&#35813;&#30446;&#24405;&#20013;&#21019;&#24314;&#20102;&#20960;&#20010;&#26631;&#20934;&#30340;&#23376;&#30446;&#24405;&#65306;<code class="code">config</code>&#30446;&#24405;&#29992;&#20110;&#23384;&#25918;&#40664;&#35748;&#30340;&#37197;&#32622;&#25991;&#20214;&#65292;<code class="code">docs</code>&#30446;&#24405;&#29992;&#20110;&#23384;&#25918;&#25991;&#26723;&#25991;&#20214;&#65292;<code class="code">script</code>&#30446;&#24405;&#29992;&#20110;&#23384;&#25918;<code class="code">vendor-name</code>&#30340;&#21629;&#20196;&#34892;&#24037;&#20855;&#65292;<code class="code">tests</code>&#30446;&#24405;&#29992;&#20110;&#23384;&#25918;&#38598;&#25104;&#30340;&#27979;&#35797;&#31034;&#20363;&#20197;&#21450;<span class="italic"><code class="code">VendorName</code></span>&#30446;&#24405;&#29992;&#20110;&#23384;&#25918;PHP&#31867;&#12290;</p>
+                            </li><li class="listitem">
+                                <p>&#35813;&#21629;&#20196;&#20026;<code class="code">VendorName</code>&#21019;&#24314;&#19968;&#31995;&#21015;&#30340;&#22522;&#30784;&#31867;&#21644;&#30446;&#24405;&#65306;&#19968;&#20010;&#26368;&#23567;&#30340;&#39029;&#38754;&#25511;&#21046;&#22120;&#65292;&#19968;&#20010;&#25554;&#21024;&#25913;&#26597;(browse/read/edit/add/delete,
+                                        &#31616;&#31216;"BREAD")&#27169;&#26495;&#25511;&#21046;&#22120;&#65292;&#20197;<code class="code">VendorName</code>&#21629;&#21517;&#30340;&#22522;&#30784;&#27169;&#22411;&#31867;&#65292;&#29992;&#20110;&#23384;&#25918;&#35270;&#22270;&#36741;&#21161;&#31867;&#21644;&#20855;&#20307;&#27169;&#22411;&#31867;&#30340;&#23376;&#30446;&#24405;&#31561;&#31561;&#12290;</p>
+                            </li><li class="listitem">
+                                <p>&#26368;&#21518;&#65292;&#35813;&#21629;&#20196;&#36824;&#21019;&#24314;&#20174;source&#30446;&#24405;&#21040;Solar&#31995;&#32479;&#20854;&#20182;&#20301;&#32622;&#30340;&#31526;&#21495;&#38142;&#25509;&#65292;&#36825;&#26679;&#30340;&#35805;&#24403;&#28304;&#30721;&#25913;&#21464;&#26102;&#65292;&#20320;&#23601;&#19981;&#38656;&#35201;&#22312;&#30446;&#24405;&#20043;&#21069;&#25335;&#36125;&#28304;&#30721;&#20102;&#12290;</p>
+                            </li></ul></div>
+                </div>
+            </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch08s01.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch08.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch08s03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">8.1. &#31616;&#20171;&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;8.3. &#38142;&#25509;&#24037;&#20316;&#21306;&#28304;&#30721;</td></tr></table></div></div>  <!-- /#main content construct --> <!-- #footer -->  <div id="foot">  <p class="fl">Copyright &copy; 2010 Solar For PHP 5 In China, All Rights Reserved.</p>    <!-- /#   LINKS AND AUTHOR-SIGNATURE CANNOT BE REMOVED !!! -->    <p class="fr">Powered By&nbsp;&nbsp;<a href="mailto:roy@solarphp.cn">Roy Gu</a><span id="cnzz"><script src="http://s16.cnzz.com/stat.php?id=2386648&web_id=2386648&show=pic" language="JavaScript"></script></span>    </p>  </div>  <hr class="hidden" />  <div class="clear"></div>  <div id="solarcopy">  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-1.gif" style="border: 0 !important;" /></a>  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-2.gif" style="border: 0 !important;" /></a>  <br />  <script type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('mzsrzilnbxkw')</script></div> <!-- /#footer --></div></body></html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="autor" content="Roy Gu (roy@solarphp.cn)" /><meta name="copyright" content="Solar Framework for PHP 5 In China" /><meta name="description" content="Solar Php框架 最佳实践框架 完全面向对象 企设级应用设计模式 超强命令行工具 | Solar 中国"  /><meta name="keywords" content="php, framework, 框架, php框架, solar, solarphp" />
+   <title>1.3. &#21019;&#24314;&#24037;&#20316;&#21306;</title><link rel="stylesheet" href="style.css" type="text/css"><link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen" /><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Solar PHP &#20013;&#25991;&#25945;&#31243;"><link rel="up" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="prev" href="ch01s02.html" title="1.2. &#19979;&#36733;&#24182;&#23433;&#35013;Solar"><link rel="next" href="ch01s04.html" title="1.4. &#37197;&#32622;&#31995;&#32479;"><link rel="part" href="pt01.html" title="Part&nbsp;I.&nbsp;&#25196;&#24070;&#36215;&#33322;"><link rel="chapter" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="chapter" href="ch02.html" title="Chapter&nbsp;2.&nbsp;&#21160;&#24577;&#35843;&#24230;&#21608;&#26399;"><link rel="chapter" href="ch03.html" title="Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;"><link rel="chapter" href="ch04.html" title="Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;"><link rel="chapter" href="ch05.html" title="Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;"><link rel="chapter" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="chapter" href="ch07.html" title="Chapter&nbsp;7.&nbsp;&#29992;&#25143;&#35748;&#35777;&#12289;&#35282;&#33394;&#21450;&#35775;&#38382;&#25511;&#21046;"><link rel="chapter" href="ch08.html" title="Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;"><link rel="chapter" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="part" href="pt02.html" title="Part&nbsp;II.&nbsp;&#38468;&#24405;"><link rel="appendix" href="apa.html" title="Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;"><link rel="appendix" href="apb.html" title="Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="view"><!-- #header (main heading + logo with slogan) --><div id="head"><!-- main headings with search component --><div id="main"><h1><a href="/">SOLAR</a><sup><a href="http://solarphp.org.cn/viewtopic.php?f=13&t=165" target="_blank">1.1.2</a></sup></h1>      <h2><a href="#">Framework for PHP	5</a></h2></div><!-- /main headings with search component -->    <hr class="hidden" /><!-- main horizontal menu --><div id="mainMenu"><ul><li><a href="../">首　页<span></span></a></li><li><a href="../project.php">Solar 项目<span></span></a></li><li class="active"><a href="../manual-new/">用户手册<span></span></a></li> <li><a href="http://forum.solarphp.cn" target="_blank">开发者社区<span></span></a></li><li><a href="http://bug.solarphp.cn" target="_blank">Bug 跟踪<span></span></a></li><li><a href="../contributor.php">Contributor<span></span></a></li><li class="fr"><a href="http://solarphp.cn/apidoc/">API 文档<span></span></a></li><li class="fr"><a href="http://demo.solarphp.cn" target="_blank">Solar Demo<span></span></a></li></ul></div>    <!-- /main horizontal menu --><hr class="hidden" /><!-- logo with slogan --><div id="logo"></div>    <!-- /logo with slogan --><hr class="hidden" /></div><!-- /#header (main heading + logo with slogan) -->  <!-- #main content construct --><div id="content"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">1.3. &#21019;&#24314;&#24037;&#20316;&#21306;</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch01s02.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch01s04.html">Next</a></td></tr></table><hr></div><div class="sect1" title="1.3. &#21019;&#24314;&#24037;&#20316;&#21306;"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e133"></a>1.3. &#21019;&#24314;&#24037;&#20316;&#21306;</h2></div></div></div>
+                
+                <p>&#22312;&#26576;&#20123;&#26694;&#26550;&#20013;&#65292;&#20320;&#21487;&#20197;&#25226;&#26576;&#20010;&#39033;&#30446;&#30340;&#25991;&#20214;&#25918;&#22312;&#21333;&#29420;&#30340;app&#21644;lib&#30446;&#24405;&#20013;&#12290;Solar&#26159;&#38754;&#21521;&#31867;&#24211;&#21644;&#21629;&#21517;&#31354;&#38388;&#30340;&#65292;&#25152;&#20197;&#38750;Solar&#31995;&#32479;&#25991;&#20214;&#23558;&#34987;&#25918;&#22312;&#21516;&#19968;&#20010;&#22320;&#26041;&#65292;&#23601;&#20687;Solar&#26412;&#36523;&#19968;&#26679;&#65292;&#21482;&#19981;&#36807;&#35201;&#25226;&#23427;&#20204;&#25918;&#22312;&#19981;&#21516;&#30340;&#8220;&#24037;&#20316;&#21306;&#8221;&#12290;&#22312;&#36825;&#20010;&#28436;&#31034;&#25945;&#31243;&#20013;&#65292;&#25105;&#20204;&#25226;&#36825;&#37324;&#30340;&#8220;&#24037;&#20316;&#21306;&#8221;&#21629;&#21517;&#20026;Acme&#12290;</p>
+                <p>&#22312;&#21629;&#20196;&#34892;&#29615;&#22659;&#19979;&#65292;&#36827;&#20837;<span class="italic">SYSTEM</span>&#30446;&#24405;&#65292;&#36755;&#20837;make-vendor&#21629;&#20196;&#12290;&#20320;&#23558;&#20250;&#30475;&#21040;&#31867;&#20284;&#19979;&#38754;&#36825;&#31181;&#36755;&#20986;&#65306;</p>
+                <pre class="screen">$ ./script/solar make-vendor Acme
+Making vendor source directories.
+Creating SYSTEM/source/acme/config.
+Creating SYSTEM/source/acme/docs.
+Creating SYSTEM/source/acme/script.
+Creating SYSTEM/source/acme/tests.
+Creating SYSTEM/source/acme/tests/Mock.
+Creating SYSTEM/source/acme/tests/Mock/Acme.
+Creating SYSTEM/source/acme/tests/Test.
+Creating SYSTEM/source/acme/tests/Test/Acme.
+Creating SYSTEM/source/acme/Acme/Cli/Help.
+Creating SYSTEM/source/acme/Acme/Cli/Help/Info.
+Creating SYSTEM/source/acme/Acme/Cli/Help/Locale.
+Creating SYSTEM/source/acme/Acme/Controller/Bread/Locale.
+Creating SYSTEM/source/acme/Acme/Controller/Bread/Public.
+Creating SYSTEM/source/acme/Acme/Controller/Bread/View.
+Creating SYSTEM/source/acme/Acme/Controller/Command/Info.
+Creating SYSTEM/source/acme/Acme/Controller/Command/Locale.
+Creating SYSTEM/source/acme/Acme/Controller/Page/Layout.
+Creating SYSTEM/source/acme/Acme/Controller/Page/Locale.
+Creating SYSTEM/source/acme/Acme/Controller/Page/Public.
+Creating SYSTEM/source/acme/Acme/Controller/Page/View.
+Creating SYSTEM/source/acme/Acme/Model.
+Writing SYSTEM/source/acme/Acme/Cli/Help.php ... done.
+Writing SYSTEM/source/acme/Acme/Cli/Help/Info/options.php ... done.
+Writing SYSTEM/source/acme/Acme/Controller/Bread.php ... done.
+Writing SYSTEM/source/acme/Acme/Controller/Bread/Locale/en_US.php ... done.
+Writing SYSTEM/source/acme/Acme/Controller/Bread/View/_item.php ... done.
+Writing SYSTEM/source/acme/Acme/Controller/Bread/View/_list.php ... done.
+Writing SYSTEM/source/acme/Acme/Controller/Bread/View/add.php ... done.
+Writing SYSTEM/source/acme/Acme/Controller/Bread/View/browse.php ... done.
+Writing SYSTEM/source/acme/Acme/Controller/Bread/View/delete.php ... done.
+Writing SYSTEM/source/acme/Acme/Controller/Bread/View/edit.php ... done.
+Writing SYSTEM/source/acme/Acme/Controller/Bread/View/read.php ... done.
+Writing SYSTEM/source/acme/Acme/Controller/Bread/View/search.php ... done.
+Writing SYSTEM/source/acme/Acme/Controller/Command.php ... done.
+Writing SYSTEM/source/acme/Acme/Controller/Page.php ... done.
+Writing SYSTEM/source/acme/Acme/Filter.php ... done.
+Making directory SYSTEM/source/acme/Acme/Sql ... done.
+Writing SYSTEM/source/acme/Acme/Sql/Model.php ... done.
+Making directory SYSTEM/source/acme/Acme/Sql/Model ... done.
+Writing SYSTEM/source/acme/Acme/Sql/Model/Collection.php ... done.
+Writing SYSTEM/source/acme/Acme/Sql/Model/Metadata.php ... done.
+Writing SYSTEM/source/acme/Acme/Sql/Model/Record.php ... done.
+Writing SYSTEM/source/acme/config/default.php ... done.
+Writing SYSTEM/source/acme/config/run-tests.php ... done.
+Writing SYSTEM/source/acme/Acme/Cli/Help/Info/help.txt ... done.
+Making links for vendor 'Acme' ...
+    Making link 'include/Acme' ... done.
+    Making link 'include/Test/Acme' ... done.
+    Making link 'include/Mock/Acme' ... done.
+    Making link 'script/acme' ... done.
+... done.
+Making public symlinks for 'Acme' ...
+    Making public directory docroot/public/Acme/Controller ... done.
+    Making public symlink for Acme_Controller_Bread ... done.
+    Making public symlink for Acme_Controller_Page ... done.
+... done.
+Remember to add 'Acme_App' to the ['Solar_Controller_Front']['classes'] element in your config file so that it finds your apps.
+Remember to add 'Acme_Model' to the ['Solar_Sql_Model_Catalog']['classes'] element in your config file so that it finds your models.
+$</pre>
+                <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+                    <p>&#19978;&#38754;&#21457;&#29983;&#30340;&#20107;&#24773;&#26159;&#65306;Solar&#21019;&#24314;source/acme&#30446;&#24405;&#12289;&#29983;&#25104;&#22522;&#26412;&#30340;&#27169;&#22411;&#21644;&#25511;&#21046;&#22120;&#31867;&#24211;&#24182;&#21019;&#24314;&#35270;&#22270;&#24110;&#21161;&#12289;&#25968;&#25454;&#36807;&#28388;&#12289;&#20849;&#20139;&#12289;&#25991;&#26723;&#21450;&#27979;&#35797;&#31561;&#23376;&#30446;&#24405;&#12290;&#25509;&#30528;Solar&#21019;&#24314;include/Acme&#38142;&#25509;&#25351;&#21521;&#28304;&#25991;&#20214;&#12290;&#36825;&#26679;&#65292;&#20320;&#23601;&#21487;&#20197;&#22312;source&#30446;&#24405;&#20013;&#23384;&#25918;&#38750;&#31867;&#24211;&#25991;&#20214;&#65292;&#20294;&#26159;include&#36335;&#24452;&#20013;&#21364;&#21482;&#21253;&#21547;&#31867;&#24211;&#25991;&#20214;&#12290;</p>
+                </td></tr></table></div>
+            </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch01s02.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch01.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch01s04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">1.2. &#19979;&#36733;&#24182;&#23433;&#35013;Solar&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;1.4. &#37197;&#32622;&#31995;&#32479;</td></tr></table></div></div>  <!-- /#main content construct --> <!-- #footer -->  <div id="foot">  <p class="fl">Copyright &copy; 2010 Solar For PHP 5 In China, All Rights Reserved.</p>    <!-- /#   LINKS AND AUTHOR-SIGNATURE CANNOT BE REMOVED !!! -->    <p class="fr">Powered By&nbsp;&nbsp;<a href="mailto:roy@solarphp.cn">Roy Gu</a><span id="cnzz"><script src="http://s16.cnzz.com/stat.php?id=2386648&web_id=2386648&show=pic" language="JavaScript"></script></span>    </p>  </div>  <hr class="hidden" />  <div class="clear"></div>  <div id="solarcopy">  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-1.gif" style="border: 0 !important;" /></a>  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-2.gif" style="border: 0 !important;" /></a>  <br />  <script type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('mzsrzilnbxkw')</script></div> <!-- /#footer --></div></body></html>

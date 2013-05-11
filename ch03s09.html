@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="autor" content="Roy Gu (roy@solarphp.cn)" /><meta name="copyright" content="Solar Framework for PHP 5 In China" /><meta name="description" content="Solar Php框架 最佳实践框架 完全面向对象 企设级应用设计模式 超强命令行工具 | Solar 中国"  /><meta name="keywords" content="php, framework, 框架, php框架, solar, solarphp" />
+   <title>3.9 &#21333;&#34920;&#32487;&#25215;</title><link rel="stylesheet" href="style.css" type="text/css"><link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen" /><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Solar PHP &#20013;&#25991;&#25945;&#31243;"><link rel="up" href="ch03.html" title="Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;"><link rel="prev" href="ch03s08.html" title="3.8 &#29305;&#27530;&#23383;&#27573;&#22788;&#29702;"><link rel="next" href="ch04.html" title="Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;"><link rel="part" href="pt01.html" title="Part&nbsp;I.&nbsp;&#25196;&#24070;&#36215;&#33322;"><link rel="chapter" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="chapter" href="ch02.html" title="Chapter&nbsp;2.&nbsp;&#21160;&#24577;&#35843;&#24230;&#21608;&#26399;"><link rel="chapter" href="ch03.html" title="Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;"><link rel="chapter" href="ch04.html" title="Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;"><link rel="chapter" href="ch05.html" title="Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;"><link rel="chapter" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="chapter" href="ch07.html" title="Chapter&nbsp;7.&nbsp;&#29992;&#25143;&#35748;&#35777;&#12289;&#35282;&#33394;&#21450;&#35775;&#38382;&#25511;&#21046;"><link rel="chapter" href="ch08.html" title="Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;"><link rel="chapter" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="part" href="pt02.html" title="Part&nbsp;II.&nbsp;&#38468;&#24405;"><link rel="appendix" href="apa.html" title="Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;"><link rel="appendix" href="apb.html" title="Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;"><link rel="subsection" href="ch03s09.html#d4e1279" title="3.9.1 &#21551;&#29992;&#21333;&#34920;&#32487;&#25215;"><link rel="subsection" href="ch03s09.html#d4e1319" title="3.9.2 &#32487;&#25215;&#27169;&#22411;"><link rel="subsection" href="ch03s09.html#d4e1325" title="3.9.3 &#33719;&#21462;&#25968;&#25454;"><link rel="subsection" href="ch03s09.html#d4e1331" title="3.9.4 &#21019;&#24314;&#21644;&#20445;&#23384;"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="view"><!-- #header (main heading + logo with slogan) --><div id="head"><!-- main headings with search component --><div id="main"><h1><a href="/">SOLAR</a><sup><a href="http://solarphp.org.cn/viewtopic.php?f=13&t=165" target="_blank">1.1.2</a></sup></h1>      <h2><a href="#">Framework for PHP	5</a></h2></div><!-- /main headings with search component -->    <hr class="hidden" /><!-- main horizontal menu --><div id="mainMenu"><ul><li><a href="../">首　页<span></span></a></li><li><a href="../project.php">Solar 项目<span></span></a></li><li class="active"><a href="../manual-new/">用户手册<span></span></a></li> <li><a href="http://forum.solarphp.cn" target="_blank">开发者社区<span></span></a></li><li><a href="http://bug.solarphp.cn" target="_blank">Bug 跟踪<span></span></a></li><li><a href="../contributor.php">Contributor<span></span></a></li><li class="fr"><a href="http://solarphp.cn/apidoc/">API 文档<span></span></a></li><li class="fr"><a href="http://demo.solarphp.cn" target="_blank">Solar Demo<span></span></a></li></ul></div>    <!-- /main horizontal menu --><hr class="hidden" /><!-- logo with slogan --><div id="logo"></div>    <!-- /logo with slogan --><hr class="hidden" /></div><!-- /#header (main heading + logo with slogan) -->  <!-- #main content construct --><div id="content"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.9 &#21333;&#34920;&#32487;&#25215;</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch03s08.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch04.html">Next</a></td></tr></table><hr></div><div class="sect1" title="3.9 &#21333;&#34920;&#32487;&#25215;"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e1274"></a>3.9 &#21333;&#34920;&#32487;&#25215;</h2></div></div></div>
+                
+                <p><a class="ulink" href="http://martinfowler.com/eaaCatalog/singleTableInheritance.html" target="_top">SingleTableInheritance</a>&#25552;&#20379;&#20102;&#22810;&#20010;&#30456;&#20284;&#20294;&#29420;&#31435;&#30340;&#31867;&#20351;&#29992;&#19968;&#20010;&#25968;&#25454;&#24211;&#34920;&#30340;&#36884;&#24452;&#12290;&#25105;&#20204;&#19981;&#22312;&#36825;&#35752;&#35770;&#36825;&#31181;&#25216;&#26415;&#30340;&#20248;&#32570;&#28857;&#65292;&#25105;&#20204;&#21482;&#26159;&#28436;&#31034;&#22914;&#20309;&#22312;Solar&#27169;&#22411;&#31995;&#32479;&#20013;&#20351;&#29992;&#36825;&#31181;&#25216;&#26415;&#12290;</p>
+                <p>&#20551;&#35774;&#20320;&#26377;&#19977;&#31181;&#31867;&#22411;&#30340;&#20869;&#23481;&#65306;&#35780;&#35770;&#12289;&#25991;&#31456;&#21644;wiki&#39029;&#38754;&#12290;&#20174;&#26412;&#36136;&#19978;&#35762;&#65292;&#23427;&#20204;&#20351;&#29992;&#30456;&#21516;&#30340;&#25968;&#25454;&#20803;&#32032;&#65306;&#20316;&#32773;&#21517;&#12289;&#26631;&#39064;&#12289;&#21451;&#22909;&#30340;URI&#22320;&#22336;&#21644;&#20869;&#23481;&#20307;&#12290;&#20351;&#29992;&#21333;&#34920;&#32487;&#25215;&#65292;&#20320;&#21487;&#20197;&#29992;&#19968;&#24352;&#34920;&#20445;&#23384;&#36825;&#20123;&#20869;&#23481;&#65292;&#21516;&#26102;&#29992;&#19981;&#21516;&#30340;&#31867;&#26469;&#34920;&#31034;&#23427;&#20204;&#65292;&#19988;&#23545;&#27599;&#31181;&#20869;&#23481;&#20351;&#29992;&#19981;&#21516;&#30340;&#26041;&#27861;&#12290;</p>
+                <div class="sect2" title="3.9.1 &#21551;&#29992;&#21333;&#34920;&#32487;&#25215;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e1279"></a>3.9.1 &#21551;&#29992;&#21333;&#34920;&#32487;&#25215;</h3></div></div></div>
+                    
+                    <p>&#20026;&#20102;&#21551;&#29992;&#21333;&#34920;&#32487;&#25215;&#65292;&#20320;&#35201;&#21478;&#22806;&#28155;&#21152;&#19968;&#20010;&#23383;&#27573;&#26469;&#25351;&#26126;&#25968;&#25454;&#34920;&#20013;&#27599;&#19968;&#34892;&#35760;&#24405;&#20351;&#29992;&#21738;&#20010;&#31867;&#21517;&#21518;&#32512;&#12290;&#28982;&#21518;&#65292;&#20320;&#23558;&#36890;&#36807;&#35774;&#32622;<code class="code">$_inherit_col</code>&#23646;&#24615;&#30340;&#20540;&#21578;&#35785;&#27169;&#22411;&#31995;&#32479;&#21018;&#25165;&#28155;&#21152;&#30340;&#23383;&#27573;&#30340;&#21517;&#23383;&#12290;&#36825;&#26679;&#30340;&#35805;&#65292;&#24403;&#20320;&#33719;&#21462;&#25968;&#25454;&#26102;&#65292;&#27169;&#22411;&#20250;&#20026;&#20320;&#21019;&#24314;&#27491;&#30830;&#30340;&#23545;&#35937;&#12290;&#65288;&#40664;&#35748;&#24773;&#20917;&#19979;&#65292;&#27169;&#22411;&#20250;&#26597;&#25214;<code class="code">inherit</code>&#23383;&#27573;&#65289;</p>
+                    <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+<b class="hl-keyword">class</b> Acme_Model_Contents <b class="hl-keyword">extends</b> Acme_Sql_Model
+{
+    <b class="hl-keyword">protected</b> method _setup()
+    {
+        $this-&gt;_inherit_col = <b class="hl-string"><i style="color:red">'inherit'</i></b>;
+    }
+}</pre>
+                    <p>&#19979;&#38754;&#26159;&#19968;&#20010;&#25968;&#25454;&#34920;&#24314;&#31435;&#21333;&#34920;&#32487;&#25215;&#30340;&#31034;&#20363;&#65307;&#34920;&#21517;&#26159;"contents"&#12290;</p>
+                    <div class="table"><a name="d4e1286"></a><p class="title"><b>Table&nbsp;3.2.&nbsp;&#21333;&#34920;&#32487;&#25215;&#31034;&#20363;&#25968;&#25454;</b></p><div class="table-contents">
+                        
+                        <table summary="&#21333;&#34920;&#32487;&#25215;&#31034;&#20363;&#25968;&#25454;" border="1"><colgroup><col><col><col><col><col><col></colgroup><thead><tr><th>id</th><th>inherit</th><th>author</th><th>title</th><th>slug</th><th>body</th></tr></thead><tbody><tr><td>1</td><td>Articles</td><td>Roy Gu</td><td>Article Subject</td><td>article-subject</td><td>The text of the article.</td></tr><tr><td>2</td><td>Reviews</td><td>Sanakan</td><td>Review Title</td><td>review-title</td><td>The text of the review.</td></tr><tr><td>3</td><td>Wikis</td><td>z.sj</td><td>Wiki Page Name</td><td>Wiki_Page_Name</td><td>The text of the wiki page.</td></tr></tbody></table>
+                    </div></div><br class="table-break">
+                </div>
+                <div class="sect2" title="3.9.2 &#32487;&#25215;&#27169;&#22411;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e1319"></a>3.9.2 &#32487;&#25215;&#27169;&#22411;</h3></div></div></div>
+                    
+                    <p>&#29616;&#22312;&#65292;&#25105;&#20204;&#26377;&#19968;&#24352;&#34920;"contents"&#20197;&#21450;&#23545;&#24212;&#30340;&#27169;&#22411;&#65292;&#25105;&#20204;&#24517;&#39035;&#35201;&#24314;&#31435;&#19981;&#21516;&#32487;&#25215;&#31867;&#22411;&#30340;&#27169;&#22411;&#12290;&#23601;&#20687;&#20320;&#22788;&#29702;&#27491;&#24120;&#30340;&#25968;&#25454;&#34920;&#19968;&#26679;&#65292;&#36825;&#37324;&#25105;&#20204;&#20063;&#20351;&#29992;<span class="command"><strong>make-model</strong></span>&#21629;&#20196;&#65292;&#20294;&#26159;&#35201;&#28155;&#21478;<code class="code">--extends</code>&#26631;&#24535;&#65292;&#29992;&#20110;&#25351;&#26126;&#26032;&#24314;&#30340;&#27169;&#22411;&#31867;&#32487;&#25215;&#33258;contents&#27169;&#22411;&#12290;</p>
+                    <pre class="screen">$ ./script/solar make-model Acme_Model_Articles --extends Acme_Model_Contents
+...
+$ ./script/solar make-model Acme_Model_Reviews --extends Acme_Model_Contents
+...
+$ ./script/solar make-model Acme_Model_Wikis --extends Acme_Model_Contents
+...
+$</pre>
+                </div>
+                <div class="sect2" title="3.9.3 &#33719;&#21462;&#25968;&#25454;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e1325"></a>3.9.3 &#33719;&#21462;&#25968;&#25454;</h3></div></div></div>
+                    
+                    <p>&#20174;&#32487;&#25215;&#27169;&#22411;&#33719;&#21462;&#35760;&#24405;&#25110;&#35760;&#24405;&#38598;&#23601;&#20687;&#20174;&#38750;&#32487;&#25215;&#27169;&#22411;&#33719;&#21462;&#19968;&#26679;&#12290;&#36825;&#20123;&#31867;&#21644;&#29238;&#27169;&#22411;&#20351;&#29992;&#21516;&#19968;&#24352;&#25968;&#25454;&#34920;&#65292;&#20294;&#26159;&#23427;&#20204;&#20250;&#33258;&#21160;&#38480;&#21046;&#20351;&#29992;&#26412;&#32487;&#25215;&#31867;&#22411;&#30340;&#25968;&#25454;&#34892;&#12290;</p>
+                    <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+<b class="hl-tag" style="color: blue">/**
+ * @var $model Solar_Sql_Model_Catalog
+ */</b>
+
+<i class="hl-comment" style="color: silver">// fetch all "articles" records from the "contents" table</i>
+$only_articles = $model-&gt;articles-&gt;fetchAll();
+
+<i class="hl-comment" style="color: silver">// fetch all "reviews" records from the "contents" table</i>
+$only_reviews = $model-&gt;reviews-&gt;fetchAll();
+
+<i class="hl-comment" style="color: silver">// fetch all "wikis" records from the "contents" table</i>
+$only_wikis = $model-&gt;wikis-&gt;fetchAll();</pre>
+                    <p>&#20320;&#29978;&#33267;&#21487;&#20197;&#20351;&#29992;&#29238;&#27169;&#22411;&#19968;&#27425;&#24615;&#33719;&#21462;&#25152;&#26377;&#30340;&#65288;&#32487;&#25215;&#31867;&#22411;&#65289;&#25968;&#25454;&#65307;&#35760;&#24405;&#38598;&#20013;&#30340;&#27599;&#20010;&#35760;&#24405;&#37117;&#20250;&#34987;&#23454;&#20363;&#21270;&#20026;&#21512;&#36866;&#30340;&#32487;&#25215;&#31867;&#22411;&#23545;&#35937;&#12290;</p>
+                    <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+<b class="hl-tag" style="color: blue">/**
+ * @var $model Solar_Sql_Model_Catalog
+ */</b>
+
+<i class="hl-comment" style="color: silver">// fetch all records of all inheritance types from the "contents" table</i>
+$list = $model-&gt;contents-&gt;fetchAll();
+
+<i class="hl-comment" style="color: silver">// get each record from the collection</i>
+<b class="hl-keyword">foreach</b> ($list <b class="hl-keyword">as</b> $item) {
+    <i class="hl-comment" style="color: silver">// each item in the collection uses its own</i>
+    <i class="hl-comment" style="color: silver">// inheritance class type</i>
+    <b class="hl-keyword">echo</b> get_class($item) . <b class="hl-string"><i style="color:red">'&lt;br /&gt;'</i></b>;
+}</pre>
+                </div>
+                <div class="sect2" title="3.9.4 &#21019;&#24314;&#21644;&#20445;&#23384;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e1331"></a>3.9.4 &#21019;&#24314;&#21644;&#20445;&#23384;</h3></div></div></div>
+                    
+                    <p>&#24403;&#20320;&#21019;&#24314;&#25110;&#20445;&#23384;&#19968;&#20010;&#21333;&#34920;&#32487;&#25215;&#31867;&#22411;&#30340;&#35760;&#24405;&#26102;&#65292;&#35760;&#24405;&#30340;&#32487;&#25215;&#20540;&#20250;&#26681;&#25454;&#20320;&#21019;&#24314;&#35760;&#24405;&#30340;&#27169;&#22411;&#33258;&#21160;&#22635;&#20805;&#12290;</p>
+                    <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+<b class="hl-tag" style="color: blue">/**
+ * @var $model Solar_Sql_Model_Catalog
+ */</b>
+
+<i class="hl-comment" style="color: silver">// create a new pre-populated article.</i>
+$article = $model-&gt;articles-&gt;fetchNew(<b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'author'</i></b> =&gt; <b class="hl-string"><i style="color:red">'pmjones'</i></b>,
+    <b class="hl-string"><i style="color:red">'title'</i></b>  =&gt; <b class="hl-string"><i style="color:red">'A New Article'</i></b>,
+    <b class="hl-string"><i style="color:red">'slug'</i></b>   =&gt; <b class="hl-string"><i style="color:red">'a-new-article'</i></b>,
+    <b class="hl-string"><i style="color:red">'body'</i></b>   =&gt; <b class="hl-string"><i style="color:red">'The body of the new article.'</i></b>,
+));
+
+<i class="hl-comment" style="color: silver">// when we save, the property "inherit = 'Article'"</i>
+<i class="hl-comment" style="color: silver">// will be set automatically for us.</i>
+$article-&gt;save();</pre>
+                </div>
+            </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch03s08.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch03.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">3.8 &#29305;&#27530;&#23383;&#27573;&#22788;&#29702;&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;</td></tr></table></div></div>  <!-- /#main content construct --> <!-- #footer -->  <div id="foot">  <p class="fl">Copyright &copy; 2010 Solar For PHP 5 In China, All Rights Reserved.</p>    <!-- /#   LINKS AND AUTHOR-SIGNATURE CANNOT BE REMOVED !!! -->    <p class="fr">Powered By&nbsp;&nbsp;<a href="mailto:roy@solarphp.cn">Roy Gu</a><span id="cnzz"><script src="http://s16.cnzz.com/stat.php?id=2386648&web_id=2386648&show=pic" language="JavaScript"></script></span>    </p>  </div>  <hr class="hidden" />  <div class="clear"></div>  <div id="solarcopy">  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-1.gif" style="border: 0 !important;" /></a>  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-2.gif" style="border: 0 !important;" /></a>  <br />  <script type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('mzsrzilnbxkw')</script></div> <!-- /#footer --></div></body></html>

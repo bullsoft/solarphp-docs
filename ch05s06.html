@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="autor" content="Roy Gu (roy@solarphp.cn)" /><meta name="copyright" content="Solar Framework for PHP 5 In China" /><meta name="description" content="Solar Php框架 最佳实践框架 完全面向对象 企设级应用设计模式 超强命令行工具 | Solar 中国"  /><meta name="keywords" content="php, framework, 框架, php框架, solar, solarphp" />
+   <title>5.6 &#24067;&#23616;</title><link rel="stylesheet" href="style.css" type="text/css"><link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen" /><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Solar PHP &#20013;&#25991;&#25945;&#31243;"><link rel="up" href="ch05.html" title="Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;"><link rel="prev" href="ch05s05.html" title="5.5 &#35270;&#22270;&#36741;&#21161;&#31867;"><link rel="next" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="part" href="pt01.html" title="Part&nbsp;I.&nbsp;&#25196;&#24070;&#36215;&#33322;"><link rel="chapter" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="chapter" href="ch02.html" title="Chapter&nbsp;2.&nbsp;&#21160;&#24577;&#35843;&#24230;&#21608;&#26399;"><link rel="chapter" href="ch03.html" title="Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;"><link rel="chapter" href="ch04.html" title="Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;"><link rel="chapter" href="ch05.html" title="Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;"><link rel="chapter" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="chapter" href="ch07.html" title="Chapter&nbsp;7.&nbsp;&#29992;&#25143;&#35748;&#35777;&#12289;&#35282;&#33394;&#21450;&#35775;&#38382;&#25511;&#21046;"><link rel="chapter" href="ch08.html" title="Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;"><link rel="chapter" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="part" href="pt02.html" title="Part&nbsp;II.&nbsp;&#38468;&#24405;"><link rel="appendix" href="apa.html" title="Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;"><link rel="appendix" href="apb.html" title="Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;"><link rel="subsection" href="ch05s06.html#d4e2102" title="5.6.1 &#25351;&#23450;&#40664;&#35748;&#24067;&#23616;"><link rel="subsection" href="ch05s06.html#d4e2118" title="5.6.2 &#21019;&#24314;&#40664;&#35748;&#24067;&#23616;"><link rel="subsection" href="ch05s06.html#d4e2129" title="5.6.3 &#21019;&#24314;&#23376;&#35270;&#22270;_head.php"><link rel="subsection" href="ch05s06.html#d4e2142" title="5.6.4 &#21019;&#24314;&#23376;&#35270;&#22270;_body.php"><link rel="subsection" href="ch05s06.html#d4e2152" title="5.6.5 &#21019;&#24314;&#23376;&#35270;&#22270; _header.php&#21644;_footer"><link rel="subsection" href="ch05s06.html#d4e2167" title="5.6.6 &#21019;&#24314;&#23376;&#35270;&#22270;_nav.php&#21644;_local.php"><link rel="subsection" href="ch05s06.html#d4e2187" title="5.6.7 &#21019;&#24314;&#26679;&#24335;&#34920;"><link rel="subsection" href="ch05s06.html#d4e2216" title="5.6.8 &#35206;&#30422;&#24067;&#23616;"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="view"><!-- #header (main heading + logo with slogan) --><div id="head"><!-- main headings with search component --><div id="main"><h1><a href="/">SOLAR</a><sup><a href="http://solarphp.org.cn/viewtopic.php?f=13&t=165" target="_blank">1.1.2</a></sup></h1>      <h2><a href="#">Framework for PHP	5</a></h2></div><!-- /main headings with search component -->    <hr class="hidden" /><!-- main horizontal menu --><div id="mainMenu"><ul><li><a href="../">首　页<span></span></a></li><li><a href="../project.php">Solar 项目<span></span></a></li><li class="active"><a href="../manual-new/">用户手册<span></span></a></li> <li><a href="http://forum.solarphp.cn" target="_blank">开发者社区<span></span></a></li><li><a href="http://bug.solarphp.cn" target="_blank">Bug 跟踪<span></span></a></li><li><a href="../contributor.php">Contributor<span></span></a></li><li class="fr"><a href="http://solarphp.cn/apidoc/">API 文档<span></span></a></li><li class="fr"><a href="http://demo.solarphp.cn" target="_blank">Solar Demo<span></span></a></li></ul></div>    <!-- /main horizontal menu --><hr class="hidden" /><!-- logo with slogan --><div id="logo"></div>    <!-- /logo with slogan --><hr class="hidden" /></div><!-- /#header (main heading + logo with slogan) -->  <!-- #main content construct --><div id="content"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.6 &#24067;&#23616;</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch05s05.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch06.html">Next</a></td></tr></table><hr></div><div class="sect1" title="5.6 &#24067;&#23616;"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e2091"></a>5.6 &#24067;&#23616;</h2></div></div></div>
+                
+                <p>&#31616;&#20171;&#20013;&#25105;&#20204;&#25552;&#21040;&#36807;&#65292;&#24067;&#23616;&#35270;&#22270;&#22312;&#25972;&#20010;&#24212;&#29992;&#20013;&#26159;&#20849;&#20139;&#30340;&#65292;&#23427;&#21253;&#35065;&#25511;&#21046;&#22120;&#35270;&#22270;&#12290;&#19968;&#20010;&#24067;&#23616;&#35270;&#22270;&#36890;&#24120;&#21253;&#21547;&#19968;&#20123;&#26222;&#36890;&#30340;&#39029;&#38754;&#20803;&#32032;&#65292;&#20363;&#22914;&#65306;&#22836;&#37096;&#12289;&#24213;&#37096;&#12289;&#23548;&#33322;&#12289;&#20869;&#23481;&#21306;&#65288;&#26174;&#31034;&#35270;&#22270;&#36755;&#20986;&#65289;&#12290;&#24067;&#23616;&#35270;&#22270;&#24120;&#24120;&#34987;&#20998;&#20026;&#29420;&#31435;&#30340;&#23376;&#35270;&#22270;&#12290;&#20363;&#22914;&#65292;&#39029;&#38754;&#22836;&#37096;&#21487;&#33021;&#23601;&#26159;&#19968;&#20010;&#23376;&#35270;&#22270;&#65292;&#20840;&#23616;&#30340;&#23548;&#33322;&#21448;&#26159;&#21478;&#19968;&#20010;&#65292;&#31561;&#31561;&#12290;&#20027;&#35270;&#22270;&#21253;&#21547;&#23376;&#35270;&#22270;&#30340;&#24341;&#29992;&#12290;&#20320;&#21487;&#20197;&#20351;&#29992;&#21463;&#20445;&#25252;&#23646;&#24615;<code class="code">$_layout_default</code>&#26469;&#25351;&#23450;&#24212;&#29992;&#30340;&#20027;&#35270;&#22270;&#12290;</p>
+                <p>&#19979;&#38754;&#36825;&#24352;&#22270;&#26174;&#31034;&#20102;&#20027;&#35270;&#22270;&#25991;&#20214;&#21644;&#22806;&#37096;&#23481;&#22120;&#12289;&#40644;&#33394;&#23481;&#22120;&#21450;&#27599;&#20010;&#23376;&#35270;&#22270;&#30340;&#20851;&#31995;&#12290;&#27599;&#20010;&#23481;&#22120;&#30340;&#23450;&#20301;&#26159;&#36890;&#36807;&#23618;&#21472;&#26679;&#24335;&#34920;&#65288;CSS&#65289;&#23436;&#25104;&#30340;&#12290;</p>
+                <div class="figure"><a name="d4e2096"></a><p class="title"><b>Figure&nbsp;5.1.&nbsp;&#20027;&#35270;&#22270;&#21253;&#21547;&#22810;&#20010;&#23376;&#35270;&#22270;</b></p><div class="figure-contents">
+                    
+                    <div><img src="../manual-new/figures/layout.png" alt="&#20027;&#35270;&#22270;&#21253;&#21547;&#22810;&#20010;&#23376;&#35270;&#22270;"></div>
+                </div></div><br class="figure-break">
+                <p>&#22806;&#37096;&#21644;&#40644;&#33394;&#21306;&#22495;&#20195;&#34920;&#20027;&#35270;&#22270;&#12290;<code class="code">_head.php</code>&#37096;&#20998;&#26159;&#39029;&#38754;&#28304;&#20195;&#30721;&#30340;&#19968;&#37096;&#20998;&#65292;&#20294;&#26159;&#23427;&#24182;&#19981;&#22312;&#23631;&#24149;&#19978;&#26174;&#31034;&#12290;</p>
+                <p>&#35753;&#25105;&#20204;&#25226;&#31532;&#19968;&#31456;&#21019;&#24314;&#30340;&#21338;&#23458;&#21464;&#25104;&#19978;&#22270;&#30340;&#26679;&#23376;&#12290;</p>
+                <div class="sect2" title="5.6.1 &#25351;&#23450;&#40664;&#35748;&#24067;&#23616;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e2102"></a>5.6.1 &#25351;&#23450;&#40664;&#35748;&#24067;&#23616;</h3></div></div></div>
+                    
+                    <p>&#25105;&#20204;&#35201;&#20570;&#30340;&#31532;&#19968;&#20214;&#20107;&#23601;&#26159;&#25351;&#23450;&#21338;&#23458;&#24212;&#29992;&#20351;&#29992;&#21738;&#20010;&#24067;&#23616;&#12290;&#35760;&#20303;<code class="code">Acme_App_Blog</code>&#24212;&#29992;&#31867;&#32487;&#25215;&#33258;<code class="code">Acme_Controller_Page</code>&#31867;&#12290;</p>
+                    <p>&#20999;&#25442;&#33267;<code class="code">SYSTEM/source/acme/Acme/Controller</code>&#30446;&#24405;&#65292;&#32534;&#36753;&#25991;&#20214;<code class="code">Page.php</code>&#12290;</p>
+                    <pre class="screen">$ cd SYSTEM/source/acme/Acme/Controller/
+$ vim Page.php</pre>
+                    <p>&#22312;&#31867;&#20013;&#21152;&#20837;&#20197;&#19979;&#20195;&#30721;&#65292;&#23601;&#20687;&#19979;&#38754;&#36825;&#26679;&#65306;</p>
+                    <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span> 
+<b class="hl-keyword">abstract</b> <b class="hl-keyword">class</b> Acme_Controller_Page <b class="hl-keyword">extends</b> Solar_Controller_Page
+{
+    <b class="hl-tag" style="color: blue">/**
+     * 
+     * Sets up the Acme_App environment.
+     * 
+     * @return void
+     * 
+     */</b>
+    <b class="hl-keyword">protected</b> <b class="hl-keyword">function</b> _setup()
+    {
+        parent::_setup();
+        
+        <i class="hl-comment" style="color: silver">// set the default layout for all applications that </i>
+        <i class="hl-comment" style="color: silver">// extend Acme_Controller_Page</i>
+        $this-&gt;_layout_default = <b class="hl-string"><i style="color:red">'blog'</i></b>;
+    }
+}
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+                        <p>&#20320;&#20063;&#21487;&#33021;&#36890;&#36807;&#23450;&#20041;&#20445;&#25252;&#23646;&#24615;<code class="code">$_layout_default</code>&#26469;&#23436;&#25104;&#36825;&#20214;&#20107;&#12290;</p>
+                        <p><code class="code">protected $_layout_default = 'blog';</code></p>
+                    </td></tr></table></div>
+                </div>
+                <div class="sect2" title="5.6.2 &#21019;&#24314;&#40664;&#35748;&#24067;&#23616;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e2118"></a>5.6.2 &#21019;&#24314;&#40664;&#35748;&#24067;&#23616;</h3></div></div></div>
+                    
+                    <p>&#36825;&#37324;&#65292;&#40664;&#35748;&#24067;&#23616;&#26159;<code class="code">blog.php</code>&#65292;&#19988;&#20301;&#20110;<code class="code">SYSTEM/source/acme/Acme/Controller/Page/Layout</code>&#30446;&#24405;&#12290;</p>
+                    <pre class="screen">$ cd SYSTEM/source/acme/Acme/Controller/Page/Layout
+$ vim blog.php</pre>
+                    <p>&#22312;&#40664;&#35748;&#24067;&#23616;&#20013;&#31896;&#36148;&#20197;&#19979;&#20195;&#30721;&#12290;</p>
+                    <pre class="programlisting">&lt;!DOCTYPE html <b class="hl-keyword">PUBLIC</b> <b class="hl-string"><i style="color:red">"-//W3C//DTD XHTML 1.0 Strict//EN"</i></b> <b class="hl-string"><i style="color:red">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</i></b>&gt;
+&lt;html xmlns=<b class="hl-string"><i style="color:red">"http://www.w3.org/1999/xhtml"</i></b>&gt;
+<span class="hl-directive" style="color: maroon">&lt;?php</span> 
+<i class="hl-comment" style="color: silver">// generate the &lt;head&gt;</i>
+<b class="hl-keyword">include</b> $this-&gt;template(<b class="hl-string"><i style="color:red">'_head.php'</i></b>); 
+<span class="hl-directive" style="color: maroon">?&gt;</span>
+
+<span class="hl-directive" style="color: maroon">&lt;?php</span> 
+<i class="hl-comment" style="color: silver">// generate the &lt;body&gt;</i>
+<b class="hl-keyword">include</b> $this-&gt;template(<b class="hl-string"><i style="color:red">'_body.php'</i></b>); 
+<span class="hl-directive" style="color: maroon">?&gt;</span>
+&lt;/html&gt;</pre>
+                    <p>&#36825;&#26159;&#25105;&#20204;&#30340;&#20027;&#35270;&#22270;&#33050;&#26412;&#12290;&#20854;&#20013;&#24341;&#29992;&#20102;2&#20010;&#23376;&#35270;&#22270;&#65292;&#20998;&#21035;&#26159;<code class="code">_head.php</code>&#21644;<code class="code">_body.php</code>&#12290;</p>
+                </div>
+                <div class="sect2" title="5.6.3 &#21019;&#24314;&#23376;&#35270;&#22270;_head.php"><div class="titlepage"><div><div><h3 class="title"><a name="d4e2129"></a>5.6.3 &#21019;&#24314;&#23376;&#35270;&#22270;_head.php</h3></div></div></div>
+                    
+                    <p>&#29616;&#22312;&#25105;&#20204;&#35201;&#21019;&#24314;&#23376;&#35270;&#22270;<code class="code">_head.php</code>&#12290;&#20551;&#35774;&#20320;&#20173;&#28982;&#22312;<code class="code">SYSTEM/source/acme/Acme/Controller/Page/Layout</code>&#30446;&#24405;&#19979;&#65292;&#21019;&#24314;<code class="code">_head.php</code>&#25991;&#20214;&#12290;</p>
+                    <pre class="screen">$ vim _head.php</pre>
+                    <p>&#22312;&#25991;&#20214;&#20013;&#31896;&#36148;&#20197;&#19979;&#20195;&#30721;&#24182;&#20445;&#23384;&#25991;&#20214;&#12290;</p>
+                    <pre class="programlisting">&lt;head&gt;
+    <span class="hl-directive" style="color: maroon">&lt;?php</span> 
+    <i class="hl-comment" style="color: silver">// use the Solar_View_Head::head() helper </i>
+    <i class="hl-comment" style="color: silver">// add a base stylesheet, then set any other head elements</i>
+    <b class="hl-keyword">echo</b> $this-&gt;head()-&gt;addStyleBase(<b class="hl-string"><i style="color:red">'Acme/Controller/Page/styles/blog.css'</i></b>)
+                      -&gt;fetch(); 
+    <span class="hl-directive" style="color: maroon">?&gt;</span>
+&lt;/head&gt;</pre>
+                    <p>&#36825;&#20010;&#35270;&#22270;&#33050;&#26412;&#36127;&#36131;&#22788;&#29702;<code class="code">&lt;head&gt;&lt;/head&gt;</code>&#26631;&#31614;&#30340;&#20869;&#23481;&#12290;&#23427;&#36890;&#36807;<code class="code">Solar_View_Helper_Head</code>&#36741;&#21161;&#31867;&#35774;&#32622;&#20027;&#26679;&#24335;&#34920;&#21450;&#28155;&#21152;&#20854;&#20182;&#22836;&#37096;&#20803;&#32032;&#12290;&#35814;&#24773;&#35831;&#26597;&#30475;<a class="ulink" href="http://solarphp.com/class/Solar_View_Helper_Head" target="_top">Solar_View_Helper_Head</a>&#36741;&#21161;&#31867;&#30340;API&#25991;&#26723;&#12290;</p>
+                </div>
+                <div class="sect2" title="5.6.4 &#21019;&#24314;&#23376;&#35270;&#22270;_body.php"><div class="titlepage"><div><div><h3 class="title"><a name="d4e2142"></a>5.6.4 &#21019;&#24314;&#23376;&#35270;&#22270;_body.php</h3></div></div></div>
+                    
+                    <p>&#20551;&#35774;&#20320;&#20173;&#28982;&#22312;<code class="code">SYSTEM/source/acme/Acme/Controller/Page/Layout</code>&#30446;&#24405;&#19979;&#65292;&#21019;&#24314;<code class="code">_body.php</code>&#25991;&#20214;&#12290;</p>
+                    <pre class="screen">$ vim _body.php</pre>
+                    <p>&#22312;&#25991;&#20214;&#20013;&#31896;&#36148;&#20197;&#19979;&#20195;&#30721;&#24182;&#20445;&#23384;&#25991;&#20214;&#12290;</p>
+                    <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span> <i class="hl-comment" style="color: silver">// set the id of the body tag. Handy for css and javascript ?&gt;</i>
+&lt;body id=<b class="hl-string"><i style="color:red">"&lt;?php echo "</i></b>{$this-&gt;controller}-page<b class="hl-string"><i style="color:red">" ?&gt;"</i></b>&gt;
+&lt;div id=<b class="hl-string"><i style="color:red">"wrap"</i></b>&gt;    
+    &lt;div id=<b class="hl-string"><i style="color:red">"header"</i></b>&gt;
+        <span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">include</b> $this-&gt;template(<b class="hl-string"><i style="color:red">'_header.php'</i></b>); <span class="hl-directive" style="color: maroon">?&gt;</span>
+    &lt;/div&gt;
+
+    &lt;div id=<b class="hl-string"><i style="color:red">"nav"</i></b>&gt;
+        <span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">include</b> $this-&gt;template(<b class="hl-string"><i style="color:red">'_nav.php'</i></b>); <span class="hl-directive" style="color: maroon">?&gt;</span>
+    &lt;/div&gt;
+
+    &lt;div id=<b class="hl-string"><i style="color:red">"main"</i></b>&gt;
+        <span class="hl-directive" style="color: maroon">&lt;?php</span> <i class="hl-comment" style="color: silver">// Add the content from the application controller ?&gt;</i>
+        <span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">echo</b> $this-&gt;layout_content; <span class="hl-directive" style="color: maroon">?&gt;</span>
+    &lt;/div&gt;
+
+    &lt;div id=<b class="hl-string"><i style="color:red">"footer"</i></b>&gt;
+        <span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">include</b> $this-&gt;template(<b class="hl-string"><i style="color:red">'_footer.php'</i></b>); <span class="hl-directive" style="color: maroon">?&gt;</span>
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;</pre>
+                    <p>&#35270;&#22270;&#33050;&#26412;&#23450;&#20041;&#20102;&#39029;&#38754;&#30340;&#32467;&#26500;&#12290;&#23618;&#21472;&#26679;&#24335;&#34920;&#23450;&#20041;&#20102;&#27599;&#20010;&#39029;&#38754;&#20803;&#32032;&#30340;&#26679;&#24335;&#12290;&#39029;&#38754;&#30340;&#27599;&#19968;&#20010;&#20803;&#32032;&#65292;&#20363;&#22914;&#39029;&#38754;&#22836;&#37096;&#65288;header&#65289;&#65292;&#37117;&#26377;&#33258;&#24049;&#30340;&#23376;&#35270;&#22270;&#33050;&#26412;&#12290;&#24212;&#29992;&#31243;&#24207;&#30340;&#25511;&#21046;&#22120;&#21160;&#20316;&#36755;&#20986;&#36890;&#36807;<code class="code">$this-&gt;layout_content</code>&#23646;&#24615;&#27880;&#20837;&#21040;&#35270;&#22270;&#20013;&#12290;</p>
+                </div>
+                <div class="sect2" title="5.6.5 &#21019;&#24314;&#23376;&#35270;&#22270; _header.php&#21644;_footer"><div class="titlepage"><div><div><h3 class="title"><a name="d4e2152"></a>5.6.5 &#21019;&#24314;&#23376;&#35270;&#22270; _header.php&#21644;_footer</h3></div></div></div>
+                    
+                    <p>&#20551;&#35774;&#20320;&#20173;&#28982;&#22312;<code class="code">SYSTEM/source/acme/Acme/Controller/Page/Layout</code>&#30446;&#24405;&#19979;&#65292;&#21019;&#24314;<code class="code">_header.php</code>&#25991;&#20214;&#12290;</p>
+                    <pre class="screen">$ vim _header.php</pre>
+                    <p>&#22312;&#25991;&#20214;&#20013;&#31896;&#36148;&#20197;&#19979;&#20195;&#30721;&#24182;&#20445;&#23384;&#25991;&#20214;&#12290;</p>
+                    <pre class="programlisting">&lt;div id="branding"&gt;
+    &lt;h1&gt;The Acme Blog&lt;/h1&gt;
+&lt;/div&gt;</pre>
+                    <p>&#36825;&#20010;&#31616;&#21333;&#30340;&#23376;&#35270;&#22270;&#21019;&#24314;&#20102;&#39029;&#38754;&#39030;&#37096;&#30340;&#27178;&#24133;&#12290;</p>
+                    <p>&#29616;&#22312;&#65292;&#20173;&#28982;&#22312;&#36825;&#20010;&#30446;&#24405;&#19979;&#21019;&#24314;<code class="code">_footer.php</code>&#25991;&#20214;&#12290;</p>
+                    <pre class="screen">$ vim _footer.php</pre>
+                    <p>&#22312;&#25991;&#20214;&#20013;&#31896;&#36148;&#20197;&#19979;&#20195;&#30721;&#24182;&#20445;&#23384;&#25991;&#20214;&#12290;</p>
+                    <pre class="programlisting">&lt;div id="footer"&gt;
+    &lt;p&gt;Copyright &amp;copy; 2010 Acme&lt;/p&gt;
+&lt;/div&gt;</pre>
+                    <p>&#36825;&#20010;&#31616;&#21333;&#30340;&#23376;&#35270;&#22270;&#21019;&#24314;&#20102;&#39029;&#38754;&#24213;&#37096;&#30340;&#39029;&#33050;&#12290;</p>
+                </div>
+                <div class="sect2" title="5.6.6 &#21019;&#24314;&#23376;&#35270;&#22270;_nav.php&#21644;_local.php"><div class="titlepage"><div><div><h3 class="title"><a name="d4e2167"></a>5.6.6 &#21019;&#24314;&#23376;&#35270;&#22270;_nav.php&#21644;_local.php</h3></div></div></div>
+                    
+                    <p>&#25509;&#19979;&#26469;&#65292;&#25105;&#20204;&#35201;&#21019;&#24314;&#23548;&#33322;&#20803;&#32032;&#12290;&#20551;&#35774;&#20320;&#20173;&#28982;&#22312;<code class="code">SYSTEM/source/acme/Acme/Controller/Page/Layout</code>&#30446;&#24405;&#19979;&#65292;&#21019;&#24314;<code class="code">_nav.php</code>&#25991;&#20214;&#12290;</p>
+                    <pre class="screen">$ vim _nav.php</pre>
+                    <p>&#22312;&#25991;&#20214;&#20013;&#31896;&#36148;&#20197;&#19979;&#20195;&#30721;&#24182;&#20445;&#23384;&#25991;&#20214;&#12290;</p>
+                    <pre class="programlisting">&lt;div id=<b class="hl-string"><i style="color:red">"nav"</i></b>&gt;
+    &lt;ul&gt;
+        &lt;li&gt;<span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">echo</b> $this-&gt;action(<b class="hl-string"><i style="color:red">'blog'</i></b>, <b class="hl-string"><i style="color:red">'Blog Home'</i></b>); ?&gt;&lt;/li&gt;
+        &lt;li&gt;<span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">echo</b> $this-&gt;action(<b class="hl-string"><i style="color:red">'blog/add'</i></b>, <b class="hl-string"><i style="color:red">'ACTION_ADD'</i></b>); ?&gt;&lt;/li&gt;
+        &lt;li&gt;<span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">echo</b> $this-&gt;action(<b class="hl-string"><i style="color:red">'blog/drafts'</i></b>, <b class="hl-string"><i style="color:red">'View Drafts'</i></b>); ?&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    <span class="hl-directive" style="color: maroon">&lt;?php</span> <i class="hl-comment" style="color: silver">// allow for extra local navigation</i>
+    <b class="hl-keyword">include</b> $this-&gt;template(<b class="hl-string"><i style="color:red">'_local.php'</i></b>); 
+    <span class="hl-directive" style="color: maroon">?&gt;</span>
+&lt;/div&gt;</pre>
+                    <p>&#27880;&#24847;&#23545;&#23376;&#35270;&#22270;<code class="code">_local.php</code>&#30340;&#24341;&#29992;&#12290;&#28155;&#21152;&#27492;&#23376;&#35270;&#22270;&#35753;&#25105;&#20204;&#21487;&#20197;&#36873;&#25321;&#24615;&#22320;&#20026;&#27599;&#20010;&#25511;&#21046;&#22120;&#28155;&#21152;&#39069;&#22806;&#30340;&#23548;&#33322;&#12290;&#36825;&#23558;&#22312;&#26412;&#31456;&#21518;&#38754;&#21464;&#24471;&#26356;&#28165;&#26224;&#12290;</p>
+                    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+                        <p>&#23548;&#33322;&#35270;&#22270;&#20013;&#30340;&#31532;&#20108;&#20010;&#21015;&#34920;&#39033;&#20351;&#29992;&#26412;&#22320;&#38190;&#20316;&#20026;&#38142;&#25509;&#25991;&#23383;&#12290;</p><pre class="programlisting">&lt;?php echo $this-&gt;action('blog/add', 'ACTION_ADD'); ?&gt;</pre>
+                        <p>&#35831;&#21442;&#32771;<a class="ulink" href="http://solarphp.com/class/Solar_View_Helper_Action" target="_top">Solar_View_Helper_Action</a>&#36741;&#21161;&#31867;&#30340;API&#25991;&#26723;&#21644;&#31532;&#19968;&#31456;&#23545;&#26412;&#22320;&#21270;&#30340;&#20171;&#32461;&#12290;</p>
+                    </td></tr></table></div>
+                    <p>&#22312;&#21516;&#19968;&#20010;&#30446;&#24405;&#19979;&#21019;&#24314;<code class="code">_local.php</code>&#25991;&#20214;&#12290;</p>
+                    <pre class="screen">$ vim _local.php</pre>
+                    <p>&#22312;&#25991;&#20214;&#20013;&#31896;&#36148;&#20197;&#19979;&#20195;&#30721;&#24182;&#20445;&#23384;&#25991;&#20214;&#12290;</p>
+                    <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+<i class="hl-comment" style="color: silver">// placeholder for local navigation</i></pre>
+                </div>
+                <div class="sect2" title="5.6.7 &#21019;&#24314;&#26679;&#24335;&#34920;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e2187"></a>5.6.7 &#21019;&#24314;&#26679;&#24335;&#34920;</h3></div></div></div>
+                    
+                    <p>&#25152;&#26377;&#30340;&#24067;&#23616;&#35270;&#22270;&#37117;&#24314;&#22909;&#20102;&#12290;&#29616;&#22312;&#65292;&#22312;<code class="code">SYSTEM/source/acme/Acme/Controller/Page/Layout</code>&#30446;&#24405;&#19979;&#24212;&#35813;&#26377;&#36825;&#20123;&#25991;&#20214;&#65306;</p>
+                    <pre class="screen">Acme/Controller/Page/
+    Layout/
+        _body.php
+        _footer.php
+        _head.php
+        _header.php
+        _local.php
+        _nav.php
+        blog.php</pre>
+                    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+                        <p>&#23613;&#31649;&#19981;&#26159;&#24517;&#39035;&#30340;&#65292;&#20294;&#26159;&#20197;&#19979;&#21010;&#32447;&#24320;&#22987;&#21629;&#21517;&#23616;&#37096;&#35270;&#22270;&#12289;&#23884;&#22871;&#35270;&#22270;&#25110;&#24067;&#23616;&#33021;&#35753;&#20320;&#36805;&#36895;&#36776;&#21035;&#23427;&#20204;&#12290;</p>
+                    </td></tr></table></div>
+                    <p>&#29616;&#22312;&#20320;&#21435;&#35775;&#38382;&#21338;&#23458;&#24212;&#29992;&#30340;&#35805;&#65292;&#35270;&#35273;&#19978;&#32943;&#23450;&#20250;&#35753;&#20320;&#24456;&#22833;&#26395;&#12290;&#22312;<code class="code">_head.php</code>&#25991;&#20214;&#20013;&#65292;&#25105;&#20204;&#24341;&#29992;&#20102;&#26679;&#24335;&#34920;<code class="code">blog.css</code>&#12290;&#36825;&#20010;&#26679;&#24335;&#34920;&#36127;&#36131;&#23450;&#20301;&#39029;&#38754;&#20803;&#32032;&#12289;&#35774;&#32622;&#23383;&#20307;&#21450;&#39068;&#33394;&#12290;&#25105;&#20204;&#29616;&#22312;&#23601;&#26469;&#21019;&#24314;&#23427;&#12290;</p>
+                    <p>&#39318;&#20808;&#65292;&#22312;<code class="code">SYSTEM/source/acme/Acme/Controller/Page/Public</code>&#30446;&#24405;&#19979;&#21019;&#24314;&#23376;&#30446;&#24405;&#8220;styles&#8221;&#12290;</p>
+                    <pre class="screen">$ cd ../Public
+$ mkdir styles
+$ cd styles</pre>
+                    <p>&#25509;&#19979;&#26469;&#65292;&#22312;&#21018;&#24314;&#30340;&#30446;&#24405;&#19979;&#21019;&#24314;CSS&#25991;&#20214;<code class="code">blog.css</code>&#12290;</p>
+                    <pre class="screen">$ vim blog.css</pre>
+                    <p>&#22312;&#25991;&#20214;&#20013;&#31896;&#36148;&#20197;&#19979;&#20195;&#30721;&#24182;&#20445;&#23384;&#25991;&#20214;&#12290;</p>
+                    <pre class="programlisting">body, html {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background-color: #fff;
+    font-family: sans-serif;
+    font-size: 10pt;
+}
+
+#wrap {
+    width: 750px;
+    margin:0 auto;
+    background-color: #ccc;
+}
+
+#header {
+    background-color: #666;
+    margin: 0px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+#header h1 {
+    margin: 0;
+    padding: 10px;
+}
+
+#nav {
+    background-color: #ccc;
+    width: 150px;
+    float: left;
+}
+
+#main {
+    float: left;
+    width: 580px;
+    background-color: #efefef;
+    padding: 10px;
+    min-height: 400px;
+}
+
+#main h2 {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+#footer {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    clear: both;
+    padding: 5px;
+}
+
+#footer p {
+    padding: 0px;
+    margin: 0px;
+}</pre>
+                    <p>&#25105;&#20204;&#21018;&#25165;&#20570;&#30340;&#20107;&#22914;&#19979;&#65306;</p>
+                    <pre class="screen">Acme/Controller/Page/
+    Public/
+        styles/
+            blog.css</pre>
+                    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+                        <p><code class="code">SYSTEM/source/acme/Acme/Controller/Page/Public</code>&#30446;&#24405;&#26159;&#19981;&#33021;&#34987;&#30452;&#25509;&#35775;&#38382;&#30340;&#12290;&#20026;&#20102;&#27983;&#35272;<code class="code">SYSTEM/source/acme/Acme/Controller/Page/Public</code>&#30446;&#24405;&#30340;&#38468;&#20214;&#65292;&#22312;Acme&#24037;&#20316;&#21306;&#21019;&#24314;&#30340;&#26102;&#23450;&#20041;&#20102;&#19968;&#20010;&#31526;&#21495;&#38142;&#25509;&#65288;symlink&#65289;&#12290;&#22914;&#26524;&#20320;&#27983;&#35272;<code class="code">SYSTEM/docroot/public</code>&#30446;&#24405;&#65292;&#20320;&#23558;&#20250;&#21457;&#29616;&#23376;&#30446;&#24405;Acme&#12290;&#36890;&#36807;&#36825;&#20010;&#30446;&#24405;&#65292;&#20844;&#20849;&#38468;&#20214;&#23601;&#33021;&#22815;&#34987;&#35775;&#38382;&#20102;&#12290;</p>
+                    </td></tr></table></div>
+                    <p>&#29616;&#22312;&#25105;&#20204;&#26469;&#30475;&#19968;&#19979;&#21338;&#23458;&#30340;&#39318;&#39029;&#65288;<a class="ulink" href="http://localhost/blog" target="_top">http://localhost/blog</a>&#65289;&#65292;&#24212;&#35813;&#21644;&#19979;&#22270;&#19968;&#26679;&#65306;</p>
+                    <p><img src="../manual-new/figures/blog.png"></p>
+                </div>
+                <div class="sect2" title="5.6.8 &#35206;&#30422;&#24067;&#23616;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e2216"></a>5.6.8 &#35206;&#30422;&#24067;&#23616;</h3></div></div></div>
+                    
+                    <p>&#22240;&#20026;&#24067;&#23616;&#26159;&#20849;&#20139;&#30340;&#65292;&#23427;&#20204;&#26497;&#22823;&#22320;&#20943;&#23569;&#20102;&#20195;&#30721;&#30340;&#37325;&#22797;&#12290;&#20294;&#26159;&#26377;&#26102;&#20505;&#22312;&#26576;&#20123;&#29305;&#27530;&#24212;&#29992;&#20013;&#65292;&#20320;&#21487;&#33021;&#24819;&#26356;&#25442;&#39029;&#38754;&#30340;&#26576;&#20123;&#20803;&#32032;&#12290;&#27169;&#22359;&#21270;&#26041;&#24335;&#24067;&#23616;&#21644;Solar&#30340;&#31867;&#26632;&#65288;&#31867;&#23618;&#27425;&#65289;&#26426;&#21046;&#20351;&#36825;&#31181;&#20219;&#21153;&#38750;&#24120;&#31616;&#21333;&#12290;&#20363;&#22914;&#65292;&#22914;&#26524;&#25105;&#20204;&#24819;&#22312;&#20027;&#23548;&#33322;&#19979;&#38754;&#21019;&#24314;&#26576;&#20010;&#29305;&#27530;&#24212;&#29992;&#30340;&#38142;&#25509;&#65292;&#25105;&#20204;&#21482;&#35201;&#31616;&#21333;&#30340;&#35206;&#30422;<code class="code">_local.php</code>&#24067;&#23616;&#33050;&#26412;&#21363;&#21487;&#12290;</p>
+                    <p>&#22312;<code class="code">SYSTEM/source/acme/Acme/App/Blog/Layout</code>&#30446;&#24405;&#19979;&#21019;&#24314;&#26032;&#25991;&#20214;<code class="code">_local.php</code>&#12290;</p>
+                    <pre class="screen">$ cd SYSTEM/source/acme/Acme/App/Blog/Layout
+$ vim _local.php</pre>
+                    <p>&#22312;&#25991;&#20214;&#20013;&#31896;&#36148;&#20197;&#19979;&#20195;&#30721;&#24182;&#20445;&#23384;&#25991;&#20214;&#12290;</p>
+                    <pre class="programlisting">&lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Local Item One&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Local Item Two&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                    <p>&#29616;&#22312;&#65292;&#21047;&#26032;&#27983;&#35272;&#22120;&#65292;&#20320;&#23558;&#30475;&#21040;&#24038;&#36793;&#23548;&#33322;&#21457;&#29983;&#20102;&#21464;&#21270;&#12290;&#22312;&#36825;&#37324;&#65292;&#21407;&#20808;&#22312;<code class="code">SYSTEM/source/acme/Acme/Controller/Page/Layout</code>&#30446;&#24405;&#19979;&#30340;<code class="code">_local.php</code>&#25991;&#20214;&#34987;<code class="code">SYSTEM/source/acme/Acme/App/Blog/Layout</code>&#30446;&#24405;&#19979;&#30340;<code class="code">_local.php</code>&#25991;&#20214;&#35206;&#30422;&#12290;</p>
+                    <p>Solar&#20351;&#29992;&#21644;&#24212;&#29992;&#30456;&#20851;&#24230;&#26368;&#22823;&#30340;&#25991;&#20214;&#12290;&#22914;&#26524;&#23427;&#27809;&#26377;&#25214;&#21040;&#23427;&#35201;&#25214;&#30340;&#20449;&#24687;&#65292;&#23427;&#23558;&#20250;&#32487;&#32493;&#22312;&#31867;&#26632;&#65288;&#23618;&#27425;&#65289;&#20013;&#21521;&#19978;&#26597;&#25214;&#12290;</p>
+                    <p>&#19979;&#38754;&#26159;&#19968;&#20010;&#24067;&#23616;&#31867;&#26632;&#30340;&#31034;&#20363;&#65306;</p>
+                    <pre class="screen">Array
+(
+    [0] =&gt; Acme/App/Blog/Layout
+    [1] =&gt; Acme/Controller/Page/Layout
+    [2] =&gt; Solar/Controller/Page/Layout
+)</pre>
+                    <p>&#27880;&#24847;&#21040;<code class="code">Acme_App_Blog</code>&#32487;&#25215;&#33258;<code class="code">Acme_Controller_Page</code>&#65292;&#32780;<code class="code">Acme_Controller_Page</code>&#21448;&#32487;&#25215;&#33258;<code class="code">Solar_Controller_Page</code>&#12290;&#30693;&#36947;&#36825;&#20010;&#23558;&#24110;&#21161;&#20320;&#29702;&#35299;Solar&#30340;&#31867;&#26632;&#26159;&#22914;&#20309;&#26500;&#24314;&#30340;&#12290;</p>
+                    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+                        <p>&#20320;&#21487;&#20197;&#22312;&#25511;&#21046;&#22120;&#20013;&#35774;&#32622;<code class="code">$this-&gt;_layout =
+                                false</code>&#20851;&#38381;&#24067;&#23616;&#21151;&#33021;&#65292;&#20320;&#20063;&#21487;&#20197;&#35774;&#32622;<code class="code">$this-&gt;_layout =
+                                'someotherlayout'</code>&#25913;&#21464;&#24067;&#23616;&#12290;</p>
+                    </td></tr></table></div>
+                </div>
+            </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch05s05.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch05.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch06.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">5.5 &#35270;&#22270;&#36741;&#21161;&#31867;&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;</td></tr></table></div></div>  <!-- /#main content construct --> <!-- #footer -->  <div id="foot">  <p class="fl">Copyright &copy; 2010 Solar For PHP 5 In China, All Rights Reserved.</p>    <!-- /#   LINKS AND AUTHOR-SIGNATURE CANNOT BE REMOVED !!! -->    <p class="fr">Powered By&nbsp;&nbsp;<a href="mailto:roy@solarphp.cn">Roy Gu</a><span id="cnzz"><script src="http://s16.cnzz.com/stat.php?id=2386648&web_id=2386648&show=pic" language="JavaScript"></script></span>    </p>  </div>  <hr class="hidden" />  <div class="clear"></div>  <div id="solarcopy">  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-1.gif" style="border: 0 !important;" /></a>  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-2.gif" style="border: 0 !important;" /></a>  <br />  <script type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('mzsrzilnbxkw')</script></div> <!-- /#footer --></div></body></html>

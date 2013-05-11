@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="autor" content="Roy Gu (roy@solarphp.cn)" /><meta name="copyright" content="Solar Framework for PHP 5 In China" /><meta name="description" content="Solar Php框架 最佳实践框架 完全面向对象 企设级应用设计模式 超强命令行工具 | Solar 中国"  /><meta name="keywords" content="php, framework, 框架, php框架, solar, solarphp" />
+   <title>A.6. &#39033;&#30446;&#31995;&#32479;</title><link rel="stylesheet" href="style.css" type="text/css"><link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen" /><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Solar PHP &#20013;&#25991;&#25945;&#31243;"><link rel="up" href="apa.html" title="Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;"><link rel="prev" href="apas05.html" title="A.5. &#20840;&#23616;&#37197;&#32622;&#25991;&#20214;"><link rel="next" href="apb.html" title="Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;"><link rel="part" href="pt01.html" title="Part&nbsp;I.&nbsp;&#25196;&#24070;&#36215;&#33322;"><link rel="chapter" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="chapter" href="ch02.html" title="Chapter&nbsp;2.&nbsp;&#21160;&#24577;&#35843;&#24230;&#21608;&#26399;"><link rel="chapter" href="ch03.html" title="Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;"><link rel="chapter" href="ch04.html" title="Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;"><link rel="chapter" href="ch05.html" title="Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;"><link rel="chapter" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="chapter" href="ch07.html" title="Chapter&nbsp;7.&nbsp;&#29992;&#25143;&#35748;&#35777;&#12289;&#35282;&#33394;&#21450;&#35775;&#38382;&#25511;&#21046;"><link rel="chapter" href="ch08.html" title="Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;"><link rel="chapter" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="part" href="pt02.html" title="Part&nbsp;II.&nbsp;&#38468;&#24405;"><link rel="appendix" href="apa.html" title="Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;"><link rel="appendix" href="apb.html" title="Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;"><link rel="subsection" href="apas06.html#d4e3595" title="A.6.1 source/&#30446;&#24405;"><link rel="subsection" href="apas06.html#d4e3607" title="A.6.2. include/&#30446;&#24405;"><link rel="subsection" href="apas06.html#d4e3622" title="A.6.3. config/&#30446;&#24405;"><link rel="subsection" href="apas06.html#d4e3628" title="A.6.4. docroot/&#30446;&#24405;"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="view"><!-- #header (main heading + logo with slogan) --><div id="head"><!-- main headings with search component --><div id="main"><h1><a href="/">SOLAR</a><sup><a href="http://solarphp.org.cn/viewtopic.php?f=13&t=165" target="_blank">1.1.2</a></sup></h1>      <h2><a href="#">Framework for PHP	5</a></h2></div><!-- /main headings with search component -->    <hr class="hidden" /><!-- main horizontal menu --><div id="mainMenu"><ul><li><a href="../">首　页<span></span></a></li><li><a href="../project.php">Solar 项目<span></span></a></li><li class="active"><a href="../manual-new/">用户手册<span></span></a></li> <li><a href="http://forum.solarphp.cn" target="_blank">开发者社区<span></span></a></li><li><a href="http://bug.solarphp.cn" target="_blank">Bug 跟踪<span></span></a></li><li><a href="../contributor.php">Contributor<span></span></a></li><li class="fr"><a href="http://solarphp.cn/apidoc/">API 文档<span></span></a></li><li class="fr"><a href="http://demo.solarphp.cn" target="_blank">Solar Demo<span></span></a></li></ul></div>    <!-- /main horizontal menu --><hr class="hidden" /><!-- logo with slogan --><div id="logo"></div>    <!-- /logo with slogan --><hr class="hidden" /></div><!-- /#header (main heading + logo with slogan) -->  <!-- #main content construct --><div id="content"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">A.6. &#39033;&#30446;&#31995;&#32479;</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="apas05.html">Prev</a>&nbsp;</td><th width="60%" align="center">Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="apb.html">Next</a></td></tr></table><hr></div><div class="sect1" title="A.6. &#39033;&#30446;&#31995;&#32479;"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e3585"></a>A.6. &#39033;&#30446;&#31995;&#32479;</h2></div></div></div>
+                
+                <p>Solar&#21644;&#24037;&#20316;&#21306;&#25991;&#20214;&#31867;&#24211;&#30340;&#33391;&#22909;&#32452;&#32455;&#26159;&#26377;&#30410;&#20110;&#26680;&#24515;&#24212;&#29992;&#30340;&#65292;&#36890;&#24120;&#26469;&#35828;&#65292;&#20320;&#38656;&#35201;&#22312;web&#26381;&#21153;&#22120;&#25110;&#20854;&#20182;&#30446;&#26631;&#20027;&#26426;&#20013;&#24067;&#32626;Solar&#31867;&#24211;&#21644;&#24037;&#20316;&#21306;&#31867;&#24211;&#12290;&#36825;&#23601;&#24847;&#21619;&#30528;&#65292;&#23545;&#20110;&#19981;&#21516;&#30340;&#25991;&#20214;&#25903;&#25345;&#21644;SVN&#22806;&#37096;&#31995;&#32479;&#65292;&#31867;&#24211;&#32452;&#32455;&#35201;&#19968;&#33268;&#65307;&#25105;&#20204;&#25226;&#23427;&#31216;&#20026;&#20320;&#30340;&#39033;&#30446;&#30340;Solar&#8220;&#31995;&#32479;&#8221;&#12290;</p>
+                <p>&#19979;&#38754;&#26159;Solar&#8220;&#31995;&#32479;&#8221;&#30340;&#20027;&#35201;&#25991;&#20214;&#21644;&#30446;&#24405;&#65306;</p>
+                <pre class="screen">SYSTEM/
+    index.php               # quick-start (insecure) bootstrap
+    config.php              # main config file
+    config/                 # other config files
+    docroot/                # web server document root
+        .htaccess           # mod-rewrite rules
+        index.php           # real bootstrap file
+        public/             # public assets
+            Solar/          # Solar assets
+    include/                # used as the php include_path
+    script/                 # command-line scripts
+        solar               # the solar command-line tool
+    source/                 # source packages, libraries, etc
+    sqlite/                 # sqlite files
+    tmp/                    # temp files
+        cache/              # private cache
+        log/                # log files
+        mail/               # test emails
+        session/            # session files</pre>
+                <p>Solar&#8220;&#31995;&#32479;&#8221;&#19979;&#38754;&#26377;&#8220;&#22235;&#22823;&#8221;&#30446;&#24405;&#65306;<code class="code">source/</code>&#12289;<code class="code">include/</code>&#12289;<code class="code">config/</code>&#21644;<code class="code">docroot/</code>&#12290;&#20854;&#20182;&#25991;&#20214;&#21644;&#30446;&#24405;&#27604;&#36739;&#23481;&#26131;&#29702;&#35299;&#65292;&#19981;&#35328;&#33258;&#26126;&#12290;</p>
+                <div class="sect2" title="A.6.1 source/&#30446;&#24405;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e3595"></a>A.6.1 <code class="code">source/</code>&#30446;&#24405;</h3></div></div></div>
+                    
+                    <p>&#25152;&#26377;&#30340;&#28304;&#20195;&#30721;&#25991;&#20214;&#37117;&#25918;&#32622;&#22312;<code class="code">source/</code>&#30446;&#24405;&#19979;&#65292;&#21253;&#25324;&#20351;&#29992;<span class="bold"><strong>make-vendor</strong></span>&#29983;&#25104;&#30340;&#25991;&#20214;&#12290;<code class="code">source/</code>&#30446;&#24405;&#19981;&#20250;&#29992;&#20110;include&#36335;&#24452;&#12290;&#23427;&#26159;&#25152;&#26377;&#20195;&#30721;&#25176;&#31649;&#20013;&#24515;&#12290;&#65288;&#25105;&#20204;&#39532;&#19978;&#23601;&#20250;&#25509;&#35302;&#21040;include&#36335;&#24452;&#65289;</p>
+                    <p><code class="code">source/</code>&#30446;&#24405;&#19981;&#20851;&#24515;&#20320;&#22312;&#37324;&#38754;&#25918;&#32622;&#20102;&#20160;&#20040;&#20195;&#30721;&#12290;&#20320;&#21487;&#20197;&#19979;&#36733;&#24182;&#35299;&#21387;PEAR&#39118;&#26684;&#21253;&#12289;&#25918;&#32622;&#31532;&#19977;&#26041;&#31867;&#24211;&#12289;SVN&#25110;git&#12290;&#20320;&#29978;&#33267;&#21487;&#20197;&#22312;&#37324;&#38754;&#25918;&#32622;&#21516;&#19968;&#31867;&#24211;&#30340;&#19981;&#21516;&#29256;&#26412;&#65292;&#21482;&#38656;&#35201;&#25226;&#23427;&#20204;&#25918;&#32622;&#22312;&#19981;&#21516;&#30340;&#23376;&#30446;&#24405;&#20013;&#21363;&#21487;&#12290;</p>
+                    <p><code class="code">source/</code>&#30446;&#24405;&#32452;&#32455;&#32467;&#26500;&#22914;&#19979;&#65306;</p>
+                    <pre class="screen">source/
+    acme/               # libraries from the `make-vendor Acme` CLI call
+        Acme.php
+        Acme/
+        config/
+        script/
+        docs/
+        tests/
+    example/            # svn:externals http://svn.example.com/trunk
+        ...
+    solar/              # core Solar libraries
+        Solar.php
+        Solar/
+        config/
+        script/
+        docs/
+        tests/
+    third-party/        # copied or downloaded from a third party
+        ...</pre>
+                </div>
+                <div class="sect2" title="A.6.2. include/&#30446;&#24405;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e3607"></a>A.6.2. <code class="code">include/</code>&#30446;&#24405;</h3></div></div></div>
+                    
+                    <p><code class="code">include/</code>&#30446;&#24405;&#26159;&#20320;&#25972;&#20010;Solar&#31995;&#32479;&#20195;&#30721;&#30340;include&#36335;&#24452;&#12290;&#19968;&#33324;&#24773;&#20917;&#19979;&#65292;<code class="code">include/</code>&#30446;&#24405;&#37324;&#21482;&#21547;&#26377;&#21040;<code class="code">source/</code>&#30446;&#24405;&#30340;&#31526;&#21495;&#38142;&#25509;&#65288;symlinks&#65289;&#12290;&#36825;&#24847;&#21619;&#30528;<code class="code">include/</code>&#30446;&#24405;&#21487;&#20197;&#25317;&#26377;<code class="code">source/</code>&#30446;&#24405;&#19979;&#30340;&#25152;&#26377;&#25991;&#20214;&#65292;&#32780;&#19988;&#19981;&#20250;&#27745;&#26579;include&#36335;&#24452;&#12290;&#36825;&#20063;&#24847;&#21619;&#30528;&#20320;&#21487;&#20197;&#38543;&#24847;&#20114;&#25442;&#28304;&#30446;&#24405;&#65292;&#36890;&#36807;&#25913;&#21464;&#31526;&#21495;&#38142;&#25509;(symlinks)&#30340;&#25351;&#21521;&#12290;</p>
+                    <p><code class="code">include/</code>&#30446;&#24405;&#30340;&#32452;&#32455;&#32467;&#26500;&#22914;&#19979;&#65306;</p>
+                    <pre class="screen">include/
+    Acme.php            # ln -s ../source/acme/Acme.php
+    Acme/               # ln -s ../source/acme/Acme
+    Example/            # ln -s ../source/Example
+    Solar.php           # ln -s ../source/solar/Solar.php
+    Solar/              # ln -s ../source/solar/Solar
+    thirdparty.php      # ln -s ../source/third-party/some_file.php</pre>
+                    <p>&#22914;&#26524;&#20320;&#20351;&#29992;<span class="bold"><strong>make-vendor</strong></span>&#21629;&#20196;&#65292;&#23427;&#20250;&#33258;&#21160;&#20026;&#20320;&#20135;&#29983;&#36825;&#20123;&#31526;&#21495;&#38142;&#25509;&#65288;&#25903;&#25345;windows
+                            vista&#21644;unix&#39118;&#26684;&#30340;&#31526;&#21495;&#38142;&#25509;&#65289;&#12290;&#22914;&#26524;&#20320;&#24341;&#20837;&#20102;&#20320;&#33258;&#24049;&#30340;&#28304;&#20195;&#30721;&#65306;&#22914;&#26524;&#23427;&#20204;&#26159;Solar&#39118;&#26684;&#30340;&#24037;&#20316;&#21306;&#65292;&#37027;&#20040;&#20320;&#21487;&#20197;&#36890;&#36807;<span class="bold"><strong>link-vendor</strong></span>&#21629;&#20196;&#20026;&#20320;&#21019;&#24314;&#31526;&#21495;&#38142;&#25509;&#65307;&#22914;&#26524;&#19981;&#26159;&#65292;&#37027;&#20040;&#20320;&#21482;&#33021;&#33258;&#24049;&#21019;&#24314;&#31526;&#21495;&#38142;&#25509;&#12290;</p>
+                </div>
+                <div class="sect2" title="A.6.3. config/&#30446;&#24405;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e3622"></a>A.6.3. <code class="code">config/</code>&#30446;&#24405;</h3></div></div></div>
+                    
+                    <p>&#25509;&#19979;&#26469;&#26159;<code class="code">config/</code>&#30446;&#24405;&#12290;&#23427;&#25918;&#32622;&#20102;&#31995;&#32479;&#25152;&#26377;&#30340;&#37197;&#32622;&#25991;&#20214;&#12290;</p>
+                    <pre class="screen">config.php
+config/
+    access.txt          # an example ACL file
+    htpasswd.conf       # an example password file
+    thirdparty.ini      # a .ini file for a third-party library</pre>
+                </div>
+                <div class="sect2" title="A.6.4. docroot/&#30446;&#24405;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e3628"></a>A.6.4. <code class="code">docroot/</code>&#30446;&#24405;</h3></div></div></div>
+                    
+                    <p>&#8220;&#22235;&#22823;&#8221;&#30446;&#24405;&#30340;&#26368;&#21518;&#19968;&#20010;&#30446;&#24405;&#26159;<code class="code">docroot/</code>&#30446;&#24405;&#12290;&#36825;&#26159;&#31995;&#32479;&#30340;Web&#26381;&#21153;&#22120;&#25991;&#20214;&#26681;&#30446;&#24405;&#12290;&#20320;&#30340;&#34394;&#25311;&#20027;&#26426;&#24212;&#35813;&#37197;&#32622;&#25351;&#21521;&#36825;&#20010;&#30446;&#24405;&#65292;&#32780;&#19981;&#26159;<span class="italic"><code class="code">SYSTEM</code></span>&#30446;&#24405;&#12290;</p>
+                    <p>&#23376;&#30446;&#24405;<code class="code">public/</code>&#20445;&#23384;&#20844;&#20849;&#30340;&#38468;&#20214;&#65292;&#20363;&#22914;&#65292;Javascript&#25991;&#20214;&#12289;
+                            &#26679;&#24335;&#34920;&#12289;&#22270;&#29255;&#31561;&#12290;&#22312;Solar&#39118;&#26684;&#30340;&#24037;&#20316;&#21306;&#20013;&#65292;&#26368;&#21518;&#19968;&#20010;&#30446;&#24405;&#23454;&#38469;&#19978;&#26159;&#27599;&#20010;&#31867;&#25351;&#21521;<code class="code">public/</code>&#30446;&#24405;&#30340;&#31526;&#21495;&#38142;&#25509;&#12290;&#36825;&#20801;&#35768;&#20320;&#38543;&#31867;&#21253;&#20998;&#24067;&#36825;&#20123;&#20844;&#20849;&#38468;&#20214;&#65292;&#32780;&#19981;&#24517;&#26377;&#27599;&#27425;&#26377;&#26356;&#25913;&#26102;&#22797;&#21046;&#36825;&#20123;&#38468;&#20214;&#12290;</p>
+                    <p><code class="code">public/</code>&#30446;&#24405;&#30340;&#32452;&#32455;&#32467;&#26500;&#22914;&#19979;&#65306;</p>
+                    <pre class="programlisting">docroot/
+    index.php               # bootstrap file
+    public/                 # public assets
+        Solar/              # 
+            View/           # 
+                Helper/     # 
+                    Pager/  # ln -s SYSTEM/source/Solar/View/Helper/Pager/Public</pre>
+                    <p>&#22914;&#26524;&#20320;&#21019;&#24314;&#31867;&#30340;&#21516;&#26102;&#29992;&#21040;<code class="code">Public/</code>&#23376;&#30446;&#24405;&#23384;&#25918;&#20844;&#20849;&#38468;&#20214;&#65292;&#37027;&#20040;&#20320;&#21487;&#20197;&#20351;&#29992;<span class="bold"><strong>link-public</strong></span>&#21629;&#20196;&#33258;&#21160;&#20135;&#29983;&#36825;&#20123;&#31526;&#21495;&#38142;&#25509;&#12290;&#65288;&#25903;&#25345;windows vista&#21644;unix&#39118;&#26684;&#30340;&#31526;&#21495;&#38142;&#25509;&#65289;</p>
+                </div>
+            </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="apas05.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="apa.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="apb.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">A.5. &#20840;&#23616;&#37197;&#32622;&#25991;&#20214;&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;</td></tr></table></div></div>  <!-- /#main content construct --> <!-- #footer -->  <div id="foot">  <p class="fl">Copyright &copy; 2010 Solar For PHP 5 In China, All Rights Reserved.</p>    <!-- /#   LINKS AND AUTHOR-SIGNATURE CANNOT BE REMOVED !!! -->    <p class="fr">Powered By&nbsp;&nbsp;<a href="mailto:roy@solarphp.cn">Roy Gu</a><span id="cnzz"><script src="http://s16.cnzz.com/stat.php?id=2386648&web_id=2386648&show=pic" language="JavaScript"></script></span>    </p>  </div>  <hr class="hidden" />  <div class="clear"></div>  <div id="solarcopy">  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-1.gif" style="border: 0 !important;" /></a>  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-2.gif" style="border: 0 !important;" /></a>  <br />  <script type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('mzsrzilnbxkw')</script></div> <!-- /#footer --></div></body></html>

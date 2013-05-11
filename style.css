@@ -1,0 +1,112 @@
+/* override from cssfw */
+div.navheader th {
+    text-align: center;
+}
+
+div#local {
+    display: none;
+}
+
+div#sub {
+    display: none;
+}
+
+table {
+    margin: 0 0 0 0;
+}
+
+table p {
+    font-size: 1em;
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+
+/* from solar docbook style.css */
+h1.title{ color:#440000;}
+h2.title{ color:#003663}
+h2 {
+    font-size: 1.3em;
+}
+
+h3, h4, h5 {
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+div.note, div.tip {
+    margin-left: 0.3in;
+    margin-right: 0.5in;
+    border: solid 1px silver;
+    background-color: #e0e0e0;
+    padding: 0.1in;
+}
+
+div.warning {
+    margin-left: 0.3in;
+    margin-right: 0.5in;
+    border: solid 1px maroon;
+    background-color: #e0e0e0;
+    padding: 0.1in;
+}
+
+div.note img, div.tip img {
+    margin-right: 0.1in;
+    border: solid 1px silver;
+}
+
+div.warning img {
+    margin-right: 0.1in;
+    border: solid 1px maroon;
+}
+
+pre.programlisting {
+    border: solid 1px #444;
+    background-color: #eeeeee;
+    padding: 0.1in;
+    margin: 0.2in;
+    clear: right;
+}
+
+pre.screen {
+    border: solid 1px #777;
+    background-color: #eeeeee;
+    padding: 0.1in;
+    margin: 0.2in;
+    clear: right;
+    overflow: auto;
+}
+
+div.variablelist dl dt span.term {
+    font-weight: bold;
+}
+
+hr { display: none; }
+
+div.navheader {
+    padding-bottom: 0.1in;
+    border-bottom: solid 1px black;
+    border-color: #aaa;
+}
+
+div.navfooter {
+    margin-top: 0.1in;
+    border-top: solid 1px black;
+    border-color: #aaa;
+    padding-top: 0.1in;
+}
+
+div.figure-float {
+    float: right;
+    margin-left: 2em;
+    margin-bottom: 2em;
+}
+
+div.revinfo {
+    text-align: center;
+    font-size: 0.7em;
+    font-style: italic;
+}
+.code{ background-color: #EEEEEE;}
+
+a{color: #440000; text-decoration:none; border-bottom:1px solid #440000;}
+a:hover{ border-bottom: dotted 1px #440000;}

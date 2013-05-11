@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="autor" content="Roy Gu (roy@solarphp.cn)" /><meta name="copyright" content="Solar Framework for PHP 5 In China" /><meta name="description" content="Solar Php框架 最佳实践框架 完全面向对象 企设级应用设计模式 超强命令行工具 | Solar 中国"  /><meta name="keywords" content="php, framework, 框架, php框架, solar, solarphp" />
+   <title>1.8. &#27983;&#35272;&#25152;&#26377;&#20844;&#24320;&#30340;&#25991;&#31456;</title><link rel="stylesheet" href="style.css" type="text/css"><link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen" /><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Solar PHP &#20013;&#25991;&#25945;&#31243;"><link rel="up" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="prev" href="ch01s07.html" title="1.7. &#24314;&#31435;&#19968;&#20010;&#22522;&#26412;&#24212;&#29992;"><link rel="next" href="ch01s09.html" title="1.9. &#38405;&#35835;&#19968;&#31687;&#25991;&#31456;"><link rel="part" href="pt01.html" title="Part&nbsp;I.&nbsp;&#25196;&#24070;&#36215;&#33322;"><link rel="chapter" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="chapter" href="ch02.html" title="Chapter&nbsp;2.&nbsp;&#21160;&#24577;&#35843;&#24230;&#21608;&#26399;"><link rel="chapter" href="ch03.html" title="Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;"><link rel="chapter" href="ch04.html" title="Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;"><link rel="chapter" href="ch05.html" title="Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;"><link rel="chapter" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="chapter" href="ch07.html" title="Chapter&nbsp;7.&nbsp;&#29992;&#25143;&#35748;&#35777;&#12289;&#35282;&#33394;&#21450;&#35775;&#38382;&#25511;&#21046;"><link rel="chapter" href="ch08.html" title="Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;"><link rel="chapter" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="part" href="pt02.html" title="Part&nbsp;II.&nbsp;&#38468;&#24405;"><link rel="appendix" href="apa.html" title="Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;"><link rel="appendix" href="apb.html" title="Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;"><link rel="subsection" href="ch01s08.html#d4e222" title="1.8.1 &#8220;Index&#8221;&#26041;&#27861;"><link rel="subsection" href="ch01s08.html#d4e237" title="1.8.2 &#8220;Index&#8221;&#35270;&#22270;&#20195;&#30721;"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="view"><!-- #header (main heading + logo with slogan) --><div id="head"><!-- main headings with search component --><div id="main"><h1><a href="/">SOLAR</a><sup><a href="http://solarphp.org.cn/viewtopic.php?f=13&t=165" target="_blank">1.1.2</a></sup></h1>      <h2><a href="#">Framework for PHP	5</a></h2></div><!-- /main headings with search component -->    <hr class="hidden" /><!-- main horizontal menu --><div id="mainMenu"><ul><li><a href="../">首　页<span></span></a></li><li><a href="../project.php">Solar 项目<span></span></a></li><li class="active"><a href="../manual-new/">用户手册<span></span></a></li> <li><a href="http://forum.solarphp.cn" target="_blank">开发者社区<span></span></a></li><li><a href="http://bug.solarphp.cn" target="_blank">Bug 跟踪<span></span></a></li><li><a href="../contributor.php">Contributor<span></span></a></li><li class="fr"><a href="http://solarphp.cn/apidoc/">API 文档<span></span></a></li><li class="fr"><a href="http://demo.solarphp.cn" target="_blank">Solar Demo<span></span></a></li></ul></div>    <!-- /main horizontal menu --><hr class="hidden" /><!-- logo with slogan --><div id="logo"></div>    <!-- /logo with slogan --><hr class="hidden" /></div><!-- /#header (main heading + logo with slogan) -->  <!-- #main content construct --><div id="content"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">1.8. &#27983;&#35272;&#25152;&#26377;&#20844;&#24320;&#30340;&#25991;&#31456;</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch01s07.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch01s09.html">Next</a></td></tr></table><hr></div><div class="sect1" title="1.8. &#27983;&#35272;&#25152;&#26377;&#20844;&#24320;&#30340;&#25991;&#31456;"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e219"></a>1.8. &#27983;&#35272;&#25152;&#26377;&#20844;&#24320;&#30340;&#25991;&#31456;</h2></div></div></div>
+                
+                <p>&#29616;&#22312;&#65292;&#25105;&#20204;&#24050;&#32463;&#20934;&#22791;&#22909;&#20102;&#19968;&#20010;&#22522;&#26412;&#30340;&#24212;&#29992;&#65292;&#25105;&#20204;&#21487;&#20197;&#24320;&#22987;&#28155;&#21152;&#26041;&#27861;&#21644;&#35270;&#22270;&#20195;&#30721;&#12290;&#25105;&#20204;&#23558;&#20174;&#21338;&#23458;&#30340;&#39318;&#39029;&#24320;&#22987;&#12290;</p>
+                <div class="sect2" title="1.8.1 &#8220;Index&#8221;&#26041;&#27861;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e222"></a>1.8.1 &#8220;Index&#8221;&#26041;&#27861;</h3></div></div></div>
+                    
+                    <p>&#36827;&#20837;SYSTEM/source/acme/Acme/App/&#30446;&#24405;&#65292;&#24182;&#25171;&#24320;Blog.php&#25991;&#20214;&#12290;&#65288;&#22312;&#27492;&#31034;&#20363;&#20013;&#65292;&#25105;&#20204;&#20351;&#29992;vim&#32534;&#36753;&#22120;&#65292;&#20320;&#21487;&#20197;&#36873;&#25321;&#33258;&#24049;&#26368;&#21916;&#27426;&#30340;&#65289;</p>
+                    <pre class="screen">$ cd SYSTEM/source/acme/Acme/App/
+$ vim Blog.php</pre>
+                    <p>&#22312;actionIndex() &#26041;&#27861;&#20013;&#28155;&#21152;&#22914;&#19979;&#20195;&#30721;&#65306;</p>
+                    <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+    <b class="hl-keyword">public</b> <b class="hl-keyword">function</b> actionIndex()
+    {
+        <i class="hl-comment" style="color: silver">// public blog articles in descending order, all result pages</i>
+        $fetch = <b class="hl-keyword">array</b>(
+            <b class="hl-string"><i style="color:red">'where'</i></b> =&gt; <b class="hl-keyword">array</b>(<b class="hl-string"><i style="color:red">'blogs.status = ?'</i></b> =&gt; <b class="hl-string"><i style="color:red">'public'</i></b>),
+            <b class="hl-string"><i style="color:red">'order'</i></b> =&gt; <b class="hl-string"><i style="color:red">'blogs.created DESC'</i></b>,
+            <b class="hl-string"><i style="color:red">'page'</i></b>  =&gt; <b class="hl-string"><i style="color:red">'all'</i></b>,
+        );
+    
+        <i class="hl-comment" style="color: silver">// fetch all matching records</i>
+        $this-&gt;<b class="hl-keyword">list</b> = $this-&gt;_model-&gt;blogs-&gt;fetchAll($fetch);
+    }</pre>
+                    <p>&#35828;&#26126;&#65306;</p>
+                    <p>
+                        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+                                <p>$fetch &#25968;&#32452;&#23450;&#20041;&#20102;&#19968;&#31995;&#21015;&#26597;&#35810;&#20174;&#21477;&#26469;&#25351;&#26126;&#25105;&#20204;&#25152;&#38656;&#35201;&#30340;&#25968;&#25454;&#12290;&#35813;&#25968;&#32452;&#30340;&#38190;&#19981;&#20165;&#21253;&#21547;&#26597;&#35810;&#21629;&#20196;&#30340;&#21508;&#20010;&#37096;&#20998;&#65288;cols&#12289;
+                                    where&#12289;join&#12289; group&#12289;having&#12289;order&#21644; limit&#65289;&#65292;&#20063;&#21253;&#21547;&#27169;&#22411;&#30340;&#30456;&#20851;&#21442;&#25968;&#65292;&#20363;&#22914;&#65306;page &#21644;
+                                    paging &#20998;&#21035;&#34920;&#31034;&#26816;&#32034;&#31532;&#20960;&#39029;&#25968;&#25454;&#21644;&#27599;&#39029;&#26174;&#31034;&#22810;&#23569;&#26465;&#25968;&#25454;&#12290;</p>
+                            </li><li class="listitem">
+                                <p>$this-&gt;list
+                                    &#23646;&#24615;&#30340;&#20869;&#23481;&#26159;&#36890;&#36807;&#35843;&#29992;blogs&#27169;&#22411;&#29983;&#25104;&#30340;&#12290;&#36825;&#26679;&#65292;&#25105;&#20204;&#23601;&#21487;&#20197;&#33719;&#21462;&#25152;&#26377;&#28385;&#36275;$fetch&#25968;&#32452;&#21442;&#25968;&#30340;&#35760;&#24405;&#12290;</p>
+                                <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+                                    <p>&#25511;&#21046;&#22120;&#30340;&#20844;&#20849;&#23646;&#24615;&#22312;&#28210;&#26579;&#35270;&#22270;&#26102;&#20250;&#33258;&#21160;&#20256;&#36882;&#32473;&#35270;&#22270;&#65292;&#19981;&#38656;&#35201;&#25163;&#21160;&#20256;&#20540;&#12290;</p>
+                                </td></tr></table></div>
+                            </li></ul></div><p>
+                    </p>
+                </div>
+                <div class="sect2" title="1.8.2 &#8220;Index&#8221;&#35270;&#22270;&#20195;&#30721;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e237"></a>1.8.2 &#8220;Index&#8221;&#35270;&#22270;&#20195;&#30721;</h3></div></div></div>
+                    
+                    <p>&#40664;&#35748;&#24773;&#20917;&#19979;&#65292;Solar&#39029;&#38754;&#25511;&#21046;&#22120;&#20250;&#28210;&#26579;&#19968;&#20010;&#21644;&#26041;&#27861;&#21517;&#19968;&#33268;&#30340;&#35270;&#22270;&#12290;&#22240;&#27492;&#65292;&#25105;&#20204;&#38656;&#35201;&#20026;actionIndex()&#26041;&#27861;&#21019;&#24314;index.php&#35270;&#22270;&#25991;&#20214;&#12290;</p>
+                    <pre class="screen">$ vim Blog/View/index.php</pre>
+                    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+                        <p>&#39029;&#38754;&#25511;&#21046;&#22120;&#35270;&#22270;&#32487;&#25215;&#33258;&#29238;&#25511;&#21046;&#22120;&#12290;&#22240;&#27492;&#65292;&#22914;&#26524;&#24403;&#21069;&#39029;&#38754;&#25511;&#21046;&#22120;&#19981;&#23384;&#22312;&#35270;&#22270;&#25991;&#20214;&#20415;&#20250;&#26597;&#25214;&#29238;&#25511;&#21046;&#20013;&#30456;&#21516;&#25991;&#20214;&#21517;&#30340;&#35270;&#22270;&#25991;&#20214;&#12290;</p>
+                    </td></tr></table></div>
+                    <p>&#22914;&#26524;&#35270;&#22270;&#25991;&#20214;&#19981;&#20026;&#31354;&#21017;&#28165;&#31354;&#23427;&#65292;&#24182;&#22312;&#25991;&#20214;&#20013;&#36755;&#20837;&#20197;&#19979;&#20195;&#30721;&#65306;</p>
+                    <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+    $title = $this-&gt;getTextRaw(<b class="hl-string"><i style="color:red">'TITLE_INDEX'</i></b>);
+    $this-&gt;head()-&gt;setTitle($title);
+<span class="hl-directive" style="color: maroon">?&gt;</span>
+
+&lt;h2&gt;<span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">echo</b> $this-&gt;getText(<b class="hl-string"><i style="color:red">'HEADING_INDEX'</i></b>); ?&gt;&lt;/h2&gt;
+
+<span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">if</b> (! $this-&gt;<b class="hl-keyword">list</b>): <span class="hl-directive" style="color: maroon">?&gt;</span>
+
+    &lt;p&gt;<span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">echo</b> $this-&gt;getText(<b class="hl-string"><i style="color:red">'ERR_NO_RECORDS'</i></b>); ?&gt;&lt;/p&gt;
+
+<span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">else</b>: <span class="hl-directive" style="color: maroon">?&gt;</span>
+
+    &lt;ul&gt;
+    
+    <span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">foreach</b> ($this-&gt;<b class="hl-keyword">list</b> <b class="hl-keyword">as</b> $item): <span class="hl-directive" style="color: maroon">?&gt;</span>
+        &lt;li&gt;<span class="hl-directive" style="color: maroon">&lt;?php</span>
+            <b class="hl-keyword">echo</b> $this-&gt;escape($item-&gt;title);
+            <b class="hl-keyword">echo</b> <b class="hl-string"><i style="color:red">"&amp;nbsp;&amp;nbsp;"</i></b>;
+            <b class="hl-keyword">echo</b> $this-&gt;action(
+                <b class="hl-string"><i style="color:red">"{$this-&gt;controller}/read/{$item-&gt;id}"</i></b>,
+                <b class="hl-string"><i style="color:red">'ACTION_READ'</i></b>
+            );
+        ?&gt;&lt;/li&gt;
+    
+    <span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">endforeach</b>; <span class="hl-directive" style="color: maroon">?&gt;</span>
+    
+    &lt;/ul&gt;
+<span class="hl-directive" style="color: maroon">&lt;?php</span> <b class="hl-keyword">endif</b>; <span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                    <p>&#26412;&#36136;&#19978;&#26469;&#35828;&#65292;&#19978;&#38754;&#36825;&#20010;&#35270;&#22270;&#20165;&#20165;&#26159;&#21462;&#24471;$this-&gt;list&#30340;&#20540;&#65292;&#24182;&#25226;&#23427;&#26174;&#31034;&#25104;&#26080;&#24207;&#21015;&#34920;&#65292;&#27599;&#20010;&#21015;&#34920;&#39033;&#37117;&#38142;&#25509;&#21040;&#23545;&#24212;&#30340;&#25991;&#31456;&#20869;&#23481;&#39029;&#12290;</p>
+                    <p>
+                        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+                                <p>&#39029;&#38754;&#25511;&#21046;&#22120;&#30340;&#20844;&#20849;&#23646;&#24615;&#20250;&#25104;&#20026;&#35270;&#22270;&#23545;&#20687;&#30340;&#23646;&#24615;&#12290;&#20363;&#22914;&#65306;&#35270;&#22270;&#20013;&#30340;$this-&gt;list&#23545;&#24212;&#20110;&#25511;&#21046;&#22120;&#30340;$list&#23646;&#24615;&#12290;</p>
+                            </li><li class="listitem">
+                                <p>&#39029;&#38754;&#25511;&#21046;&#22120;&#20026;&#40664;&#35748;&#20026;&#20320;&#21019;&#24314;&#19968;&#20123;&#20844;&#20849;&#23646;&#24615;&#65288;&#20063;&#21363;&#35270;&#22270;&#21487;&#29992;&#30340;&#23646;&#24615;&#65289;&#65292;&#23427;&#20204;&#26159;&#65306;$this-&gt;controller_class&#12289;$this-&gt;controller&#12289;$this-&gt;action&#12289;$this-&gt;layout&#21644;
+                                    $this-&gt;errors&#12290;</p>
+                            </li><li class="listitem">
+                                <p>&#37027;&#27492;&#19981;&#20197;$this&#24320;&#22836;&#30340;&#21464;&#37327;&#37117;&#26159;&#23646;&#20110;&#35270;&#22270;&#33050;&#26412;&#33258;&#24049;&#30340;&#12290;&#36825;&#26679;&#30340;&#35805;&#65292;&#25105;&#20204;&#24456;&#23481;&#26131;&#20998;&#36777;&#21738;&#20123;&#21464;&#37327;&#26469;&#33258;&#39029;&#38754;&#25511;&#21046;&#22120;&#65292;&#21738;&#20123;&#21464;&#37327;&#26159;&#22312;&#35270;&#22270;&#20013;&#21019;&#24314;&#30340;&#12290;</p>
+                            </li><li class="listitem">
+                                <p>$this-&gt;getTextRaw()&#12289;$this-&gt;head()&#12289;$this-getText()&#12289;$this-&gt;escape()
+                                    &#21644;
+                                    $this-&gt;action()&#23646;&#20110;&#35270;&#22270;&#30340;&#36741;&#21161;&#26041;&#27861;&#12290;&#23427;&#20204;&#23553;&#35013;&#20102;&#19968;&#20123;&#22312;&#35270;&#22270;&#20013;&#21453;&#35206;&#29992;&#21040;&#30340;&#20195;&#30721;&#12290;&#20320;&#21487;&#20197;&#22312;Solar_View_Helper
+                                    &#21644; Solar_View_Helper_Form packages&#21253;&#20013;&#26597;&#38405;&#25152;&#26377;&#30340;&#35270;&#22270;&#36741;&#21161;&#26041;&#27861;&#12290;</p>
+                            </li><li class="listitem">
+                                <p>&#36825;&#37324;&#36755;&#20986;&#30340;&#28040;&#24687;&#20351;&#29992;&#20840;&#37096;&#22823;&#20889;&#30340;&#25991;&#26412;&#23383;&#31526;&#20018;&#65292;&#32780;&#19981;&#26159;&#23558;&#28040;&#24687;&#20889;&#27515;&#22312;$this-&gt;action()&#20013;&#65292;&#30446;&#30340;&#26159;&#20026;&#26412;&#22320;&#21270;&#20570;&#20934;&#22791;&#12290;</p>
+                            </li></ul></div><p>
+                    </p>
+                    <p>&#20320;&#29616;&#22312;&#21487;&#20197;&#27983;&#35272;http://localhost/index.php/blog&#65292;&#24182;&#19988;&#21487;&#20197;&#30475;&#21040;&#25152;&#26377;&#20844;&#24320;&#30340;&#21338;&#23458;&#25991;&#31456;&#30340;&#21015;&#34920;&#12290;</p>
+                </div>
+            </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch01s07.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch01.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch01s09.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">1.7. &#24314;&#31435;&#19968;&#20010;&#22522;&#26412;&#24212;&#29992;&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;1.9. &#38405;&#35835;&#19968;&#31687;&#25991;&#31456; </td></tr></table></div></div>  <!-- /#main content construct --> <!-- #footer -->  <div id="foot">  <p class="fl">Copyright &copy; 2010 Solar For PHP 5 In China, All Rights Reserved.</p>    <!-- /#   LINKS AND AUTHOR-SIGNATURE CANNOT BE REMOVED !!! -->    <p class="fr">Powered By&nbsp;&nbsp;<a href="mailto:roy@solarphp.cn">Roy Gu</a><span id="cnzz"><script src="http://s16.cnzz.com/stat.php?id=2386648&web_id=2386648&show=pic" language="JavaScript"></script></span>    </p>  </div>  <hr class="hidden" />  <div class="clear"></div>  <div id="solarcopy">  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-1.gif" style="border: 0 !important;" /></a>  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-2.gif" style="border: 0 !important;" /></a>  <br />  <script type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('mzsrzilnbxkw')</script></div> <!-- /#footer --></div></body></html>

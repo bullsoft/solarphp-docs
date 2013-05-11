@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="autor" content="Roy Gu (roy@solarphp.cn)" /><meta name="copyright" content="Solar Framework for PHP 5 In China" /><meta name="description" content="Solar Php框架 最佳实践框架 完全面向对象 企设级应用设计模式 超强命令行工具 | Solar 中国"  /><meta name="keywords" content="php, framework, 框架, php框架, solar, solarphp" />
+   <title>9.1. &#31616;&#20171;</title><link rel="stylesheet" href="style.css" type="text/css"><link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen" /><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Solar PHP &#20013;&#25991;&#25945;&#31243;"><link rel="up" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="prev" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="next" href="ch09s02.html" title="9.2. &#26500;&#36896;&#28040;&#24687;"><link rel="part" href="pt01.html" title="Part&nbsp;I.&nbsp;&#25196;&#24070;&#36215;&#33322;"><link rel="chapter" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="chapter" href="ch02.html" title="Chapter&nbsp;2.&nbsp;&#21160;&#24577;&#35843;&#24230;&#21608;&#26399;"><link rel="chapter" href="ch03.html" title="Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;"><link rel="chapter" href="ch04.html" title="Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;"><link rel="chapter" href="ch05.html" title="Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;"><link rel="chapter" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="chapter" href="ch07.html" title="Chapter&nbsp;7.&nbsp;&#29992;&#25143;&#35748;&#35777;&#12289;&#35282;&#33394;&#21450;&#35775;&#38382;&#25511;&#21046;"><link rel="chapter" href="ch08.html" title="Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;"><link rel="chapter" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="part" href="pt02.html" title="Part&nbsp;II.&nbsp;&#38468;&#24405;"><link rel="appendix" href="apa.html" title="Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;"><link rel="appendix" href="apb.html" title="Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="view"><!-- #header (main heading + logo with slogan) --><div id="head"><!-- main headings with search component --><div id="main"><h1><a href="/">SOLAR</a><sup><a href="http://solarphp.org.cn/viewtopic.php?f=13&t=165" target="_blank">1.1.2</a></sup></h1>      <h2><a href="#">Framework for PHP	5</a></h2></div><!-- /main headings with search component -->    <hr class="hidden" /><!-- main horizontal menu --><div id="mainMenu"><ul><li><a href="../">首　页<span></span></a></li><li><a href="../project.php">Solar 项目<span></span></a></li><li class="active"><a href="../manual-new/">用户手册<span></span></a></li> <li><a href="http://forum.solarphp.cn" target="_blank">开发者社区<span></span></a></li><li><a href="http://bug.solarphp.cn" target="_blank">Bug 跟踪<span></span></a></li><li><a href="../contributor.php">Contributor<span></span></a></li><li class="fr"><a href="http://solarphp.cn/apidoc/">API 文档<span></span></a></li><li class="fr"><a href="http://demo.solarphp.cn" target="_blank">Solar Demo<span></span></a></li></ul></div>    <!-- /main horizontal menu --><hr class="hidden" /><!-- logo with slogan --><div id="logo"></div>    <!-- /logo with slogan --><hr class="hidden" /></div><!-- /#header (main heading + logo with slogan) -->  <!-- #main content construct --><div id="content"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">9.1. &#31616;&#20171;</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch09.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;9.&nbsp;&#37038;&#20214;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch09s02.html">Next</a></td></tr></table><hr></div><div class="sect1" title="9.1. &#31616;&#20171;"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e3388"></a>9.1. &#31616;&#20171;</h2></div></div></div>
+                
+                <p>Solar&#33258;&#24102;&#20102;&#19968;&#31995;&#21015;&#31867;&#24110;&#21161;&#24744;&#24314;&#31435;&#30005;&#23376;&#37038;&#20214;&#20449;&#24687;&#65292;&#24182;&#36890;&#36807;&#21508;&#31181;&#19981;&#21516;&#30340;&#20256;&#36755;&#26426;&#21046;&#21457;&#36865;&#23427;&#20204;&#12290;&#36825;&#37324;&#26377;&#19968;&#20010;&#31616;&#21333;&#30340;&#31034;&#20363;&#65306;</p>
+                <p>
+                    </p><pre lang="" class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+<b class="hl-tag" style="color: blue">/**
+ * first, compose a message
+ */</b>
+
+<i class="hl-comment" style="color: silver">// build a message</i>
+$mail = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Mail_Message'</i></b>);
+
+<i class="hl-comment" style="color: silver">// from, to, and subject lines</i>
+$mail-&gt;setFrom(<b class="hl-string"><i style="color:red">'pmjones@example.com'</i></b>)
+     -&gt;addTo(<b class="hl-string"><i style="color:red">'bolivar@example.net'</i></b>, <b class="hl-string"><i style="color:red">'Bolivar Shagnaasty'</i></b>)
+     -&gt;setSubject(<b class="hl-string"><i style="color:red">'An Example Email Message'</i></b>);
+
+<i class="hl-comment" style="color: silver">// add a "text" body component</i>
+$mail-&gt;setText(<b class="hl-string"><i style="color:red">"Hello world!"</i></b>);
+
+<i class="hl-comment" style="color: silver">// add an "html" body component</i>
+$mail-&gt;setHtml(<b class="hl-string"><i style="color:red">"&lt;p&gt;&lt;em&gt;Hello&lt;/em&gt; world!&lt;/p&gt;"</i></b>);
+
+<i class="hl-comment" style="color: silver">// add an attachment</i>
+$file = <b class="hl-string"><i style="color:red">'/path/to/image.jpg'</i></b>;
+$mime = <b class="hl-string"><i style="color:red">'image/jpeg'</i></b>;
+$mail-&gt;attachFile($file, $mime);
+
+<b class="hl-tag" style="color: blue">/**
+ * now send the message using php mail()
+ */</b>
+
+<i class="hl-comment" style="color: silver">// build a transport</i>
+$transport = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Mail_Transport'</i></b>, <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'adapter'</i></b> =&gt; <b class="hl-string"><i style="color:red">'Solar_Mail_Transport_Adapter_Phpmail'</i></b>,
+));
+
+<i class="hl-comment" style="color: silver">// send the mail through the transport</i>
+$transport-&gt;send($mail);
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre><p>
+                </p>
+            </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch09.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch09.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch09s02.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;9.&nbsp;&#37038;&#20214;&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;9.2. &#26500;&#36896;&#28040;&#24687;</td></tr></table></div></div>  <!-- /#main content construct --> <!-- #footer -->  <div id="foot">  <p class="fl">Copyright &copy; 2010 Solar For PHP 5 In China, All Rights Reserved.</p>    <!-- /#   LINKS AND AUTHOR-SIGNATURE CANNOT BE REMOVED !!! -->    <p class="fr">Powered By&nbsp;&nbsp;<a href="mailto:roy@solarphp.cn">Roy Gu</a><span id="cnzz"><script src="http://s16.cnzz.com/stat.php?id=2386648&web_id=2386648&show=pic" language="JavaScript"></script></span>    </p>  </div>  <hr class="hidden" />  <div class="clear"></div>  <div id="solarcopy">  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-1.gif" style="border: 0 !important;" /></a>  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-2.gif" style="border: 0 !important;" /></a>  <br />  <script type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('mzsrzilnbxkw')</script></div> <!-- /#footer --></div></body></html>

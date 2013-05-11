@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="autor" content="Roy Gu (roy@solarphp.cn)" /><meta name="copyright" content="Solar Framework for PHP 5 In China" /><meta name="description" content="Solar Php框架 最佳实践框架 完全面向对象 企设级应用设计模式 超强命令行工具 | Solar 中国"  /><meta name="keywords" content="php, framework, 框架, php框架, solar, solarphp" />
+   <title>9.4. &#21457;&#36865;&#37038;&#20214;</title><link rel="stylesheet" href="style.css" type="text/css"><link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen" /><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Solar PHP &#20013;&#25991;&#25945;&#31243;"><link rel="up" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="prev" href="ch09s03.html" title="9.3. &#21457;&#36865;&#38468;&#20214;"><link rel="next" href="pt02.html" title="Part&nbsp;II.&nbsp;&#38468;&#24405;"><link rel="part" href="pt01.html" title="Part&nbsp;I.&nbsp;&#25196;&#24070;&#36215;&#33322;"><link rel="chapter" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="chapter" href="ch02.html" title="Chapter&nbsp;2.&nbsp;&#21160;&#24577;&#35843;&#24230;&#21608;&#26399;"><link rel="chapter" href="ch03.html" title="Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;"><link rel="chapter" href="ch04.html" title="Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;"><link rel="chapter" href="ch05.html" title="Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;"><link rel="chapter" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="chapter" href="ch07.html" title="Chapter&nbsp;7.&nbsp;&#29992;&#25143;&#35748;&#35777;&#12289;&#35282;&#33394;&#21450;&#35775;&#38382;&#25511;&#21046;"><link rel="chapter" href="ch08.html" title="Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;"><link rel="chapter" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="part" href="pt02.html" title="Part&nbsp;II.&nbsp;&#38468;&#24405;"><link rel="appendix" href="apa.html" title="Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;"><link rel="appendix" href="apb.html" title="Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;"><link rel="subsection" href="ch09s04.html#d4e3425" title="9.4.1. &#20351;&#29992;&#20854;&#20013;&#19968;&#31181;&#20256;&#36755;&#26426;&#21046;"><link rel="subsection" href="ch09s04.html#d4e3453" title="9.4.2. &#20256;&#36755;&#20381;&#36182;&#27880;&#20837;"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="view"><!-- #header (main heading + logo with slogan) --><div id="head"><!-- main headings with search component --><div id="main"><h1><a href="/">SOLAR</a><sup><a href="http://solarphp.org.cn/viewtopic.php?f=13&t=165" target="_blank">1.1.2</a></sup></h1>      <h2><a href="#">Framework for PHP	5</a></h2></div><!-- /main headings with search component -->    <hr class="hidden" /><!-- main horizontal menu --><div id="mainMenu"><ul><li><a href="../">首　页<span></span></a></li><li><a href="../project.php">Solar 项目<span></span></a></li><li class="active"><a href="../manual-new/">用户手册<span></span></a></li> <li><a href="http://forum.solarphp.cn" target="_blank">开发者社区<span></span></a></li><li><a href="http://bug.solarphp.cn" target="_blank">Bug 跟踪<span></span></a></li><li><a href="../contributor.php">Contributor<span></span></a></li><li class="fr"><a href="http://solarphp.cn/apidoc/">API 文档<span></span></a></li><li class="fr"><a href="http://demo.solarphp.cn" target="_blank">Solar Demo<span></span></a></li></ul></div>    <!-- /main horizontal menu --><hr class="hidden" /><!-- logo with slogan --><div id="logo"></div>    <!-- /logo with slogan --><hr class="hidden" /></div><!-- /#header (main heading + logo with slogan) -->  <!-- #main content construct --><div id="content"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">9.4. &#21457;&#36865;&#37038;&#20214;</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch09s03.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;9.&nbsp;&#37038;&#20214;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="pt02.html">Next</a></td></tr></table><hr></div><div class="sect1" title="9.4. &#21457;&#36865;&#37038;&#20214;"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e3422"></a>9.4. &#21457;&#36865;&#37038;&#20214;</h2></div></div></div>
+                
+                <p>&#29616;&#22312;&#65292;&#25105;&#20204;&#24050;&#32463;&#20934;&#22791;&#22909;&#19968;&#23553;&#37038;&#20214;&#20102;&#65292;&#35753;&#25105;&#20204;&#20999;&#23454;&#22320;&#25226;&#23427;&#21457;&#20986;&#21435;&#21543;&#12290;&#21457;&#36865;&#19968;&#23553;&#37038;&#20214;&#20043;&#21069;&#65292;&#25105;&#20204;&#35201;&#36873;&#25321;&#20351;&#29992;&#21738;&#31181;&#20256;&#36755;&#26426;&#21046;&#65292;&#28982;&#21518;&#20877;&#20351;&#29992;&#36825;&#31181;&#26426;&#21046;&#26469;&#21457;&#36865;&#37038;&#20214;&#12290;</p>
+                <div class="sect2" title="9.4.1. &#20351;&#29992;&#20854;&#20013;&#19968;&#31181;&#20256;&#36755;&#26426;&#21046;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e3425"></a>9.4.1. &#20351;&#29992;&#20854;&#20013;&#19968;&#31181;&#20256;&#36755;&#26426;&#21046;</h3></div></div></div>
+                    
+                    <p>Solar&#33258;&#24102;&#20102;&#20004;&#31181;<code class="code">Solar_Mail_Transport</code>&#65288;&#37038;&#20214;&#20256;&#36755;&#65289;&#36866;&#37197;&#22120;&#65306;&#19968;&#31181;&#26159;Phpmail&#36866;&#21512;&#22120;&#65292;&#23427;&#20351;&#29992;PHP&#20869;&#32622;&#30340;<a class="ulink" href="http://php.net/manual/en/function.mail.php" target="_top">mail()</a>&#26041;&#27861;&#65307;&#21478;&#19968;&#31181;&#26159;SMTP&#24037;&#21378;&#36866;&#37197;&#22120;&#65292;&#23427;&#30340;&#20351;&#29992;&#26041;&#27861;&#22797;&#26434;&#19968;&#28857;&#28857;&#65292;&#20294;&#26159;&#20581;&#22766;&#24456;&#22810;&#12290;</p>
+                    <div class="sect3" title="9.4.1.1. &#20351;&#29992;PHP mail()&#20256;&#36755;"><div class="titlepage"><div><div><h4 class="title"><a name="d4e3430"></a>9.4.1.1. &#20351;&#29992;PHP mail()&#20256;&#36755;</h4></div></div></div>
+                        
+                        <p>&#38750;&#24120;&#31616;&#21333;&#65306;&#22522;&#20110;PHP&#20869;&#32622;mail()&#20989;&#25968;&#30340;&#36866;&#37197;&#22120;&#12290;</p><pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+$mail = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Mail_Message'</i></b>);
+<i class="hl-comment" style="color: silver">// .. build the message ...</i>
+
+<i class="hl-comment" style="color: silver">// build a transport and send the message</i>
+$transport = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Mail_Transport'</i></b>, <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'adapter'</i></b> =&gt; <b class="hl-string"><i style="color:red">'Solar_Mail_Transport_Adapter_Phpmail'</i></b>
+));
+
+$transport-&gt;send($mail);
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                    </div>
+                    <div class="sect3" title="&#20351;&#29992;Solar_Smtp&#20256;&#36755;"><div class="titlepage"><div><div><h4 class="title"><a name="d4e3434"></a>&#20351;&#29992;Solar_Smtp&#20256;&#36755;</h4></div></div></div>
+                        
+                        <p>SMTP&#24037;&#21378;&#36866;&#37197;&#22120;&#27604;&#20043;&#21069;&#30340;Mail&#36866;&#37197;&#22120;&#22797;&#26434;&#19968;&#20123;&#65292;&#20294;&#20063;&#19981;&#26159;&#20320;&#24819;&#35937;&#20013;&#37027;&#20040;&#22797;&#26434;&#12290;&#25105;&#20204;&#38656;&#35201;&#24314;&#31435;&#19968;&#20010;<a class="ulink" href="http://solarphp.cn/apidoc/Solar_Smtp/Solar_Smtp.html" target="_top">SMTP&#36830;&#25509;&#23545;&#35937;</a>&#65292;&#28982;&#21518;&#21578;&#35785;SMTP&#20256;&#36755;&#36866;&#37197;&#22120;&#20351;&#29992;&#23427;&#65292;&#26368;&#21518;&#21457;&#36865;&#37038;&#20214;&#12290;</p><pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+$mail = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Mail_Message'</i></b>);
+<i class="hl-comment" style="color: silver">// ...</i>
+
+<i class="hl-comment" style="color: silver">// build an SMTP connection object</i>
+$smtp = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Smtp'</i></b>, <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'adapter'</i></b> =&gt; <b class="hl-string"><i style="color:red">'Solar_Smtp_Adapter_NoAuth'</i></b>,
+    <b class="hl-string"><i style="color:red">'host'</i></b>    =&gt; <b class="hl-string"><i style="color:red">'mail.example.com'</i></b>,
+));
+
+<i class="hl-comment" style="color: silver">// build a transport and send the message</i>
+$transport = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Mail_Transport'</i></b>, <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'adapter'</i></b> =&gt; <b class="hl-string"><i style="color:red">'Solar_Mail_Transport_Adapter_Smtp'</i></b>,
+    <b class="hl-string"><i style="color:red">'smtp'</i></b>    =&gt; $smtp,
+));
+
+$transport-&gt;send($mail);
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                        <p>SMTP&#36830;&#25509;&#23545;&#35937;&#26412;&#36523;&#23601;&#26159;&#19968;&#20010;&#24037;&#21378;&#65292;&#23427;&#21253;&#21547;&#21508;&#31181;&#19981;&#21516;&#30340;&#39564;&#35777;&#36866;&#37197;&#22120;&#65306;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+                                    <p><a class="ulink" href="http://solarphp.cn/apidoc/Solar_Smtp/Solar_Smtp_Adapter_NoAuth.html" target="_top">none (&#40664;&#35748;)</a></p>
+                                </li><li class="listitem">
+                                    <p><a class="ulink" href="http://solarphp.cn/apidoc/Solar_Smtp/Solar_Smtp_Adapter_PlainAuth.html" target="_top">plain</a></p>
+                                </li><li class="listitem">
+                                    <p><a class="ulink" href="http://solarphp.cn/apidoc/Solar_Smtp/Solar_Smtp_Adapter_LoginAuth.html" target="_top">login</a></p>
+                                </li><li class="listitem">
+                                    <p><a class="ulink" href="http://solarphp.cn/apidoc/Solar_Smtp/Solar_Smtp_Adapter_CramMd5Auth.html" target="_top">CRAM-MD5</a></p>
+                                </li></ul></div>
+                    </div>
+                </div>
+                <div class="sect2" title="9.4.2. &#20256;&#36755;&#20381;&#36182;&#27880;&#20837;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e3453"></a>9.4.2. &#20256;&#36755;&#20381;&#36182;&#27880;&#20837;</h3></div></div></div>
+                    
+                    <p>&#20320;&#26080;&#38656;&#27599;&#27425;&#21457;&#37038;&#20214;&#26102;&#37117;&#24314;&#31435;&#19968;&#20010;&#20256;&#36755;&#36830;&#25509;&#23545;&#35937;&#65292;&#20320;&#21487;&#20197;&#20026;&#37038;&#20214;&#20449;&#24687;&#37197;&#32622;&#19968;&#20010;&#20381;&#36182;&#27880;&#20837;&#30340;&#20256;&#36755;&#36830;&#25509;&#23545;&#35937;&#12290;&#28982;&#21518;&#37038;&#20214;&#20449;&#24687;&#23601;&#20250;&#20351;&#29992;&#27880;&#20837;&#30340;&#37027;&#20010;&#20256;&#36755;&#36830;&#25509;&#23545;&#35937;&#21457;&#36865;&#23427;&#33258;&#24049;&#20102;&#12290;&#23545;&#20110;<code class="code">Solar_Mail_Message</code>&#31867;&#65292;&#37197;&#32622;&#20256;&#36755;&#36830;&#25509;&#23545;&#35937;&#27880;&#20837;&#30340;&#38190;&#21517;&#26159;'transport'&#12290;</p>
+                    <div class="sect3" title="9.4.2.1. &#20351;&#29992;&#37197;&#32622;&#25968;&#32452;&#37197;&#32622;&#27880;&#20837;"><div class="titlepage"><div><div><h4 class="title"><a name="d4e3457"></a>9.4.2.1. &#20351;&#29992;&#37197;&#32622;&#25968;&#32452;&#37197;&#32622;&#27880;&#20837;</h4></div></div></div>
+                        
+                        <p>&#20351;&#29992;&#20381;&#36182;&#27880;&#20837;&#26368;&#31616;&#21333;&#30340;&#26041;&#27861;&#23601;&#26159;&#20026;'transport'&#20256;&#36882;&#19968;&#20010;&#37197;&#32622;&#25968;&#32452;&#12290;&#36825;&#37324;&#26377;&#19968;&#20010;&#21521;&#37038;&#20214;&#28040;&#24687;&#27880;&#20837;PHP<a class="ulink" href="http://php.net/manual/en/function.mail.php" target="_top">mail()</a>&#36866;&#37197;&#22120;&#30340;&#31616;&#21333;&#31034;&#20363;&#65306;</p><pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+<i class="hl-comment" style="color: silver">// create a message object, and inject a transport config</i>
+$mail = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Mail_Message'</i></b>, <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'transport'</i></b> =&gt; <b class="hl-keyword">array</b>(
+        <b class="hl-string"><i style="color:red">'adapter'</i></b> =&gt; <b class="hl-string"><i style="color:red">'Solar_Mail_Transport_Adapter_Phpmail'</i></b>,
+    )
+));
+
+<i class="hl-comment" style="color: silver">// ... compose the message ...</i>
+
+<i class="hl-comment" style="color: silver">// now tell the email to "send itself".</i>
+<i class="hl-comment" style="color: silver">// this uses the injected transport.</i>
+$mail-&gt;send();
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                        <p>&#19979;&#38754;&#26377;&#19968;&#20010;&#31245;&#24494;&#22797;&#26434;&#28857;&#30340;&#31034;&#20363;&#65292;&#23427;&#20351;&#29992;<code class="code">Solar_Smtp</code>&#24037;&#21378;&#36866;&#37197;&#22120;&#20316;&#20026;&#20256;&#36755;&#36830;&#25509;&#23545;&#35937;&#65292;&#35813;&#23545;&#35937;&#20351;&#29992;&#32431;&#25991;&#26412;&#26041;&#24335;&#39564;&#35777;&#12290;&#27880;&#24847;&#21040;&#65292;&#20256;&#36755;&#36830;&#25509;&#23545;&#35937;&#26412;&#36523;&#20063;&#20351;&#29992;&#20381;&#36182;&#27880;&#20837;&#65292;&#36890;&#36807;&#32473;'smtp'&#38190;&#20256;&#36882;&#19968;&#20010;&#37197;&#32622;&#25968;&#32452;&#27880;&#20837;<code class="code">Solar_Smtp</code>&#23545;&#35937;&#12290;</p><pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+<i class="hl-comment" style="color: silver">// create a message object, and inject a transport config</i>
+$mail = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Mail_Message'</i></b>, <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'transport'</i></b> =&gt; <b class="hl-keyword">array</b>(
+        <b class="hl-string"><i style="color:red">'adapter'</i></b> =&gt; <b class="hl-string"><i style="color:red">'Solar_Mail_Transport_Adapter_Smtp'</i></b>,
+        <b class="hl-string"><i style="color:red">'smtp'</i></b> =&gt; <b class="hl-keyword">array</b>(
+            <b class="hl-string"><i style="color:red">'adapter'</i></b>  =&gt; <b class="hl-string"><i style="color:red">'Solar_Smtp_Adapter_PlainAuth'</i></b>,
+            <b class="hl-string"><i style="color:red">'username'</i></b> =&gt; <b class="hl-string"><i style="color:red">'pmjones'</i></b>,
+            <b class="hl-string"><i style="color:red">'password'</i></b> =&gt; <b class="hl-string"><i style="color:red">'secret'</i></b>,
+            <b class="hl-string"><i style="color:red">'host'</i></b>     =&gt; <b class="hl-string"><i style="color:red">'mail.example.com'</i></b>,
+        ),
+    )
+));
+
+<i class="hl-comment" style="color: silver">// ... compose the message ...</i>
+
+<i class="hl-comment" style="color: silver">// now tell the email to "send itself".</i>
+<i class="hl-comment" style="color: silver">// this uses the injected transport.</i>
+$mail-&gt;send();
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                        <p>&#36825;&#38750;&#24120;&#26041;&#20415;&#65292;&#29305;&#21035;&#26159;&#20320;&#21487;&#20197;&#25552;&#21069;&#22312;&#20320;&#30340;&#37197;&#32622;&#25991;&#20214;&#20013;&#20889;&#22909;&#37197;&#32622;&#25968;&#32452;&#65292;&#24403;&#20320;&#27599;&#27425;&#21019;&#24314;<code class="code">Solar_Mail_Message</code>&#23545;&#35937;&#26102;&#65292;&#22987;&#32456;&#25226;&#23427;&#20204;&#20316;&#20026;&#40664;&#35748;&#30340;&#37197;&#32622;&#12290;&#22312;&#36825;&#31181;&#24773;&#20917;&#19979;&#65292;&#20320;&#19981;&#20877;&#38656;&#35201;&#22312;&#20351;&#29992;&#26102;&#20256;&#36882;&#23436;&#25972;&#30340;&#37197;&#32622;&#25968;&#32452;&#20102;&#65292;&#20351;&#29992;&#31867;&#21517;&#23601;&#21487;&#20197;&#20102;&#12290;</p><pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+$config[<b class="hl-string"><i style="color:red">'Solar_Mail_Message'</i></b>] = <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'transport'</i></b> =&gt; <b class="hl-string"><i style="color:red">'Solar_Mail_Transport_Adapter_Smtp'</i></b>,
+);
+
+$config[<b class="hl-string"><i style="color:red">'Solar_Mail_Transport_Adapter_Smtp'</i></b>] = <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'transport'</i></b> =&gt; <b class="hl-string"><i style="color:red">'Solar_Smtp_Adapter_PlainAuth'</i></b>,
+);
+
+$config[<b class="hl-string"><i style="color:red">'Solar_Smtp_Adapter_PlainAuth'</i></b>] = <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'adapter'</i></b>  =&gt; <b class="hl-string"><i style="color:red">'Solar_Smtp_Adapter_PlainAuth'</i></b>,
+    <b class="hl-string"><i style="color:red">'username'</i></b> =&gt; <b class="hl-string"><i style="color:red">'pmjones'</i></b>,
+    <b class="hl-string"><i style="color:red">'password'</i></b> =&gt; <b class="hl-string"><i style="color:red">'secret'</i></b>,
+    <b class="hl-string"><i style="color:red">'host'</i></b>     =&gt; <b class="hl-string"><i style="color:red">'mail.example.com'</i></b>,
+);
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                        <p>&#20351;&#29992;&#22522;&#20110;&#37197;&#32622;&#25991;&#20214;&#30340;&#26041;&#24335;&#65292;&#32780;&#19981;&#20351;&#29992;&#22522;&#20110;&#36923;&#36753;&#30340;&#26041;&#24335;&#65292;&#24847;&#21619;&#30528;&#24212;&#29992;&#30340;&#25152;&#26377;&#37197;&#32622;&#37117;&#21487;&#20197;&#25918;&#22312;&#19968;&#20010;&#22320;&#26041;&#12290;&#20320;&#29978;&#33267;&#21487;&#20197;&#22312;&#37197;&#32622;&#25991;&#20214;&#20013;&#25913;&#21464;&#36866;&#37197;&#22120;&#65292;&#32780;&#19981;&#38656;&#35201;&#25913;&#21464;&#37038;&#20214;&#21457;&#36865;&#30340;&#20195;&#30721;&#65292;&#21069;&#25552;&#26159;&#35201;&#20351;&#29992;&#30456;&#21516;&#30340;&#27880;&#20876;&#34920;&#21517;&#31216;&#12290;</p>
+                    </div>
+                    <div class="sect3" title="9.4.2.2. &#20351;&#29992;&#27880;&#20876;&#34920;&#27880;&#20837;"><div class="titlepage"><div><div><h4 class="title"><a name="d4e3470"></a>9.4.2.2. &#20351;&#29992;&#27880;&#20876;&#34920;&#27880;&#20837;</h4></div></div></div>
+                        
+                        <p>&#20351;&#29992;&#37197;&#32622;&#25968;&#32452;&#37197;&#32622;&#27880;&#20837;&#30340;&#21807;&#19968;&#38382;&#39064;&#26159;&#65306;&#22312;&#20320;&#27599;&#27425;&#21019;&#24314;<code class="code">Solar_Mail_Message</code>&#23545;&#35937;&#30340;&#21516;&#26102;&#20063;&#20250;&#21019;&#24314;&#20381;&#36182;&#23545;&#35937;&#12290;&#26377;&#26102;&#20505;&#20351;&#29992;&#27880;&#20876;&#34920;&#26469;&#22788;&#29702;&#20381;&#36182;&#27880;&#20837;&#20250;&#26356;&#22909;&#65292;&#33267;&#23569;&#19981;&#20250;&#22240;&#20026;&#37325;&#22797;&#21019;&#24314;&#21516;&#19968;&#20010;&#23545;&#35937;&#32780;&#32791;&#20809;&#36164;&#28304;&#12290;</p>
+                        <p>&#20320;&#21487;&#20197;&#22312;&#20320;&#30340;&#20837;&#21475;&#25991;&#20214;&#25110;<code class="code"><a class="ulink" href="http://solarphp.cn/apidoc/Solar_Controller/Solar_Controller_Page.html#method_setup" target="_top">Solar_Controller_Page::_setup()</a></code>&#25991;&#20214;&#20013;&#27880;&#20876;SMTP&#20256;&#36755;&#23545;&#35937;&#65292;&#36825;&#26679;&#20320;&#23601;&#21487;&#20197;&#22312;&#25972;&#20010;&#24212;&#29992;&#20013;&#20351;&#29992;&#23427;&#12290;</p><pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+<i class="hl-comment" style="color: silver">// build a Solar_Smtp object</i>
+$smtp = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Smtp'</i></b>, <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'adapter'</i></b>  =&gt; <b class="hl-string"><i style="color:red">'Solar_Smtp_Adapter_PlainAuth'</i></b>,
+    <b class="hl-string"><i style="color:red">'username'</i></b> =&gt; <b class="hl-string"><i style="color:red">'pmjones'</i></b>,
+    <b class="hl-string"><i style="color:red">'password'</i></b> =&gt; <b class="hl-string"><i style="color:red">'secret'</i></b>,
+    <b class="hl-string"><i style="color:red">'host'</i></b>     =&gt; <b class="hl-string"><i style="color:red">'mail.example.com'</i></b>,
+));
+
+<i class="hl-comment" style="color: silver">// register it as 'smtp'</i>
+Solar_Registry::set(<b class="hl-string"><i style="color:red">'smtp'</i></b>, $smtp);
+
+<i class="hl-comment" style="color: silver">// build a Solar_Mail_Transport object with the SMTP object injected</i>
+$transport = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Mail_Transport'</i></b>, <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'adapter'</i></b> =&gt; <b class="hl-string"><i style="color:red">'Solar_Mail_Transport_Adapter_Smtp'</i></b>,
+    <b class="hl-string"><i style="color:red">'smtp'</i></b>    =&gt; <b class="hl-string"><i style="color:red">'smtp'</i></b>, <i class="hl-comment" style="color: silver">// uses the registered 'smtp' object</i>
+);
+
+<i class="hl-comment" style="color: silver">// register the transport as 'mail-transport'</i>
+Solar_Registry::set(<b class="hl-string"><i style="color:red">'mail-transport'</i></b>, $transport);
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                        <p>&#29616;&#22312;&#65292;&#24403;&#20320;&#21019;&#24314;&#19968;&#20010;&#26032;&#30340;&#37038;&#20214;&#28040;&#24687;&#23545;&#35937;&#26102;&#65292;&#20320;&#21487;&#20197;&#21578;&#35785;&#23427;&#24050;&#32463;&#23384;&#22312;&#19968;&#20010;&#21487;&#29992;&#30340;&#20256;&#36755;&#23545;&#35937;&#20102;&#65292;&#28982;&#21518;&#30452;&#25509;&#35843;&#29992;<a class="ulink" href="http://solarphp.cn/apidoc/Solar_Mail/Solar_Mail_Message.html#methodsend" target="_top">send()</a>&#26041;&#27861;&#21457;&#36865;&#37038;&#20214;&#12290;</p><pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+$mail = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Mail_Message'</i></b>, <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'transport'</i></b> =&gt; <b class="hl-string"><i style="color:red">'mail-transport'</i></b>,
+));
+
+<i class="hl-comment" style="color: silver">// ... build the message, and then:</i>
+$mail-&gt;send();
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                        <p>&#22914;&#26524;&#20320;&#24895;&#24847;&#65292;&#20320;&#21487;&#20197;&#25226;&#21457;&#36865;&#37038;&#20214;&#30456;&#20851;&#30340;&#37197;&#32622;&#20449;&#24687;&#37117;&#20889;&#20837;&#21040;Solar&#30340;&#37197;&#32622;&#25991;&#20214;&#20013;&#12290;&#28982;&#21518;&#20320;&#21487;&#20197;&#20174;&#27880;&#20876;&#34920;&#20013;&#24310;&#36831;&#21152;&#36733;&#36825;&#20123;&#23545;&#35937;&#65292;&#32780;&#19988;&#23427;&#20204;&#37117;&#20250;&#26377;&#27491;&#30830;&#30340;&#37197;&#32622;&#12290;&#31995;&#32479;&#20250;&#33258;&#21160;&#24110;&#20320;&#24310;&#36831;&#21152;&#36733;&#37027;&#20123;&#20381;&#36182;&#30340;&#23545;&#35937;&#12290;</p>
+                        <p>&#22312;Solar.config.php&#25991;&#20214;&#20013;&#65306;</p><pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+<i class="hl-comment" style="color: silver">// configure SMTP</i>
+$config[<b class="hl-string"><i style="color:red">'Solar_Smtp'</i></b>] = <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'adapter'</i></b>  =&gt; <b class="hl-string"><i style="color:red">'Solar_Smtp_Adapter_PlainAuth'</i></b>,
+    <b class="hl-string"><i style="color:red">'username'</i></b> =&gt; <b class="hl-string"><i style="color:red">'pmjones'</i></b>,
+    <b class="hl-string"><i style="color:red">'password'</i></b> =&gt; <b class="hl-string"><i style="color:red">'secret'</i></b>,
+    <b class="hl-string"><i style="color:red">'host'</i></b>     =&gt; <b class="hl-string"><i style="color:red">'mail.example.com'</i></b>,
+);
+
+<i class="hl-comment" style="color: silver">// configure mail transport</i>
+$config[<b class="hl-string"><i style="color:red">'Solar_Mail_Transport'</i></b>] = <b class="hl-keyword">array</b>(
+    <b class="hl-string"><i style="color:red">'adapter'</i></b> =&gt; <b class="hl-string"><i style="color:red">'Solar_Mail_Transport_Adapter_Smtp'</i></b>,
+    <b class="hl-string"><i style="color:red">'smtp'</i></b>    =&gt; <b class="hl-string"><i style="color:red">'smtp'</i></b>,
+);
+
+<i class="hl-comment" style="color: silver">// tell all mail messages to use the registered 'mail-transport'</i>
+$config[<b class="hl-string"><i style="color:red">'Solar_Mail_Message'</i></b>][<b class="hl-string"><i style="color:red">'transport'</i></b>] = <b class="hl-string"><i style="color:red">'mail-transport'</i></b>;
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                        <p>&#25509;&#30528;&#20320;&#35201;&#20570;&#30340;&#20107;&#24773;&#23601;&#26159;&#22312;&#20320;&#30340;&#20837;&#21475;&#25991;&#20214;&#20013;&#27880;&#20876;&#31867;&#21517;&#65288;&#27880;&#24847;&#26159;&#27880;&#20876;&#31867;&#21517;&#32780;&#19981;&#26159;&#27880;&#20876;&#23545;&#35937;&#65289;&#65306;</p><pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+Solar_Registry::set(<b class="hl-string"><i style="color:red">'smtp'</i></b>, <b class="hl-string"><i style="color:red">'Solar_Smtp'</i></b>);
+Solar_Registry::set(<b class="hl-string"><i style="color:red">'mail-transport'</i></b>, <b class="hl-string"><i style="color:red">'Solar_Mail_Transport'</i></b>);
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                        <p>&#12290;&#12290;&#12290;&#19978;&#38754;&#30340;&#20195;&#30721;&#23558;&#20250;&#22312;&#37027;&#20123;&#23545;&#35937;&#31532;&#19968;&#27425;&#34987;&#20381;&#36182;&#35843;&#29992;&#26102;&#21019;&#24314;&#23427;&#20204;&#65292;&#24182;&#19988;&#20197;&#21518;&#20320;&#20174;&#27880;&#20876;&#34920;&#33719;&#21462;&#36825;&#20123;&#23545;&#35937;&#26102;&#65292;&#20250;&#37325;&#29992;&#31532;&#19968;&#27425;&#21019;&#24314;&#30340;&#23545;&#35937;&#12290;</p>
+                        <p>&#29616;&#22312;&#65292;&#20320;&#21487;&#20197;&#38750;&#24120;&#31616;&#21333;&#22320;&#21457;&#36865;&#37038;&#20214;&#28040;&#24687;&#20102;&#65306;</p><pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+<i class="hl-comment" style="color: silver">// create and build a message</i>
+$mail = Solar::factory(<b class="hl-string"><i style="color:red">'Solar_Mail_Message'</i></b>);
+<i class="hl-comment" style="color: silver">// ...</i>
+
+<i class="hl-comment" style="color: silver">// send the message; this creates the SMTP and mail-transport objects</i>
+<i class="hl-comment" style="color: silver">// from the config-file settings, and sends the message trough the</i>
+<i class="hl-comment" style="color: silver">// registered transport.</i>
+$mail-&gt;send();
+<span class="hl-directive" style="color: maroon">?&gt;</span></pre>
+                    </div>
+                </div>
+            </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch09s03.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch09.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="pt02.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">9.3. &#21457;&#36865;&#38468;&#20214;&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Part&nbsp;II.&nbsp;&#38468;&#24405;</td></tr></table></div></div>  <!-- /#main content construct --> <!-- #footer -->  <div id="foot">  <p class="fl">Copyright &copy; 2010 Solar For PHP 5 In China, All Rights Reserved.</p>    <!-- /#   LINKS AND AUTHOR-SIGNATURE CANNOT BE REMOVED !!! -->    <p class="fr">Powered By&nbsp;&nbsp;<a href="mailto:roy@solarphp.cn">Roy Gu</a><span id="cnzz"><script src="http://s16.cnzz.com/stat.php?id=2386648&web_id=2386648&show=pic" language="JavaScript"></script></span>    </p>  </div>  <hr class="hidden" />  <div class="clear"></div>  <div id="solarcopy">  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-1.gif" style="border: 0 !important;" /></a>  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-2.gif" style="border: 0 !important;" /></a>  <br />  <script type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('mzsrzilnbxkw')</script></div> <!-- /#footer --></div></body></html>

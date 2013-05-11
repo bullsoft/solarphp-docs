@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="autor" content="Roy Gu (roy@solarphp.cn)" /><meta name="copyright" content="Solar Framework for PHP 5 In China" /><meta name="description" content="Solar Php框架 最佳实践框架 完全面向对象 企设级应用设计模式 超强命令行工具 | Solar 中国"  /><meta name="keywords" content="php, framework, 框架, php框架, solar, solarphp" />
+   <title>6.7 &#21322;&#33258;&#21160;&#35270;&#22270;&#26174;&#31034;</title><link rel="stylesheet" href="style.css" type="text/css"><link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen" /><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Solar PHP &#20013;&#25991;&#25945;&#31243;"><link rel="up" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="prev" href="ch06s06.html" title="6.6 &#35270;&#22270;&#35013;&#39280;"><link rel="next" href="ch06s08.html" title="6.8 &#33258;&#23450;&#20041;&#35760;&#24405;&#20803;&#32032;"><link rel="part" href="pt01.html" title="Part&nbsp;I.&nbsp;&#25196;&#24070;&#36215;&#33322;"><link rel="chapter" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="chapter" href="ch02.html" title="Chapter&nbsp;2.&nbsp;&#21160;&#24577;&#35843;&#24230;&#21608;&#26399;"><link rel="chapter" href="ch03.html" title="Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;"><link rel="chapter" href="ch04.html" title="Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;"><link rel="chapter" href="ch05.html" title="Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;"><link rel="chapter" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="chapter" href="ch07.html" title="Chapter&nbsp;7.&nbsp;&#29992;&#25143;&#35748;&#35777;&#12289;&#35282;&#33394;&#21450;&#35775;&#38382;&#25511;&#21046;"><link rel="chapter" href="ch08.html" title="Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;"><link rel="chapter" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="part" href="pt02.html" title="Part&nbsp;II.&nbsp;&#38468;&#24405;"><link rel="appendix" href="apa.html" title="Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;"><link rel="appendix" href="apb.html" title="Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;"><link rel="subsection" href="ch06s07.html#d4e2440" title="6.7.1 &#23383;&#27573;&#22495;"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="view"><!-- #header (main heading + logo with slogan) --><div id="head"><!-- main headings with search component --><div id="main"><h1><a href="/">SOLAR</a><sup><a href="http://solarphp.org.cn/viewtopic.php?f=13&t=165" target="_blank">1.1.2</a></sup></h1>      <h2><a href="#">Framework for PHP	5</a></h2></div><!-- /main headings with search component -->    <hr class="hidden" /><!-- main horizontal menu --><div id="mainMenu"><ul><li><a href="../">首　页<span></span></a></li><li><a href="../project.php">Solar 项目<span></span></a></li><li class="active"><a href="../manual-new/">用户手册<span></span></a></li> <li><a href="http://forum.solarphp.cn" target="_blank">开发者社区<span></span></a></li><li><a href="http://bug.solarphp.cn" target="_blank">Bug 跟踪<span></span></a></li><li><a href="../contributor.php">Contributor<span></span></a></li><li class="fr"><a href="http://solarphp.cn/apidoc/">API 文档<span></span></a></li><li class="fr"><a href="http://demo.solarphp.cn" target="_blank">Solar Demo<span></span></a></li></ul></div>    <!-- /main horizontal menu --><hr class="hidden" /><!-- logo with slogan --><div id="logo"></div>    <!-- /logo with slogan --><hr class="hidden" /></div><!-- /#header (main heading + logo with slogan) -->  <!-- #main content construct --><div id="content"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">6.7 &#21322;&#33258;&#21160;&#35270;&#22270;&#26174;&#31034;</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch06s06.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch06s08.html">Next</a></td></tr></table><hr></div><div class="sect1" title="6.7 &#21322;&#33258;&#21160;&#35270;&#22270;&#26174;&#31034;"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e2431"></a>6.7 &#21322;&#33258;&#21160;&#35270;&#22270;&#26174;&#31034;</h2></div></div></div>
+                
+                <p>&#23545;&#20110;&#19968;&#27425;&#24615;&#26174;&#31034;&#34920;&#21333;&#23545;&#35937;&#20013;&#30340;&#25152;&#26377;&#20803;&#32032;&#26469;&#35828;&#65292;<code class="code">auto()</code>&#26041;&#27861;&#26159;&#38750;&#24120;&#26041;&#20415;&#30340;&#65292;&#20294;&#26159;&#36890;&#24120;&#25105;&#20204;&#20165;&#38656;&#35201;&#26174;&#31034;&#26576;&#20123;&#20803;&#32032;&#65292;&#26377;&#26102;&#20505;&#21482;&#26159;&#26576;&#20010;&#23383;&#27573;&#38598;&#25110;&#26576;&#32452;&#30340;&#19968;&#37096;&#20998;&#12290;&#22240;&#27492;&#65292;&#20809;&#26377;<code class="code">auto()</code>&#26159;&#19981;&#22815;&#30340;&#65292;&#25105;&#20204;&#36824;&#38656;&#35201;&#20854;&#20182;<code class="code">form()</code>&#36741;&#21161;&#31867;&#65292;&#19988;&#38656;&#35201;&#20174;&#34920;&#21333;&#23545;&#35937;&#20013;&#21333;&#29420;&#33719;&#21462;&#20803;&#32032;&#12290;</p>
+                <p>&#22312;&#26412;&#33410;&#20013;&#65292;&#25105;&#20204;&#24819;&#35937;&#19968;&#19979;&#65292;&#25105;&#20204;&#26377;&#19968;&#20010;&#20174;&#35760;&#24405;&#23545;&#35937;<code class="code">Acme_Model_Users_Record</code>&#20135;&#29983;&#30340;&#34920;&#21333;&#23545;&#35937;&#65292;&#21253;&#25324;&#20197;&#19979;&#20803;&#32032;&#65306;</p>
+                <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+$this-&gt;form-&gt;elements[<b class="hl-string"><i style="color:red">'user[handle]'</i></b>]      = <b class="hl-keyword">array</b>(...);
+$this-&gt;form-&gt;elements[<b class="hl-string"><i style="color:red">'user[moniker]'</i></b>]     = <b class="hl-keyword">array</b>(...);
+$this-&gt;form-&gt;elements[<b class="hl-string"><i style="color:red">'user[name_first]'</i></b>]  = <b class="hl-keyword">array</b>(...);
+$this-&gt;form-&gt;elements[<b class="hl-string"><i style="color:red">'user[name_middle]'</i></b>] = <b class="hl-keyword">array</b>(...);
+$this-&gt;form-&gt;elements[<b class="hl-string"><i style="color:red">'user[name_last]'</i></b>]   = <b class="hl-keyword">array</b>(...);
+$this-&gt;form-&gt;elements[<b class="hl-string"><i style="color:red">'user[email]'</i></b>]       = <b class="hl-keyword">array</b>(...);
+$this-&gt;form-&gt;elements[<b class="hl-string"><i style="color:red">'user[phone]'</i></b>]       = <b class="hl-keyword">array</b>(...);</pre>
+                <div class="sect2" title="6.7.1 &#23383;&#27573;&#22495;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e2440"></a>6.7.1 &#23383;&#27573;&#22495;</h3></div></div></div>
+                    
+                    <p>&#20551;&#35774;&#36825;&#20010;&#35270;&#22270;&#26377;&#19968;&#20010;&#35201;&#27714;&#65306;&#25105;&#20204;&#24517;&#39035;&#25226;&#21517;&#31216;&#37096;&#20998;&#25918;&#22312;&#19968;&#20010;&#23383;&#27573;&#22495;&#20013;&#65292;&#32852;&#31995;&#20154;&#37096;&#20998;&#25918;&#21040;&#21478;&#19968;&#20010;&#23383;&#27573;&#22495;&#20013;&#12290;</p>
+                    <pre class="programlisting"><span class="hl-directive" style="color: maroon">&lt;?php</span>
+<b class="hl-keyword">echo</b> $this-&gt;form()
+          -&gt;meta($this-&gt;form)
+          -&gt;beginFieldset(<b class="hl-string"><i style="color:red">'LEGEND_NAME'</i></b>)
+          -&gt;addElements($this-&gt;form-&gt;getElements(<b class="hl-string"><i style="color:red">'user[name_'</i></b>))
+          -&gt;endFieldset()
+          -&gt;beginFieldset(<b class="hl-string"><i style="color:red">'LEGEND_CONTACT'</i></b>)
+          -&gt;addElements($this-&gt;form-&gt;getElements(<b class="hl-keyword">array</b>(
+                <b class="hl-string"><i style="color:red">'user[email]'</i></b>,
+                <b class="hl-string"><i style="color:red">'user[phone]'</i></b>,
+            )))
+          -&gt;endFieldset()
+          -&gt;addProcess(<b class="hl-string"><i style="color:red">'save'</i></b>)
+          -&gt;fetch();</pre>
+                    <p><code class="code">meta()</code>&#26041;&#27861;&#33719;&#21462;&#34920;&#21333;&#30340;&#29366;&#24577;&#65292;form&#26631;&#31614;&#30340;&#23646;&#24615;&#21450;&#25972;&#20010;&#34920;&#21333;&#30340;&#21453;&#39304;&#20449;&#24687;&#65288;&#20687;&#8220;&#25104;&#21151;&#8221;&#25110;&#8220;&#22833;&#36133;&#8221;&#36825;&#31867;&#39030;&#23618;&#30340;&#21453;&#39304;&#20449;&#24687;&#65289;&#12290;</p>
+                    <p><code class="code">beginFieldset()</code>&#21644;<code class="code">endFieldset()</code>&#26041;&#27861;&#20998;&#21035;&#28155;&#21152;fieldset&#30340;&#24320;&#22987;&#21644;&#20851;&#38381;&#26631;&#31614;&#12290;</p>
+                    <p><code class="code">addElements()</code>&#26041;&#27861;&#20165;&#28155;&#21152;&#21015;&#20986;&#30340;&#20803;&#32032;&#12290;<a class="ulink" href="http://solarphp.com/class/Solar_Form::getElements()" target="_top">Solar_Form::getElements()</a>&#26041;&#27861;&#20174;&#34920;&#21333;&#23545;&#35937;&#20013;&#33719;&#21462;&#20803;&#32032;&#12290;&#22914;&#26524;&#20320;&#20256;&#36882;&#19968;&#20010;&#23383;&#31526;&#20018;&#21442;&#25968;&#65292;&#23427;&#23558;&#36820;&#22238;&#37027;&#20123;&#21517;&#31216;&#20197;&#35813;&#23383;&#20018;&#20018;&#24320;&#22836;&#30340;&#20803;&#32032;&#65307;&#22914;&#26524;&#20320;&#20256;&#36882;&#19968;&#20010;&#20803;&#32032;&#21517;&#31216;&#30340;&#25968;&#32452;&#65292;&#23427;&#23558;&#20165;&#20165;&#36820;&#22238;&#25351;&#23450;&#30340;&#20803;&#32032;&#12290;</p>
+                    <p>&#19978;&#38754;&#30340;&#35270;&#22270;&#33050;&#26412;&#20135;&#29983;&#30340;&#36755;&#20986;&#22914;&#19979;&#12290;</p>
+                    <pre class="programlisting">&lt;form method=<b class="hl-string"><i style="color:red">"post"</i></b> enctype=<b class="hl-string"><i style="color:red">"multipart/form-data"</i></b>&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;LEGEND_NAME&lt;/legend&gt;
+        &lt;dl <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"list"</i></b>&gt;
+            &lt;dt <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-name_first"</i></b>&gt;
+                &lt;label <b class="hl-keyword">for</b>=<b class="hl-string"><i style="color:red">"user-name_first"</i></b> <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-name_first"</i></b>&gt;LABEL_NAME_FIRST&lt;/label&gt;
+            &lt;/dt&gt;
+            &lt;dd <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-name_first"</i></b>&gt;
+                &lt;input type=<b class="hl-string"><i style="color:red">"text"</i></b> name=<b class="hl-string"><i style="color:red">"user[name_first]"</i></b> value=<b class="hl-string"><i style="color:red">""</i></b> id=<b class="hl-string"><i style="color:red">"user-name_first"</i></b> 
+                    <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"input-text user-name_first"</i></b>
+                /&gt;
+            &lt;/dd&gt;
+            &lt;dt <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-name_middle"</i></b>&gt;
+                &lt;label <b class="hl-keyword">for</b>=<b class="hl-string"><i style="color:red">"user-name_middle"</i></b> <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-name_middle"</i></b>&gt;LABEL_NAME_MIDDLE&lt;/label&gt;
+            &lt;/dt&gt;
+            &lt;dd <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-name_middle"</i></b>&gt;
+                &lt;input type=<b class="hl-string"><i style="color:red">"text"</i></b> name=<b class="hl-string"><i style="color:red">"user[name_middle]"</i></b> value=<b class="hl-string"><i style="color:red">""</i></b> id=<b class="hl-string"><i style="color:red">"user-name_middle"</i></b> 
+                    <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"input-text user-name_middle"</i></b>
+                /&gt;
+            &lt;/dd&gt;
+            &lt;dt <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-name_last"</i></b>&gt;
+                &lt;label <b class="hl-keyword">for</b>=<b class="hl-string"><i style="color:red">"user-name_last"</i></b> <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-name_last"</i></b>&gt;LABEL_NAME_LAST&lt;/label&gt;
+            &lt;/dt&gt;
+            &lt;dd <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-name_last"</i></b>&gt;
+                &lt;input type=<b class="hl-string"><i style="color:red">"text"</i></b> name=<b class="hl-string"><i style="color:red">"user[name_last]"</i></b> value=<b class="hl-string"><i style="color:red">""</i></b> id=<b class="hl-string"><i style="color:red">"user-name_last"</i></b> 
+                    <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"input-text user-name_last"</i></b> 
+                /&gt;
+            &lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;LEGEND_CONTACT&lt;/legend&gt;
+        &lt;dl <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"list"</i></b>&gt;
+            &lt;dt <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-email"</i></b>&gt;
+                &lt;label <b class="hl-keyword">for</b>=<b class="hl-string"><i style="color:red">"user-email"</i></b> <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-email"</i></b>&gt;Email&lt;/label&gt;
+            &lt;/dt&gt;
+            &lt;dd <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-email"</i></b>&gt;
+                &lt;input type=<b class="hl-string"><i style="color:red">"text"</i></b> name=<b class="hl-string"><i style="color:red">"user[email]"</i></b> value=<b class="hl-string"><i style="color:red">""</i></b> id=<b class="hl-string"><i style="color:red">"user-email"</i></b> 
+                    <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"input-text user-email"</i></b>
+                /&gt;
+            &lt;/dd&gt;
+            &lt;dt <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-phone"</i></b>&gt;
+                &lt;label <b class="hl-keyword">for</b>=<b class="hl-string"><i style="color:red">"user-phone"</i></b> <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-phone"</i></b>&gt;LABEL_PHONE&lt;/label&gt;
+            &lt;/dt&gt;
+            &lt;dd <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"user-phone"</i></b>&gt;
+                &lt;input type=<b class="hl-string"><i style="color:red">"text"</i></b> name=<b class="hl-string"><i style="color:red">"user[phone]"</i></b> value=<b class="hl-string"><i style="color:red">""</i></b> id=<b class="hl-string"><i style="color:red">"user-phone"</i></b> 
+                    <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"input-text user-phone"</i></b> 
+                /&gt;
+            &lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/fieldset&gt;
+    &lt;dl <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"list"</i></b>&gt;
+        &lt;dt <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"process-save"</i></b>&gt;
+            
+        &lt;/dt&gt;
+        &lt;dd <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"process-save"</i></b>&gt;
+            &lt;input type=<b class="hl-string"><i style="color:red">"submit"</i></b> name=<b class="hl-string"><i style="color:red">"process"</i></b> value=<b class="hl-string"><i style="color:red">"Save"</i></b> id=<b class="hl-string"><i style="color:red">"process-save"</i></b> 
+                <b class="hl-keyword">class</b>=<b class="hl-string"><i style="color:red">"input-submit process-save"</i></b>
+            /&gt;
+        &lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/form&gt;</pre>
+                </div>
+            </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch06s06.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch06.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch06s08.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">6.6 &#35270;&#22270;&#35013;&#39280;&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;6.8 &#33258;&#23450;&#20041;&#35760;&#24405;&#20803;&#32032;</td></tr></table></div></div>  <!-- /#main content construct --> <!-- #footer -->  <div id="foot">  <p class="fl">Copyright &copy; 2010 Solar For PHP 5 In China, All Rights Reserved.</p>    <!-- /#   LINKS AND AUTHOR-SIGNATURE CANNOT BE REMOVED !!! -->    <p class="fr">Powered By&nbsp;&nbsp;<a href="mailto:roy@solarphp.cn">Roy Gu</a><span id="cnzz"><script src="http://s16.cnzz.com/stat.php?id=2386648&web_id=2386648&show=pic" language="JavaScript"></script></span>    </p>  </div>  <hr class="hidden" />  <div class="clear"></div>  <div id="solarcopy">  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-1.gif" style="border: 0 !important;" /></a>  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-2.gif" style="border: 0 !important;" /></a>  <br />  <script type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('mzsrzilnbxkw')</script></div> <!-- /#footer --></div></body></html>

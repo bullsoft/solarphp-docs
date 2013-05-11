@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="autor" content="Roy Gu (roy@solarphp.cn)" /><meta name="copyright" content="Solar Framework for PHP 5 In China" /><meta name="description" content="Solar Php框架 最佳实践框架 完全面向对象 企设级应用设计模式 超强命令行工具 | Solar 中国"  /><meta name="keywords" content="php, framework, 框架, php框架, solar, solarphp" />
+   <title>1.2. &#19979;&#36733;&#24182;&#23433;&#35013;Solar</title><link rel="stylesheet" href="style.css" type="text/css"><link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen" /><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="index.html" title="Solar PHP &#20013;&#25991;&#25945;&#31243;"><link rel="up" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="prev" href="ch01s01.html" title="1.1. &#31616;&#20171;"><link rel="next" href="ch01s03.html" title="1.3. &#21019;&#24314;&#24037;&#20316;&#21306;"><link rel="part" href="pt01.html" title="Part&nbsp;I.&nbsp;&#25196;&#24070;&#36215;&#33322;"><link rel="chapter" href="ch01.html" title="Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;"><link rel="chapter" href="ch02.html" title="Chapter&nbsp;2.&nbsp;&#21160;&#24577;&#35843;&#24230;&#21608;&#26399;"><link rel="chapter" href="ch03.html" title="Chapter&nbsp;3.&nbsp;&#21644;&#27169;&#22411;&#19968;&#36215;&#36339;&#21326;&#23572;&#20857;"><link rel="chapter" href="ch04.html" title="Chapter&nbsp;4.&nbsp;&#21644;&#20851;&#31995;&#27169;&#22411;&#36530;&#29483;&#29483;"><link rel="chapter" href="ch05.html" title="Chapter&nbsp;5.&nbsp;&#35270;&#22270;&#21644;&#24067;&#23616;"><link rel="chapter" href="ch06.html" title="Chapter&nbsp;6.&nbsp;&#27169;&#22411;&#21644;&#34920;&#21333;"><link rel="chapter" href="ch07.html" title="Chapter&nbsp;7.&nbsp;&#29992;&#25143;&#35748;&#35777;&#12289;&#35282;&#33394;&#21450;&#35775;&#38382;&#25511;&#21046;"><link rel="chapter" href="ch08.html" title="Chapter&nbsp;8.&nbsp;&#21629;&#20196;&#34892;&#24037;&#20855;"><link rel="chapter" href="ch09.html" title="Chapter&nbsp;9.&nbsp;&#37038;&#20214;"><link rel="part" href="pt02.html" title="Part&nbsp;II.&nbsp;&#38468;&#24405;"><link rel="appendix" href="apa.html" title="Appendix&nbsp;A.&nbsp;&#39033;&#30446;&#26631;&#20934;"><link rel="appendix" href="apb.html" title="Appendix&nbsp;B.&nbsp;&#21629;&#21517;&#35268;&#33539;"><link rel="subsection" href="ch01s02.html#d4e53" title="1.2.1 Linux/Unix&#24179;&#21488;"><link rel="subsection" href="ch01s02.html#d4e79" title="1.2.2 Windows &#24179;&#21488;"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="view"><!-- #header (main heading + logo with slogan) --><div id="head"><!-- main headings with search component --><div id="main"><h1><a href="/">SOLAR</a><sup><a href="http://solarphp.org.cn/viewtopic.php?f=13&t=165" target="_blank">1.1.2</a></sup></h1>      <h2><a href="#">Framework for PHP	5</a></h2></div><!-- /main headings with search component -->    <hr class="hidden" /><!-- main horizontal menu --><div id="mainMenu"><ul><li><a href="../">首　页<span></span></a></li><li><a href="../project.php">Solar 项目<span></span></a></li><li class="active"><a href="../manual-new/">用户手册<span></span></a></li> <li><a href="http://forum.solarphp.cn" target="_blank">开发者社区<span></span></a></li><li><a href="http://bug.solarphp.cn" target="_blank">Bug 跟踪<span></span></a></li><li><a href="../contributor.php">Contributor<span></span></a></li><li class="fr"><a href="http://solarphp.cn/apidoc/">API 文档<span></span></a></li><li class="fr"><a href="http://demo.solarphp.cn" target="_blank">Solar Demo<span></span></a></li></ul></div>    <!-- /main horizontal menu --><hr class="hidden" /><!-- logo with slogan --><div id="logo"></div>    <!-- /logo with slogan --><hr class="hidden" /></div><!-- /#header (main heading + logo with slogan) -->  <!-- #main content construct --><div id="content"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">1.2. &#19979;&#36733;&#24182;&#23433;&#35013;Solar</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch01s01.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;1.&nbsp;&#24555;&#36895;&#20837;&#38376;---&#31616;&#21333;&#21338;&#23458;&#28436;&#31034;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch01s03.html">Next</a></td></tr></table><hr></div><div class="sect1" title="1.2. &#19979;&#36733;&#24182;&#23433;&#35013;Solar"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d4e51"></a>1.2. &#19979;&#36733;&#24182;&#23433;&#35013;Solar</h2></div></div></div>
+                
+                <div class="sect2" title="1.2.1 Linux/Unix&#24179;&#21488;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e53"></a>1.2.1 Linux/Unix&#24179;&#21488;</h3></div></div></div>
+                    
+                    <p>
+                        </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+                                <p>&#19979;&#36733;Solar&#31995;&#32479;&#21387;&#32553;&#21253;&#65292;&#20320;&#21487;&#20197;&#20174;<a class="ulink" href="http://svn.solarphp.com/system/download/solar-system-1.1.1.tgz" target="_top">&#36825;&#37324;</a>&#19979;&#36733;&#12290;</p>
+                            </li><li class="listitem">
+                                <p>&#25226;&#31995;&#32479;&#21253;&#35299;&#21387;&#21040;&#32593;&#31449;&#26681;&#30446;&#24405;&#65288;&#20363;&#22914;&#65306;/var/www/htdocs &#25110;
+                                        /etc/apache2/sites/default&#65289;&#65292;&#22312;&#26412;&#31034;&#20363;&#20013;&#25105;&#20204;&#25226;&#35813;&#30446;&#24405;&#21483;<span class="italic">SYSTEM</span></p>
+                                <div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/warning.png"></td><th align="left">Warning</th></tr><tr><td align="left" valign="top">
+                                    <p>&#35831;&#27880;&#24847;&#65292;&#36825;&#31181;&#20570;&#27861;&#26159;&#24456;&#19981;&#23433;&#20840;&#30340;&#65307;&#22312;&#23454;&#38469;&#39033;&#30446;&#20013;&#65292;&#20320;&#24212;&#35813;&#25226;&#31995;&#32479;&#21253;&#35299;&#21387;&#21040;&#32593;&#31449;&#26681;&#30446;&#24405;&#20043;&#22806;&#65292;&#36890;&#36807;&#24314;&#31435;&#34394;&#25311;&#20027;&#26426;&#26469;&#25351;&#21521;<span class="italic">SYSTEM/docroot</span>&#30446;&#24405;</p>
+                                </td></tr></table></div>
+                            </li><li class="listitem">
+                                <p>&#36827;&#20837;<span class="italic">SYSTEM</span>&#30446;&#24405;&#65292;&#20320;&#24212;&#35813;&#20250;&#30475;&#21040;&#31867;&#20284;&#19979;&#38754;&#36825;&#26679;&#30340;&#25991;&#20214;&#30446;&#24405;&#65306;</p>
+                                <pre class="screen">$ cd SYSTEM
+$ ls -1F
+README
+config/
+config.php
+docroot/
+include/
+index.php
+script/
+source/
+sqlite/
+tmp/
+$</pre>
+                            </li><li class="listitem">
+                                <p>&#26356;&#25913;tmp/&#21644;sqlite/&#30446;&#24405;&#30340;&#26435;&#38480;&#65292;&#20197;&#20351;web&#26381;&#21153;&#22120;&#23545;&#20854;&#20855;&#26377;&#21487;&#20889;&#26435;&#38480;</p>
+                                <pre class="screen">$ chmod -R 777 sqlite/ tmp/
+$</pre>
+                                <div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/warning.png"></td><th align="left">Warning</th></tr><tr><td align="left" valign="top">
+                                    <p>&#35831;&#27880;&#24847;&#65292;&#23545;&#36825;&#20123;&#30446;&#24405;&#20351;&#29992;&#26368;&#22823;&#35835;/&#20889;&#26435;&#38480;&#26159;&#19981;&#23433;&#20840;&#30340;&#12290;&#22312;&#23454;&#38469;&#39033;&#30446;&#20013;&#65292;&#20320;&#24212;&#35813;&#25226;sqlite/&#21644;tmp/&#30340;&#25152;&#26377;&#32773;&#25913;&#20026;web&#26381;&#21153;&#22120;&#12290;</p>
+                                </td></tr></table></div>
+                            </li><li class="listitem">
+                                <p>&#29616;&#22312;&#20320;&#21487;&#20197;&#27983;&#35272;http://localhost/index.php &#24182;&#19988;&#21487;&#20197;&#30475;&#21040;Hello World!&#28040;&#24687;</p>
+                                <p><img src="../manual-new/figures/01-hello-world.png"></p>
+                            </li></ol></div><p>
+                    </p>
+                </div>
+                <div class="sect2" title="1.2.2 Windows &#24179;&#21488;"><div class="titlepage"><div><div><h3 class="title"><a name="d4e79"></a>1.2.2 Windows &#24179;&#21488;</h3></div></div></div>
+                    
+                    <p>
+                        </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+                                <p>&#19979;&#36733;Solar&#31995;&#32479;&#21387;&#32553;&#21253;&#65292;&#20320;&#21487;&#20197;&#20174;<a class="ulink" href="http://solarphp.cn/download/solar-system-win-latest.rar" target="_top">&#36825;&#37324;</a>&#19979;&#36733;&#12290;</p>
+                            </li><li class="listitem">
+                                <p>&#25226;&#31995;&#32479;&#21253;&#35299;&#21387;&#21040;<code class="code">/solarlatest</code>&#30446;&#24405;&#19979;&#65292;&#22312;&#26412;&#31034;&#20363;&#20013;&#25105;&#20204;&#25226;&#35813;&#30446;&#24405;&#21483;<span class="italic">SYSTEM</span>&#12290;</p>
+                            </li><li class="listitem">
+                                <p>&#36827;&#20837;<span class="italic">SYSTEM</span>&#30446;&#24405;&#65292;&#20320;&#24212;&#35813;&#20250;&#30475;&#21040;&#31867;&#20284;&#19979;&#38754;&#36825;&#26679;&#30340;&#25991;&#20214;&#30446;&#24405;&#65306;</p>
+                                <pre class="screen">$ cd SYSTEM
+$ dir
+README
+README2
+config/
+config.php
+docroot/
+include/
+index.php
+script/
+source/
+toolkit/
+sqlite/
+tmp/
+$</pre>
+                                <div class="note" title="&#20026;&#20160;&#20040;&#35201;&#21306;&#20998; Windows &#21644; Linux &#21602;&#65311;" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note: &#20026;&#20160;&#20040;&#35201;&#21306;&#20998; Windows &#21644; Linux &#21602;&#65311;"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">&#20026;&#20160;&#20040;&#35201;&#21306;&#20998; Windows &#21644; Linux &#21602;&#65311;</th></tr><tr><td align="left" valign="top">
+                                    
+                                    <p>&#36825;&#20010;&#38382;&#39064;&#30830;&#23454;&#35753;&#25105;&#20204;&#27809;&#21150;&#27861;&#22238;&#36991;&#65292;&#20107;&#23454;&#19978;&#36825;&#21487;&#33021;&#20063;&#26159;Solar&#30446;&#21069;&#23578;&#19981;&#27969;&#34892;&#30340;&#21407;&#22240;&#65292;&#35768;&#22810;&#20154;&#30475;&#21040;&#36825;&#37324;&#32943;&#23450;&#20250;&#38382;&#65306;&#8220; PHP
+                                        &#19981;&#26159;&#36328;&#24179;&#21488;&#30340;&#20040;&#65292;&#20026;&#20309;&#19968;&#20010;PHP&#26694;&#26550;&#19981;&#26159;&#36328;&#24179;&#21488;&#30340;&#21602;&#65311;&#8221;&#24681;&#65292;&#36825;&#20010;&#38382;&#39064;&#25105;&#29616;&#22312;&#21487;&#20197;&#22238;&#31572;&#20320;&#12290;&#19981;&#38169;&#65292;PHP&#26159;&#36328;&#24179;&#21488;&#30340;&#65292;&#20294;&#26159;PHP&#22312;&#20004;&#20010;&#24179;&#21488;&#19979;&#32943;&#23450;&#26377;&#19981;&#21516;&#30340;&#23454;&#29616;&#65292;&#32780;&#19988;PHP&#23545;&#20110;Linux&#30340;&#25903;&#25345;&#26356;&#22909;&#12290;&#37027;&#20040;Solar&#20063;&#19968;&#26679;&#65292;Solar
+                                        &#20986;&#29983;&#22312; Linux &#23478;&#24237;&#12290;&#20854;&#23454;Solar&#21487;&#20197;&#30452;&#25509;&#22312;win&#19979;&#36816;&#34892;(&#21482;&#35201;&#26377;wamp&#29615;&#22659;)&#65292;&#20294;&#26159;&#22240;&#20026; Solar
+                                        &#29992;&#21040;&#25991;&#20214;&#31995;&#32479;&#30340; Symlink &#29305;&#24615;&#65292;&#25152;&#20197;&#20854;&#23454;&#26159; Solar &#30340;&#21629;&#20196;&#34892;&#24037;&#20855;&#19981;&#33021;&#24456;&#22909;&#22320;&#22312; WIN
+                                        &#19979;&#25191;&#34892;&#12290;&#21629;&#20196;&#34892;&#26159;&#24110;&#21161;&#25105;&#20204;&#24555;&#36895;&#24320;&#21457;&#30340;&#24471;&#21147;&#21161;&#25163;&#65292;&#25105;&#20204;&#24403;&#28982;&#19981;&#20801;&#35768;&#23427;&#19981;&#33021;&#20351;&#29992;&#12290;</p>
+                                </td></tr></table></div>
+                                <p>&#20180;&#32454;&#30475;Solar for Windows&#30340;&#30446;&#24405;&#32467;&#26500;&#65292;&#20320;&#20250;&#21457;&#29616;&#21644; Linux &#24179;&#21488;&#19979;&#30340; Solar &#23545;&#27604;&#65292;&#36825;&#37324;&#22810;&#20102;
+                                        <code class="code">README2</code> &#25991;&#20214;&#21644; <code class="code">toolkit</code> &#25991;&#20214;&#22841;&#12290;&#25991;&#20214;
+                                        <code class="code">README2</code> &#26159; Roy &lt;<a class="ulink" href="http://roygu.com" target="_top">http://roygu.com</a>&gt; &#29992;&#20110;&#35760;&#24405; Solar for Windows &#29256;&#26412;&#26085;&#24535;&#30340;&#12290;&#32780;
+                                        <code class="code">toolkit</code> &#25991;&#20214;&#22841;&#19979;&#26159;&#22312; WIN &#24179;&#21488;&#30340;&#19968;&#20123;&#24037;&#20855;&#21253;&#65292;&#22312; WIN &#19979;&#35201;&#24819;&#26356;&#22909;&#30340;&#20351;&#29992;
+                                    Solar&#65292;&#25105;&#35748;&#20026;&#36825;&#20123;&#24037;&#20855;&#21253;&#26159;&#24517;&#35201;&#30340;&#12290;</p>
+                            </li><li class="listitem">
+                                <p>Window &#29256;&#26412;&#30340;&#20027;&#35201;&#24037;&#20316;</p>
+                                <p>WIN &#19979;&#20027;&#35201;&#30340;&#19981;&#21516;&#20063;&#23601;&#22312; <code class="code">script</code> &#30446;&#24405;&#19979;&#65292;&#22240;&#20026;&#25105;&#20204;&#21482;&#38656;&#35201;&#35299;&#20915; Solar
+                                    &#21629;&#20196;&#34892;&#38382;&#39064;&#23601;&#34892;&#20102;&#12290;&#36825;&#37324;&#25105;&#35201;&#35828;&#35828;&#25105;&#23545; Solar &#30340;&#29702;&#35299;&#12290;Paul &lt;<a class="ulink" href="http://paul-m-jones.com" target="_top">http://paul-m-jones.com</a>&gt; &#25226; Solar &#35774;&#35745;&#24471;&#36275;&#22815;&#22909;&#20102;&#12290;&#25972;&#20010; Solar
+                                    &#26159;&#19968;&#20010;&#31995;&#32479;&#65292;&#20320;&#21487;&#20197;&#25226;&#23427;&#29702;&#35299;&#20026;&#25805;&#20316;&#31995;&#32479;&#65292;&#23427;&#30001; Solar &#20869;&#26680;&#21644;&#36741;&#21161;&#24037;&#20855;&#32452;&#25104;&#65292;&#25105;&#20204;&#22312; Solar
+                                    &#19978;&#24320;&#21457;&#24212;&#29992;&#23601;&#30456;&#24403;&#20110;&#22312;&#25805;&#20316;&#31995;&#32479;&#19978;&#24320;&#21457;&#36719;&#20214;&#19968;&#26679;&#65292;&#36825;&#20010;&#27604;&#21947;&#24212;&#35813;&#22909;&#29702;&#35299;&#32780;&#19988;&#19981;&#36807;&#20998;&#12290;&#19968;&#33324;&#26469;&#35828;&#65292;&#25105;&#20204;&#26377;&#20004;&#31181;&#36884;&#24452;&#35775;&#38382;
+                                    Solar&#65306;&#19968;&#31181;&#26159;&#20174;&#27983;&#35272;&#22120;&#35775;&#38382;&#65292;&#36825;&#20010;&#26102;&#20505;&#20837;&#21475;&#25991;&#20214;&#26159; <code class="code">/docroot/index.php</code> &#25110;
+                                        <code class="code">/index.php</code>&#65307;&#19968;&#31181;&#26159;&#20174; CLI&#65288;&#21629;&#20196;&#34892;&#65289;&#35775;&#38382;&#65292;&#36825;&#20010;&#26102;&#20505;&#20837;&#21475;&#25991;&#20214;&#26159;
+                                        <code class="code">/script/solar</code>&#12290;&#36825;&#20004;&#20010;&#25991;&#20214;&#37117;&#36890;&#36807; Solar &#30340;&#26550;&#26500;&#31867;
+                                        <code class="code">/source/solar/Solar.php</code> &#26469;&#20351;&#29992; Solar &#20869;&#26680;&#12290;</p>
+                                <p>&#22312; Solar &#19978;&#24320;&#21457;&#24212;&#29992;&#26159;&#20197; vendor &#20026;&#21333;&#20301;&#30340;&#65292;&#20320;&#24320;&#21457;&#30340;&#24212;&#29992;&#30340;&#25152;&#26377;&#20195;&#30721;&#37117;&#26159;&#39640;&#24230;&#38598;&#20013;&#30340;&#65292;&#20107;&#23454;&#19978;&#19968;&#20010; vendor
+                                    &#26159;&#19968;&#20010;&#25991;&#20214;&#22841;&#12290;&#36825;&#23601;&#26159;&#35828;&#20320;&#22312;&#37096;&#32626;&#20195;&#30721;&#26102;&#65292;&#21482;&#38656;&#35201;&#37096;&#32626; vendor &#23601;&#34892;&#20102;&#65292;&#38750;&#24120;&#31616;&#21333;&#39640;&#25928;&#12290;</p>
+                                <p>&#30001;&#20110; Solar &#20351;&#29992;&#20102;&#25991;&#20214;&#31995;&#32479;&#30340; Symlink &#29305;&#24615;&#65292;Windows NT6 &#20043;&#21069;&#30340;&#31995;&#32479;&#26159;&#19981;&#25903;&#25345; Symlink
+                                    &#29305;&#24615;&#30340;&#65292;&#20063;&#23601;&#26159;&#35828; WIN 2000, XP, 2003 &#19981;&#25903;&#25345;&#36825;&#31181;&#29305;&#24615;&#12290;&#20294;&#26159;&#24066;&#38754;&#19978; WIN 2000 &#21644; WIN 2003
+                                    &#20173;&#26377;&#24456;&#22823;&#20221;&#39069;&#65292;&#25152;&#20197;&#19981;&#33021;&#22312;&#36825;&#20004;&#20010;&#26381;&#21153;&#22120;&#29256;&#26412;&#19978;&#37096;&#32626;&#26159;&#19981;&#33021;&#25509;&#21463;&#30340;&#12290;&#20294;&#21516;&#26102;&#20026;&#20102;&#23613;&#21487;&#33021;&#23567;&#30340;&#25913;&#21464; Solar
+                                        &#30340;&#35774;&#35745;&#21746;&#23398;&#65292;&#25152;&#20197;&#21482;&#33021;&#37319;&#29992;&#22797;&#21046;&#30340;&#26041;&#24335;&#26469;&#20445;&#35777;<code class="code">/include</code>&#30446;&#24405;&#30340;&#21487;&#29992;&#24615;&#65292;&#37319;&#29992;&#21453;&#21521;&#21516;&#27493;&#25216;&#26415;&#26469;&#20445;&#35777;
+                                    vendor &#30340;&#23436;&#25972;&#24615;&#12289;&#21487;&#31227;&#26893;&#24615;&#12290;</p>
+                            </li><li class="listitem">
+                                <p>&#22914;&#20309;&#24320;&#22987;&#65311;</p>
+                                <p>&#24456;&#31616;&#21333;&#65292;&#25171;&#24320;<code class="code">/script/phpenv.ini</code>&#25991;&#20214;&#65292;&#37197;&#32622; PHP
+                                    &#21487;&#25191;&#34892;&#25991;&#20214;&#21450;&#20854;&#37197;&#32622;&#25991;&#20214;&#30340;&#36335;&#24452;&#12290;</p>
+                                <pre class="screen">PHP_EXE="D:\php\php.exe"
+PHP_INI="D:\php\php.ini"</pre>
+                                <p>&#28982;&#21518;&#36827;&#20837; <span class="italic">SYSTEM</span>
+                                    &#30446;&#24405;&#65292;&#36755;&#20837;&#19979;&#38754;&#36825;&#26465;&#21629;&#20196;&#27979;&#35797;&#20320;&#30340;&#37197;&#32622;&#65292;&#21516;&#26102;&#21487;&#26597;&#30475;&#20320;&#30340; PHP &#29256;&#26412;&#65306;</p>
+                                <pre class="screen">D:\xampp\htdocs\solarlatest&gt;script\solar -phpv
+PHP 5.2.9-2 (cli) (built: Apr  9 2009 08:23:19)
+Copyright (c) 1997-2009 The PHP Group
+Zend Engine v2.2.0, Copyright (c) 1998-2009 Zend Technologies
+    with Xdebug v2.0.4, Copyright (c) 2002-2008, by Derick Rethans</pre>
+                                <p>&#24685;&#21916;&#65292;&#22914;&#26524;&#20986;&#29616;&#19978;&#38754;&#36825;&#31181;&#24773;&#20917;&#65292;&#35828;&#26159;&#20320;&#24050;&#32463;&#25104;&#21151;&#20102;&#12290;&#25509;&#19979;&#26469;&#21021;&#20351;&#21270; Solar &#30340;&#36816;&#34892;&#29615;&#22659;&#65292;&#23613;&#31649; WIN NT6 &#20043;&#21518;&#30340;&#31995;&#32479;&#25903;&#25345;
+                                    Symlink&#65292;&#20294; Symlink &#26159;&#19981;&#33021;&#31227;&#21160;&#30340;&#65292;&#21363;&#20351;&#21019;&#24314;&#30340;&#26102;&#20505;&#20351;&#29992;&#30340;&#26159;&#30456;&#23545;&#36335;&#24452;&#12290;&#36825;&#23601;&#38656;&#35201;&#25105;&#20204;&#25163;&#24037;&#21019;&#24314;&#20102;&#65292;Paul &#22312;
+                                    Solar 1.1.2 &#29256;&#26412;&#20013;&#25552;&#20379;&#20102; <code class="code">winfix.bat</code>
+                                        &#25991;&#20214;&#29992;&#20110;&#35299;&#20915;&#27492;&#38382;&#39064;&#12290;&#19981;&#36807;&#25105;&#26377;&#19981;&#21516;&#30340;&#30475;&#27861;&#65292;<code class="code">/source/solar/Solar</code> &#25991;&#20214;&#22841;&#26159;
+                                    Solar &#30340;&#20869;&#26680;&#65292;&#26377;&#20854;&#29305;&#27530;&#24615;&#65292;&#20294;&#25105;&#20204;&#20173;&#21487;&#20197;&#25226;&#23427;&#30475;&#20316;&#26159;&#19968;&#20010; vendor&#65292;&#26159;&#19968;&#20010;&#31995;&#32479;&#32423;&#30340; vendor&#65292;&#25152;&#20197;&#25105;&#20204;&#20173;&#24819;&#20351;&#29992;
+                                        <code class="code">link-vendor</code>
+                                    &#21629;&#20196;&#26469;&#20026;&#23427;&#21019;&#24314;&#38142;&#25509;&#65292;&#24184;&#36816;&#30340;&#26159;&#65292;&#25105;&#20204;&#24050;&#32463;&#23454;&#29616;&#20102;&#36825;&#20010;&#21151;&#33021;&#12290;&#20320;&#35201;&#20570;&#30340;&#23601;&#26159;&#36755;&#20837;&#19979;&#38754;&#36825;&#26465;&#21629;&#20196;&#65306;</p>
+                                <pre class="screen">D:\xampp\htdocs\solarlatest&gt;script\solar link-vendor Solar
+Making links for vendor 'Solar' ...
+    Making link 'include/Solar' ... done.
+    Making link 'include\Test/Solar' ... done.
+    Making link 'include\Mock/Solar' ... done.
+    Making link 'include\Fixture/Solar' ... done.
+    Making link 'include/Solar.php' ... done.
+    Making link 'include\Test/Solar.php' ... done.
+... done.
+Making public symlinks for 'Solar' ...
+    Making public directory docroot/public/Solar/Controller ... done.
+    Making public symlink for Solar_Controller_Bread ... done.
+    Making public symlink for Solar_Controller_Page ... done.
+    Making public directory docroot/public/Solar/View/Helper ... done.
+    Making public symlink for Solar_View_Helper_Pager ... done.
+... done.
+Remember to add 'Solar_App' to the ['Solar_Controller_Front']['classes'] element
+ in your config file so that it finds your apps.
+Remember to add 'Solar_Model' to the ['Solar_Sql_Model_Catalog']['classes'] elem
+ent in your config file so that it finds your models.</pre>
+                                <p>OK&#65292;&#22312; WIN NT6 &#20043;&#21518;&#30340;&#31995;&#32479;&#20013;&#65292;&#25509;&#19979;&#26469;&#30340;&#20107;&#24773;&#23601;&#21644; Linux &#19979;&#19968;&#27169;&#19968;&#26679;&#20102;&#12290;&#22312; WIN NT6
+                                    &#20043;&#21069;&#30340;&#31995;&#32479;&#20013;&#65288;&#20063;&#21363;&#65306;WIN XP, 2000,
+                                        2003&#65289;&#36824;&#26377;&#28857;&#21306;&#21035;&#65292;&#22240;&#20026;&#22312;&#36825;&#31181;&#24773;&#20917;&#19979;&#25105;&#20204;&#26159;&#20351;&#29992;&#22797;&#21046;&#30340;&#26041;&#24335;&#26469;&#27169;&#25311;&#23454;&#29616;&#30340;&#65292;&#25152;&#20197;&#22312;&#36825;&#31181;&#31995;&#32479;&#19978;&#25105;&#20204;&#30340;&#24037;&#20316;&#21306;&#22495;&#23601;&#19981;&#20877;&#26159;&#20219;&#24847;&#30340;&#65292;&#25105;&#20204;&#35201;&#32454;&#24515;&#22320;&#22312;<code class="code">/include</code>&#12289;<code class="code">/docroot/public</code>&#19979;&#24037;&#20316;&#65292;&#30830;&#20445;&#30446;&#21069;&#30340;&#24212;&#29992;&#26159;&#21487;&#29992;&#30340;&#12290;&#26368;&#21518;&#20351;&#29992;sync-vendor&#21629;&#20196;&#25226;&#25152;&#26377;&#20195;&#30721;&#21516;&#27493;&#21040;<code class="code">/source</code>&#19979;&#12290;</p>
+                                <pre class="screen"># script\solar sync-vendor Solar
+Sync directories and files ...
+include/Fixture/Solar -&gt; source/solar/tests/Fixture/Solar
+    done.
+include/Mock/Solar -&gt; source/solar/tests/Mock/Solar
+    done.
+include/Test/Solar -&gt; source/solar/tests/Test/Solar
+    done.
+include/Solar.php -&gt; source/solar/Solar.php
+    done.
+include/Test/Solar.php -&gt; source/solar/tests/Test/Solar.php
+    done.
+include/Solar -&gt; source/solar/Solar
+    done.
+Sync complete.
+... done.</pre>
+                            </li></ol></div><p>
+                    </p>
+                </div>
+            </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch01s01.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch01.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch01s03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">1.1. &#31616;&#20171;&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;1.3. &#21019;&#24314;&#24037;&#20316;&#21306;</td></tr></table></div></div>  <!-- /#main content construct --> <!-- #footer -->  <div id="foot">  <p class="fl">Copyright &copy; 2010 Solar For PHP 5 In China, All Rights Reserved.</p>    <!-- /#   LINKS AND AUTHOR-SIGNATURE CANNOT BE REMOVED !!! -->    <p class="fr">Powered By&nbsp;&nbsp;<a href="mailto:roy@solarphp.cn">Roy Gu</a><span id="cnzz"><script src="http://s16.cnzz.com/stat.php?id=2386648&web_id=2386648&show=pic" language="JavaScript"></script></span>    </p>  </div>  <hr class="hidden" />  <div class="clear"></div>  <div id="solarcopy">  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-1.gif" style="border: 0 !important;" /></a>  <a href="http://solarphp.cn" target="_blank"><img src="../images/solar-button-2.gif" style="border: 0 !important;" /></a>  <br />  <script type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('mzsrzilnbxkw')</script></div> <!-- /#footer --></div></body></html>
