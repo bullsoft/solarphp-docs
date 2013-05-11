@@ -1,0 +1,45 @@
+/* project */
+div.perex { border: none !important;}
+div#project h2{
+    border-bottom: 1px solid #CCCCCC;
+    margin-right: 10px;
+}
+/* nav */
+div#local * {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+div#local {
+    /*background-color: #F1ECE7;*/
+    padding-top: -5px;
+    margin-left: 2px;
+    width: 258px;
+}
+div#local ul {
+    border-top: 1px solid white;
+}
+div#local li {
+    clear: both;
+    list-style: none outside none;
+}
+div#local a, div#local a:link, div#local a:active, div#local a:visited {
+    background-color: #F1ECE7;
+    border-bottom: 1px solid white;
+    border-top: 0 none;
+    color: #660000;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 244px;
+}
+div#local a:hover {
+    text-decoration: underline;
+}
+div#local li.active a, div#local li.active a:link, div#local li.active a:active, div#local li.active a:visited, div#local li.active a:hover {
+    background: url("../images/local_link_grade.jpg") repeat-x scroll 0 0 #640203;
+    color: #FDDD9A;
+}
